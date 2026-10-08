@@ -23,6 +23,14 @@ GENELOC = {"GRCh38": TOOLS / "ref" / "NCBI38.gene.loc", "GRCh37": TOOLS / "ref" 
 DERIVED = Path("D:/AAN_data/derived")
 
 
+def find_annot(workdir):
+    # the Windows build of MAGMA writes the annotation with an extra .txt on the end
+    for name in ("annot.genes.annot", "annot.genes.annot.txt"):
+        if (workdir / name).exists():
+            return workdir / name
+    return None
+
+
 def run(args):
     print(" ".join(str(a) for a in args), flush=True)
     subprocess.run([str(a) for a in args], check=True)
@@ -38,31 +46,35 @@ def main():
     ap.add_argument("--covar", default=str(DERIVED / "gene_covar.txt"))
     ap.add_argument("--condition", default="avg_all,avg_neuron")
     ap.add_argument("--jobs", type=int, default=6, help="chromosomes analysed in parallel")
+    ap.add_argument("--reuse", action="store_true", help="skip rebuilding the SNP files if annotation exists")
     args = ap.parse_args()
 
     build = "GRCh37" if args.format == "pgc3" else "GRCh38"
     workdir = DERIVED / "magma" / args.name
     workdir.mkdir(parents=True, exist_ok=True)
 
-    if args.format == "decodeme":
-        g = gwas_readers.read_decodeme(args.gwas, pd.read_parquet(args.map))
-    elif args.format == "harmonised":
-        g = gwas_readers.read_harmonised(args.gwas, args.n)
+    if args.reuse and find_annot(workdir):
+        print("reusing the SNP files and annotation already in", workdir, flush=True)
     else:
-        g = gwas_readers.read_pgc3(args.gwas)
-    g = g.drop_duplicates("rsid")
-    print(f"{len(g):,} SNPs read ({build})", flush=True)
+        if args.format == "decodeme":
+            g = gwas_readers.read_decodeme(args.gwas, pd.read_parquet(args.map))
+        elif args.format == "harmonised":
+            g = gwas_readers.read_harmonised(args.gwas, args.n)
+        else:
+            g = gwas_readers.read_pgc3(args.gwas)
+        g = g.drop_duplicates("rsid")
+        print(f"{len(g):,} SNPs read ({build})", flush=True)
 
-    g[["rsid", "p", "n"]].to_csv(workdir / "pval.txt", sep="\t", index=False,
-                                 header=["SNP", "P", "N"], float_format="%.6g")
-    g[["rsid", "chrom", "pos"]].to_csv(workdir / "snploc.txt", sep="\t", index=False, header=False)
+        g[["rsid", "p", "n"]].to_csv(workdir / "pval.txt", sep="\t", index=False,
+                                     header=["SNP", "P", "N"], float_format="%.6g")
+        g[["rsid", "chrom", "pos"]].to_csv(workdir / "snploc.txt", sep="\t", index=False, header=False)
 
-    run([MAGMA, "--annotate", "window=35,10", "--snp-loc", workdir / "snploc.txt",
-         "--gene-loc", GENELOC[build], "--out", workdir / "annot"])
+        run([MAGMA, "--annotate", "window=35,10", "--snp-loc", workdir / "snploc.txt",
+             "--gene-loc", GENELOC[build], "--out", workdir / "annot"])
     # one job per chromosome, a few at a time: much faster than a single run and it keeps memory down
     def gene_analysis(chrom):
         run([MAGMA, "--bfile", REF, "--pval", workdir / "pval.txt", "ncol=N",
-             "--gene-annot", workdir / "annot.genes.annot", "--batch", chrom, "chr",
+             "--gene-annot", find_annot(workdir), "--batch", chrom, "chr",
              "--out", workdir / "genes"])
 
     with ThreadPoolExecutor(max_workers=args.jobs) as pool:

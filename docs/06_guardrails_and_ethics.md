@@ -26,7 +26,7 @@ Read the terms on the DecodeME OSF page and cite the preprint and the OSF projec
 re-identify anyone. Cite Siletti et al. 2023 (Science) for the cell atlas and every GWAS used.
 
 ## Pre-registration
-Freeze the thresholds in `preregistration/PREREG_DRAFT.md` before looking at ME/CFS enrichment
+Freeze the thresholds in `preregistration/PREREG_v1.md` before looking at ME/CFS enrichment
 results, then `git tag prereg-v1`. Any later change goes in `preregistration/DEVIATIONS.md` with a
 date and a reason.
 

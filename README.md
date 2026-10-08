@@ -21,7 +21,7 @@ re-checked by Palash before any novelty claim is written into the abstract.
 | File | What it holds |
 |---|---|
 | [PLAN.md](PLAN.md) | The full plan: question, hypotheses, design, methods, timeline, decision rules |
-| [preregistration/PREREG_DRAFT.md](preregistration/PREREG_DRAFT.md) | Thresholds to freeze (git-tag) BEFORE any analysis runs |
+| [preregistration/PREREG_v1.md](preregistration/PREREG_v1.md) | Frozen thresholds and tests (git tag `prereg-v1`), written before any ME/CFS result was viewed |
 | [docs/01_idea_selection_log.md](docs/01_idea_selection_log.md) | Every idea considered and why each was kept or dropped |
 | [docs/02_prior_art_and_sources.md](docs/02_prior_art_and_sources.md) | What already exists, with links; the gaps; what to re-search |
 | [docs/03_feasibility_check.md](docs/03_feasibility_check.md) | Data files, sizes, checksums, machine, tools, what is verified vs not |

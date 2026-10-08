@@ -29,18 +29,28 @@ def gzip_ok(path):
         return False
 
 
-def fetch(url, out, tries=6):
+def fetch(url, out, expected, tries=8):
+    """Download with resume: if a partial file exists, ask the server for the rest."""
     for attempt in range(tries):
+        have = out.stat().st_size if out.exists() else 0
+        if have == expected:
+            return True
+        if have > expected:
+            out.unlink()
+            have = 0
         try:
-            with requests.get(url, stream=True, timeout=120) as r:
+            headers = {"Range": f"bytes={have}-"} if have else {}
+            with requests.get(url, stream=True, timeout=120, headers=headers) as r:
                 if r.status_code == 429:
                     time.sleep(30 * (attempt + 1))
                     continue
                 r.raise_for_status()
-                with open(out, "wb") as fh:
+                mode = "ab" if (have and r.status_code == 206) else "wb"
+                with open(out, mode) as fh:
                     for block in r.iter_content(CHUNK):
                         fh.write(block)
-            return True
+            if out.stat().st_size == expected:
+                return True
         except requests.RequestException as err:
             print("  retry after error:", err)
             time.sleep(10 * (attempt + 1))
@@ -71,7 +81,7 @@ def main():
             print("have", row["label"])
             continue
         print("downloading", row["label"], f"{row['bytes'] / 1e6:.0f} MB", flush=True)
-        if not fetch(row["url"], out) or not gzip_ok(out):
+        if not fetch(row["url"], out, int(row["bytes"])) or not gzip_ok(out):
             print("FAILED", row["label"])
             continue
         print("ok", row["label"], flush=True)
