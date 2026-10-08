@@ -1,0 +1,340 @@
+disease	efo	target	ensembl	drug	mechanism	n_targets_of_drug
+migraine	MONDO_0005277	CALCRL	ENSG00000064989	ATOGEPANT	Calcitonin gene-related peptide type 1 receptor antagonist	1
+migraine	MONDO_0005277	SLC6A2	ENSG00000103546	PSEUDOEPHEDRINE HYDROCHLORIDE	Norepinephrine transporter releasing agent	1
+migraine	MONDO_0005277	CALCA	ENSG00000110680	FREMANEZUMAB	Calcitonin gene-related peptide antagonist	2
+migraine	MONDO_0005277	CALCB	ENSG00000175868	FREMANEZUMAB	Calcitonin gene-related peptide antagonist	2
+migraine	MONDO_0005277	CALCRL	ENSG00000064989	ZAVEGEPANT HYDROCHLORIDE	Calcitonin gene-related peptide type 1 receptor antagonist	1
+migraine	MONDO_0005277	PTGS2	ENSG00000073756	ASPIRIN	Cyclooxygenase inhibitor	2
+migraine	MONDO_0005277	PTGS1	ENSG00000095303	ASPIRIN	Cyclooxygenase inhibitor	2
+migraine	MONDO_0005277	PTGS2	ENSG00000073756	NAPROXEN SODIUM	Cyclooxygenase inhibitor	2
+migraine	MONDO_0005277	PTGS1	ENSG00000095303	NAPROXEN SODIUM	Cyclooxygenase inhibitor	2
+migraine	MONDO_0005277	CALCA	ENSG00000110680	GALCANEZUMAB	Calcitonin gene-related peptide inhibitor	2
+migraine	MONDO_0005277	CALCB	ENSG00000175868	GALCANEZUMAB	Calcitonin gene-related peptide inhibitor	2
+migraine	MONDO_0005277	SLC6A3	ENSG00000142319	DIETHYLPROPION	Dopamine transporter inhibitor	2
+migraine	MONDO_0005277	SLC6A2	ENSG00000103546	DIETHYLPROPION	Norepinephrine transporter inhibitor	2
+migraine	MONDO_0005277	HTR1D	ENSG00000179546	ERGOTAMINE TARTRATE	Serotonin 1d (5-HT1d) receptor agonist	7
+migraine	MONDO_0005277	ADRA1A	ENSG00000120907	ERGOTAMINE TARTRATE	Adrenergic receptor alpha agonist	7
+migraine	MONDO_0005277	ADRA2A	ENSG00000150594	ERGOTAMINE TARTRATE	Adrenergic receptor alpha agonist	7
+migraine	MONDO_0005277	ADRA2C	ENSG00000184160	ERGOTAMINE TARTRATE	Adrenergic receptor alpha agonist	7
+migraine	MONDO_0005277	ADRA1D	ENSG00000171873	ERGOTAMINE TARTRATE	Adrenergic receptor alpha agonist	7
+migraine	MONDO_0005277	ADRA1B	ENSG00000170214	ERGOTAMINE TARTRATE	Adrenergic receptor alpha agonist	7
+migraine	MONDO_0005277	ADRA2B	ENSG00000274286	ERGOTAMINE TARTRATE	Adrenergic receptor alpha agonist	7
+migraine	MONDO_0005277	PTGS2	ENSG00000073756	CELECOXIB	Cyclooxygenase-2 inhibitor	1
+migraine	MONDO_0005277	HTR2B	ENSG00000135914	METHYSERGIDE	Serotonin 2b (5-HT2b) receptor antagonist	3
+migraine	MONDO_0005277	HTR1A	ENSG00000178394	METHYSERGIDE	Serotonin 1a (5-HT1a) receptor partial agonist	3
+migraine	MONDO_0005277	HTR2C	ENSG00000147246	METHYSERGIDE	Serotonin 2c (5-HT2c) receptor antagonist	3
+migraine	MONDO_0005277	HTR1B	ENSG00000135312	NARATRIPTAN HYDROCHLORIDE	Serotonin 1b (5-HT1b) receptor agonist	2
+migraine	MONDO_0005277	HTR1D	ENSG00000179546	NARATRIPTAN HYDROCHLORIDE	Serotonin 1d (5-HT1d) receptor agonist	2
+migraine	MONDO_0005277	CALCRL	ENSG00000064989	ERENUMAB	Calcitonin gene-related peptide type 1 receptor antagonist	1
+migraine	MONDO_0005277	PTGS2	ENSG00000073756	ACETAMINOPHEN	Cyclooxygenase inhibitor	4
+migraine	MONDO_0005277	PTGS1	ENSG00000095303	ACETAMINOPHEN	Cyclooxygenase inhibitor	4
+migraine	MONDO_0005277	FAAH	ENSG00000117480	ACETAMINOPHEN	Anandamide amidohydrolase inhibitor	4
+migraine	MONDO_0005277	TRPV1	ENSG00000196689	ACETAMINOPHEN	Vanilloid receptor opener	4
+migraine	MONDO_0005277	HTR1B	ENSG00000135312	SUMATRIPTAN	Serotonin 1b (5-HT1b) receptor agonist	2
+migraine	MONDO_0005277	HTR1D	ENSG00000179546	SUMATRIPTAN	Serotonin 1d (5-HT1d) receptor agonist	2
+migraine	MONDO_0005277	HTR1F	ENSG00000179097	LASMIDITAN SUCCINATE	Serotonin 1f (5-HT1f) receptor agonist	1
+migraine	MONDO_0005277	PTGS2	ENSG00000073756	DICLOFENAC	Cyclooxygenase inhibitor	2
+migraine	MONDO_0005277	PTGS1	ENSG00000095303	DICLOFENAC	Cyclooxygenase inhibitor	2
+migraine	MONDO_0005277	PTGS2	ENSG00000073756	IBUPROFEN	Cyclooxygenase inhibitor	2
+migraine	MONDO_0005277	PTGS1	ENSG00000095303	IBUPROFEN	Cyclooxygenase inhibitor	2
+migraine	MONDO_0005277	PTGS2	ENSG00000073756	DICLOFENAC POTASSIUM	Cyclooxygenase inhibitor	2
+migraine	MONDO_0005277	PTGS1	ENSG00000095303	DICLOFENAC POTASSIUM	Cyclooxygenase inhibitor	2
+migraine	MONDO_0005277	HTR1B	ENSG00000135312	ZOLMITRIPTAN	Serotonin 1b (5-HT1b) receptor agonist	2
+migraine	MONDO_0005277	HTR1D	ENSG00000179546	ZOLMITRIPTAN	Serotonin 1d (5-HT1d) receptor agonist	2
+migraine	MONDO_0005277	HTR1F	ENSG00000179097	LASMIDITAN	Serotonin 1f (5-HT1f) receptor agonist	1
+migraine	MONDO_0005277	CALCRL	ENSG00000064989	RIMEGEPANT	Calcitonin gene-related peptide type 1 receptor antagonist	1
+migraine	MONDO_0005277	HTR1D	ENSG00000179546	ERGOTAMINE	Serotonin 1d (5-HT1d) receptor agonist	7
+migraine	MONDO_0005277	ADRA1A	ENSG00000120907	ERGOTAMINE	Adrenergic receptor alpha agonist	7
+migraine	MONDO_0005277	ADRA2A	ENSG00000150594	ERGOTAMINE	Adrenergic receptor alpha agonist	7
+migraine	MONDO_0005277	ADRA2C	ENSG00000184160	ERGOTAMINE	Adrenergic receptor alpha agonist	7
+migraine	MONDO_0005277	ADRA1D	ENSG00000171873	ERGOTAMINE	Adrenergic receptor alpha agonist	7
+migraine	MONDO_0005277	ADRA1B	ENSG00000170214	ERGOTAMINE	Adrenergic receptor alpha agonist	7
+migraine	MONDO_0005277	ADRA2B	ENSG00000274286	ERGOTAMINE	Adrenergic receptor alpha agonist	7
+migraine	MONDO_0005277	CALCA	ENSG00000110680	EPTINEZUMAB	Calcitonin gene-related peptide inhibitor	2
+migraine	MONDO_0005277	CALCB	ENSG00000175868	EPTINEZUMAB	Calcitonin gene-related peptide inhibitor	2
+migraine	MONDO_0005277	HTR1B	ENSG00000135312	NARATRIPTAN	Serotonin 1b (5-HT1b) receptor agonist	2
+migraine	MONDO_0005277	HTR1D	ENSG00000179546	NARATRIPTAN	Serotonin 1d (5-HT1d) receptor agonist	2
+migraine	MONDO_0005277	CALCRL	ENSG00000064989	UBROGEPANT	Calcitonin gene-related peptide type 1 receptor antagonist	1
+migraine	MONDO_0005277	OPRK1	ENSG00000082556	CODEINE PHOSPHATE	Opioid receptors; mu/kappa/delta agonist	3
+migraine	MONDO_0005277	OPRD1	ENSG00000116329	CODEINE PHOSPHATE	Opioid receptors; mu/kappa/delta agonist	3
+migraine	MONDO_0005277	OPRM1	ENSG00000112038	CODEINE PHOSPHATE	Opioid receptors; mu/kappa/delta agonist	3
+migraine	MONDO_0005277	ADRB1	ENSG00000043591	PROPRANOLOL HYDROCHLORIDE	Beta-1 adrenergic receptor antagonist	2
+migraine	MONDO_0005277	ADRB2	ENSG00000169252	PROPRANOLOL HYDROCHLORIDE	Beta-2 adrenergic receptor antagonist	2
+migraine	MONDO_0005277	CALCRL	ENSG00000064989	RIMEGEPANT SULFATE	Calcitonin gene-related peptide type 1 receptor antagonist	1
+migraine	MONDO_0005277	HTR1F	ENSG00000179097	ALMOTRIPTAN MALATE	Serotonin 1f (5-HT1f) receptor agonist	3
+migraine	MONDO_0005277	HTR1B	ENSG00000135312	ALMOTRIPTAN MALATE	Serotonin 1b (5-HT1b) receptor agonist	3
+migraine	MONDO_0005277	HTR1D	ENSG00000179546	ALMOTRIPTAN MALATE	Serotonin 1d (5-HT1d) receptor agonist	3
+migraine	MONDO_0005277	PTGS2	ENSG00000073756	LORNOXICAM	Cyclooxygenase inhibitor	2
+migraine	MONDO_0005277	PTGS1	ENSG00000095303	LORNOXICAM	Cyclooxygenase inhibitor	2
+migraine	MONDO_0005277	HTR1F	ENSG00000179097	ELETRIPTAN	Serotonin 1f (5-HT1f) receptor agonist	3
+migraine	MONDO_0005277	HTR1B	ENSG00000135312	ELETRIPTAN	Serotonin 1b (5-HT1b) receptor agonist	3
+migraine	MONDO_0005277	HTR1D	ENSG00000179546	ELETRIPTAN	Serotonin 1d (5-HT1d) receptor agonist	3
+migraine	MONDO_0005277	HTR1B	ENSG00000135312	SUMATRIPTAN SUCCINATE	Serotonin 1b (5-HT1b) receptor agonist	2
+migraine	MONDO_0005277	HTR1D	ENSG00000179546	SUMATRIPTAN SUCCINATE	Serotonin 1d (5-HT1d) receptor agonist	2
+migraine	MONDO_0005277	SNAP25	ENSG00000132639	BOTULINUM TOXIN TYPE A	Synaptosomal nerve-associated protein 25 (SNAP-25) hydrolytic enzyme	1
+migraine	MONDO_0005277	HTR1B	ENSG00000135312	RIZATRIPTAN BENZOATE	Serotonin 1b (5-HT1b) receptor agonist	2
+migraine	MONDO_0005277	HTR1D	ENSG00000179546	RIZATRIPTAN BENZOATE	Serotonin 1d (5-HT1d) receptor agonist	2
+migraine	MONDO_0005277	GABRA1	ENSG00000022355	BUTALBITAL	GABA-A receptor; anion channel positive allosteric modulator	16
+migraine	MONDO_0005277	GABRB2	ENSG00000145864	BUTALBITAL	GABA-A receptor; anion channel positive allosteric modulator	16
+migraine	MONDO_0005277	GABRG2	ENSG00000113327	BUTALBITAL	GABA-A receptor; anion channel positive allosteric modulator	16
+migraine	MONDO_0005277	GABRB3	ENSG00000166206	BUTALBITAL	GABA-A receptor; anion channel positive allosteric modulator	16
+migraine	MONDO_0005277	GABRA4	ENSG00000109158	BUTALBITAL	GABA-A receptor; anion channel positive allosteric modulator	16
+migraine	MONDO_0005277	GABRG3	ENSG00000182256	BUTALBITAL	GABA-A receptor; anion channel positive allosteric modulator	16
+migraine	MONDO_0005277	GABRQ	ENSG00000268089	BUTALBITAL	GABA-A receptor; anion channel positive allosteric modulator	16
+migraine	MONDO_0005277	GABRA3	ENSG00000011677	BUTALBITAL	GABA-A receptor; anion channel positive allosteric modulator	16
+migraine	MONDO_0005277	GABRP	ENSG00000094755	BUTALBITAL	GABA-A receptor; anion channel positive allosteric modulator	16
+migraine	MONDO_0005277	GABRD	ENSG00000187730	BUTALBITAL	GABA-A receptor; anion channel positive allosteric modulator	16
+migraine	MONDO_0005277	GABRG1	ENSG00000163285	BUTALBITAL	GABA-A receptor; anion channel positive allosteric modulator	16
+migraine	MONDO_0005277	GABRB1	ENSG00000163288	BUTALBITAL	GABA-A receptor; anion channel positive allosteric modulator	16
+migraine	MONDO_0005277	GABRE	ENSG00000102287	BUTALBITAL	GABA-A receptor; anion channel positive allosteric modulator	16
+migraine	MONDO_0005277	GABRA2	ENSG00000151834	BUTALBITAL	GABA-A receptor; anion channel positive allosteric modulator	16
+migraine	MONDO_0005277	GABRA5	ENSG00000186297	BUTALBITAL	GABA-A receptor; anion channel positive allosteric modulator	16
+migraine	MONDO_0005277	GABRA6	ENSG00000145863	BUTALBITAL	GABA-A receptor; anion channel positive allosteric modulator	16
+migraine	MONDO_0005277	HTR1D	ENSG00000179546	DIHYDROERGOTAMINE	Serotonin 1d (5-HT1d) receptor agonist	1
+migraine	MONDO_0005277	HTR1B	ENSG00000135312	FROVATRIPTAN	Serotonin 1b (5-HT1b) receptor agonist	2
+migraine	MONDO_0005277	HTR1D	ENSG00000179546	FROVATRIPTAN	Serotonin 1d (5-HT1d) receptor agonist	2
+migraine	MONDO_0005277	RAMP1	ENSG00000132329	ZAVEGEPANT	Calcitonin-gene-related peptide receptor, CALCRL/RAMP1 antagonist	2
+migraine	MONDO_0005277	CALCRL	ENSG00000064989	ZAVEGEPANT	Calcitonin gene-related peptide type 1 receptor antagonist	2
+migraine	MONDO_0005277	HTR1D	ENSG00000179546	DIHYDROERGOTAMINE MESYLATE	Serotonin 1d (5-HT1d) receptor agonist	1
+migraine	MONDO_0005277	HTR1B	ENSG00000135312	RIZATRIPTAN	Serotonin 1b (5-HT1b) receptor agonist	2
+migraine	MONDO_0005277	HTR1D	ENSG00000179546	RIZATRIPTAN	Serotonin 1d (5-HT1d) receptor agonist	2
+migraine	MONDO_0005277	ADRA2A	ENSG00000150594	CLONIDINE	Adrenergic receptor alpha-2 agonist	3
+migraine	MONDO_0005277	ADRA2C	ENSG00000184160	CLONIDINE	Adrenergic receptor alpha-2 agonist	3
+migraine	MONDO_0005277	ADRA2B	ENSG00000274286	CLONIDINE	Adrenergic receptor alpha-2 agonist	3
+migraine	MONDO_0005277	CA2	ENSG00000104267	TOPIRAMATE	Carbonic anhydrase II inhibitor	37
+migraine	MONDO_0005277	CA4	ENSG00000167434	TOPIRAMATE	Carbonic anhydrase IV inhibitor	37
+migraine	MONDO_0005277	GRIA4	ENSG00000152578	TOPIRAMATE	Glutamate receptor ionotropic AMPA antagonist	37
+migraine	MONDO_0005277	GRIA3	ENSG00000125675	TOPIRAMATE	Glutamate receptor ionotropic AMPA antagonist	37
+migraine	MONDO_0005277	GRIA2	ENSG00000120251	TOPIRAMATE	Glutamate receptor ionotropic AMPA antagonist	37
+migraine	MONDO_0005277	GRIA1	ENSG00000155511	TOPIRAMATE	Glutamate receptor ionotropic AMPA antagonist	37
+migraine	MONDO_0005277	GRIK1	ENSG00000171189	TOPIRAMATE	Glutamate receptor ionotropic kainate antagonist	37
+migraine	MONDO_0005277	GRIK5	ENSG00000105737	TOPIRAMATE	Glutamate receptor ionotropic kainate antagonist	37
+migraine	MONDO_0005277	GRIK4	ENSG00000149403	TOPIRAMATE	Glutamate receptor ionotropic kainate antagonist	37
+migraine	MONDO_0005277	GRIK2	ENSG00000164418	TOPIRAMATE	Glutamate receptor ionotropic kainate antagonist	37
+migraine	MONDO_0005277	GRIK3	ENSG00000163873	TOPIRAMATE	Glutamate receptor ionotropic kainate antagonist	37
+migraine	MONDO_0005277	GABRA1	ENSG00000022355	TOPIRAMATE	GABA-A receptor; anion channel positive modulator	37
+migraine	MONDO_0005277	GABRB2	ENSG00000145864	TOPIRAMATE	GABA-A receptor; anion channel positive modulator	37
+migraine	MONDO_0005277	GABRG2	ENSG00000113327	TOPIRAMATE	GABA-A receptor; anion channel positive modulator	37
+migraine	MONDO_0005277	GABRB3	ENSG00000166206	TOPIRAMATE	GABA-A receptor; anion channel positive modulator	37
+migraine	MONDO_0005277	GABRA4	ENSG00000109158	TOPIRAMATE	GABA-A receptor; anion channel positive modulator	37
+migraine	MONDO_0005277	GABRG3	ENSG00000182256	TOPIRAMATE	GABA-A receptor; anion channel positive modulator	37
+migraine	MONDO_0005277	GABRQ	ENSG00000268089	TOPIRAMATE	GABA-A receptor; anion channel positive modulator	37
+migraine	MONDO_0005277	GABRA3	ENSG00000011677	TOPIRAMATE	GABA-A receptor; anion channel positive modulator	37
+migraine	MONDO_0005277	GABRP	ENSG00000094755	TOPIRAMATE	GABA-A receptor; anion channel positive modulator	37
+migraine	MONDO_0005277	GABRD	ENSG00000187730	TOPIRAMATE	GABA-A receptor; anion channel positive modulator	37
+migraine	MONDO_0005277	GABRG1	ENSG00000163285	TOPIRAMATE	GABA-A receptor; anion channel positive modulator	37
+migraine	MONDO_0005277	GABRB1	ENSG00000163288	TOPIRAMATE	GABA-A receptor; anion channel positive modulator	37
+migraine	MONDO_0005277	GABRE	ENSG00000102287	TOPIRAMATE	GABA-A receptor; anion channel positive modulator	37
+migraine	MONDO_0005277	GABRA2	ENSG00000151834	TOPIRAMATE	GABA-A receptor; anion channel positive modulator	37
+migraine	MONDO_0005277	GABRA5	ENSG00000186297	TOPIRAMATE	GABA-A receptor; anion channel positive modulator	37
+migraine	MONDO_0005277	GABRA6	ENSG00000145863	TOPIRAMATE	GABA-A receptor; anion channel positive modulator	37
+migraine	MONDO_0005277	SCN1A	ENSG00000144285	TOPIRAMATE	Sodium channel alpha subunit blocker	37
+migraine	MONDO_0005277	SCN5A	ENSG00000183873	TOPIRAMATE	Sodium channel alpha subunit blocker	37
+migraine	MONDO_0005277	SCN4A	ENSG00000007314	TOPIRAMATE	Sodium channel alpha subunit blocker	37
+migraine	MONDO_0005277	SCN7A	ENSG00000136546	TOPIRAMATE	Sodium channel alpha subunit blocker	37
+migraine	MONDO_0005277	SCN2A	ENSG00000136531	TOPIRAMATE	Sodium channel alpha subunit blocker	37
+migraine	MONDO_0005277	SCN9A	ENSG00000169432	TOPIRAMATE	Sodium channel alpha subunit blocker	37
+migraine	MONDO_0005277	SCN3A	ENSG00000153253	TOPIRAMATE	Sodium channel alpha subunit blocker	37
+migraine	MONDO_0005277	SCN11A	ENSG00000168356	TOPIRAMATE	Sodium channel alpha subunit blocker	37
+migraine	MONDO_0005277	SCN8A	ENSG00000196876	TOPIRAMATE	Sodium channel alpha subunit blocker	37
+migraine	MONDO_0005277	SCN10A	ENSG00000185313	TOPIRAMATE	Sodium channel alpha subunit blocker	37
+migraine	MONDO_0005277	OPRM1	ENSG00000112038	FENTANYL CITRATE	Mu opioid receptor agonist	1
+migraine	MONDO_0005277	HTR1F	ENSG00000179097	ALMOTRIPTAN	Serotonin 1f (5-HT1f) receptor agonist	3
+migraine	MONDO_0005277	HTR1B	ENSG00000135312	ALMOTRIPTAN	Serotonin 1b (5-HT1b) receptor agonist	3
+migraine	MONDO_0005277	HTR1D	ENSG00000179546	ALMOTRIPTAN	Serotonin 1d (5-HT1d) receptor agonist	3
+migraine	MONDO_0005277	ADRB1	ENSG00000043591	PROPRANOLOL	Beta-1 adrenergic receptor antagonist	2
+migraine	MONDO_0005277	ADRB2	ENSG00000169252	PROPRANOLOL	Beta-2 adrenergic receptor antagonist	2
+migraine	MONDO_0005277	HTR1F	ENSG00000179097	ELETRIPTAN HYDROBROMIDE	Serotonin 1f (5-HT1f) receptor agonist	3
+migraine	MONDO_0005277	HTR1B	ENSG00000135312	ELETRIPTAN HYDROBROMIDE	Serotonin 1b (5-HT1b) receptor agonist	3
+migraine	MONDO_0005277	HTR1D	ENSG00000179546	ELETRIPTAN HYDROBROMIDE	Serotonin 1d (5-HT1d) receptor agonist	3
+migraine	MONDO_0005277	HTR1B	ENSG00000135312	FROVATRIPTAN SUCCINATE	Serotonin 1b (5-HT1b) receptor agonist	2
+migraine	MONDO_0005277	HTR1D	ENSG00000179546	FROVATRIPTAN SUCCINATE	Serotonin 1d (5-HT1d) receptor agonist	2
+migraine	MONDO_0005277	ALDH5A1	ENSG00000112294	DIVALPROEX SODIUM	Succinate semialdehyde dehydrogenase inhibitor	1
+migraine	MONDO_0005277	ADORA1	ENSG00000163485	CAFFEINE	Adenosine receptor antagonist	4
+migraine	MONDO_0005277	ADORA2B	ENSG00000170425	CAFFEINE	Adenosine receptor antagonist	4
+migraine	MONDO_0005277	ADORA3	ENSG00000282608	CAFFEINE	Adenosine receptor antagonist	4
+migraine	MONDO_0005277	ADORA2A	ENSG00000128271	CAFFEINE	Adenosine receptor antagonist	4
+rheumatoid_arthritis	MONDO_0008383	IL1R1	ENSG00000115594	ANAKINRA	Interleukin-1 receptor antagonist	1
+rheumatoid_arthritis	MONDO_0008383	JAK3	ENSG00000105639	TOFACITINIB	Janus Kinase (JAK) inhibitor	4
+rheumatoid_arthritis	MONDO_0008383	JAK1	ENSG00000162434	TOFACITINIB	Janus Kinase (JAK) inhibitor	4
+rheumatoid_arthritis	MONDO_0008383	JAK2	ENSG00000096968	TOFACITINIB	Janus Kinase (JAK) inhibitor	4
+rheumatoid_arthritis	MONDO_0008383	TYK2	ENSG00000105397	TOFACITINIB	Janus Kinase (JAK) inhibitor	4
+rheumatoid_arthritis	MONDO_0008383	PTGS2	ENSG00000073756	NAPROXEN SODIUM	Cyclooxygenase inhibitor	2
+rheumatoid_arthritis	MONDO_0008383	PTGS1	ENSG00000095303	NAPROXEN SODIUM	Cyclooxygenase inhibitor	2
+rheumatoid_arthritis	MONDO_0008383	TNF	ENSG00000232810	ETANERCEPT	TNF-alpha inhibitor	1
+rheumatoid_arthritis	MONDO_0008383	TNF	ENSG00000232810	ADALIMUMAB	TNF-alpha inhibitor	1
+rheumatoid_arthritis	MONDO_0008383	TLR7	ENSG00000196664	HYDROXYCHLOROQUINE SULFATE	Toll-like receptor 7 antagonist	2
+rheumatoid_arthritis	MONDO_0008383	TLR9	ENSG00000239732	HYDROXYCHLOROQUINE SULFATE	Toll-like receptor 9 antagonist	2
+rheumatoid_arthritis	MONDO_0008383	PTGS2	ENSG00000073756	NABUMETONE	Cyclooxygenase-2 inhibitor	1
+rheumatoid_arthritis	MONDO_0008383	PTGS2	ENSG00000073756	ACECLOFENAC	Cyclooxygenase-2 inhibitor	1
+rheumatoid_arthritis	MONDO_0008383	DHODH	ENSG00000102967	LEFLUNOMIDE	Dihydroorotate dehydrogenase inhibitor	1
+rheumatoid_arthritis	MONDO_0008383	PTGS2	ENSG00000073756	MELOXICAM	Cyclooxygenase-2 inhibitor	1
+rheumatoid_arthritis	MONDO_0008383	PTGS2	ENSG00000073756	ETODOLAC	Cyclooxygenase-2 inhibitor	1
+rheumatoid_arthritis	MONDO_0008383	PTGS2	ENSG00000073756	FENOPROFEN CALCIUM	Cyclooxygenase inhibitor	2
+rheumatoid_arthritis	MONDO_0008383	PTGS1	ENSG00000095303	FENOPROFEN CALCIUM	Cyclooxygenase inhibitor	2
+rheumatoid_arthritis	MONDO_0008383	NR3C1	ENSG00000113580	HYDROCORTISONE	Glucocorticoid receptor agonist	1
+rheumatoid_arthritis	MONDO_0008383	PTGS2	ENSG00000073756	PIROXICAM	Cyclooxygenase inhibitor	2
+rheumatoid_arthritis	MONDO_0008383	PTGS1	ENSG00000095303	PIROXICAM	Cyclooxygenase inhibitor	2
+rheumatoid_arthritis	MONDO_0008383	HRH2	ENSG00000113749	FAMOTIDINE	Histamine H2 receptor antagonist	1
+rheumatoid_arthritis	MONDO_0008383	IL6R	ENSG00000160712	TOCILIZUMAB	Interleukin-6 receptor alpha subunit inhibitor	1
+rheumatoid_arthritis	MONDO_0008383	MS4A1	ENSG00000156738	RITUXIMAB	B-lymphocyte antigen CD20 binding agent	1
+rheumatoid_arthritis	MONDO_0008383	ALOX5	ENSG00000012779	SULFASALAZINE	Arachidonate 5-lipoxygenase inhibitor	3
+rheumatoid_arthritis	MONDO_0008383	PTGS2	ENSG00000073756	SULFASALAZINE	Cyclooxygenase inhibitor	3
+rheumatoid_arthritis	MONDO_0008383	PTGS1	ENSG00000095303	SULFASALAZINE	Cyclooxygenase inhibitor	3
+rheumatoid_arthritis	MONDO_0008383	PTGS2	ENSG00000073756	FENOPROFEN	Cyclooxygenase inhibitor	2
+rheumatoid_arthritis	MONDO_0008383	PTGS1	ENSG00000095303	FENOPROFEN	Cyclooxygenase inhibitor	2
+rheumatoid_arthritis	MONDO_0008383	PTGS2	ENSG00000073756	CELECOXIB	Cyclooxygenase-2 inhibitor	1
+rheumatoid_arthritis	MONDO_0008383	PPAT	ENSG00000128059	AZATHIOPRINE	Amidophosphoribosyltransferase inhibitor	1
+rheumatoid_arthritis	MONDO_0008383	PTGS2	ENSG00000073756	NAPROXEN	Cyclooxygenase inhibitor	2
+rheumatoid_arthritis	MONDO_0008383	PTGS1	ENSG00000095303	NAPROXEN	Cyclooxygenase inhibitor	2
+rheumatoid_arthritis	MONDO_0008383	PTGS2	ENSG00000073756	TOLMETIN SODIUM	Cyclooxygenase inhibitor	2
+rheumatoid_arthritis	MONDO_0008383	PTGS1	ENSG00000095303	TOLMETIN SODIUM	Cyclooxygenase inhibitor	2
+rheumatoid_arthritis	MONDO_0008383	PTGS2	ENSG00000073756	INDOMETHACIN	Cyclooxygenase inhibitor	2
+rheumatoid_arthritis	MONDO_0008383	PTGS1	ENSG00000095303	INDOMETHACIN	Cyclooxygenase inhibitor	2
+rheumatoid_arthritis	MONDO_0008383	PTGS2	ENSG00000073756	TOLMETIN	Cyclooxygenase inhibitor	2
+rheumatoid_arthritis	MONDO_0008383	PTGS1	ENSG00000095303	TOLMETIN	Cyclooxygenase inhibitor	2
+rheumatoid_arthritis	MONDO_0008383	JAK3	ENSG00000105639	TOFACITINIB CITRATE	Janus Kinase (JAK) inhibitor	4
+rheumatoid_arthritis	MONDO_0008383	JAK1	ENSG00000162434	TOFACITINIB CITRATE	Janus Kinase (JAK) inhibitor	4
+rheumatoid_arthritis	MONDO_0008383	JAK2	ENSG00000096968	TOFACITINIB CITRATE	Janus Kinase (JAK) inhibitor	4
+rheumatoid_arthritis	MONDO_0008383	TYK2	ENSG00000105397	TOFACITINIB CITRATE	Janus Kinase (JAK) inhibitor	4
+rheumatoid_arthritis	MONDO_0008383	PTGS2	ENSG00000073756	KETOPROFEN	Cyclooxygenase inhibitor	2
+rheumatoid_arthritis	MONDO_0008383	PTGS1	ENSG00000095303	KETOPROFEN	Cyclooxygenase inhibitor	2
+rheumatoid_arthritis	MONDO_0008383	JAK1	ENSG00000162434	FILGOTINIB	Tyrosine-protein kinase JAK1 inhibitor	4
+rheumatoid_arthritis	MONDO_0008383	JAK2	ENSG00000096968	FILGOTINIB	Tyrosine-protein kinase JAK2 inhibitor	4
+rheumatoid_arthritis	MONDO_0008383	TYK2	ENSG00000105397	FILGOTINIB	Tyrosine-protein kinase TYK2 inhibitor	4
+rheumatoid_arthritis	MONDO_0008383	JAK3	ENSG00000105639	FILGOTINIB	Tyrosine-protein kinase JAK3 inhibitor	4
+rheumatoid_arthritis	MONDO_0008383	NR3C1	ENSG00000113580	PREDNISONE	Glucocorticoid receptor agonist	1
+rheumatoid_arthritis	MONDO_0008383	IL6R	ENSG00000160712	SARILUMAB	Interleukin-6 receptor alpha subunit antagonist	1
+rheumatoid_arthritis	MONDO_0008383	MIF	ENSG00000240972	IGURATIMOD	Macrophage migration inhibitory factor inhibitor	3
+rheumatoid_arthritis	MONDO_0008383	TRAF3IP2	ENSG00000056972	IGURATIMOD	E3 ubiquitin ligase TRAF3IP2 inhibitor	3
+rheumatoid_arthritis	MONDO_0008383	PTGS2	ENSG00000073756	IGURATIMOD	Cyclooxygenase-2 inhibitor	3
+rheumatoid_arthritis	MONDO_0008383	DHFR	ENSG00000228716	METHOTREXATE SODIUM	Dihydrofolate reductase inhibitor	1
+rheumatoid_arthritis	MONDO_0008383	ATP4A	ENSG00000105675	ESOMEPRAZOLE MAGNESIUM	Potassium-transporting ATPase inhibitor	2
+rheumatoid_arthritis	MONDO_0008383	ATP4B	ENSG00000186009	ESOMEPRAZOLE MAGNESIUM	Potassium-transporting ATPase inhibitor	2
+rheumatoid_arthritis	MONDO_0008383	IL1B	ENSG00000125538	CANAKINUMAB	Interleukin-1 beta inhibitor	1
+rheumatoid_arthritis	MONDO_0008383	PTGER3	ENSG00000050628	MISOPROSTOL	Prostanoid EP3 receptor agonist	1
+rheumatoid_arthritis	MONDO_0008383	NR3C1	ENSG00000113580	METHYLPREDNISOLONE SODIUM SUCCINATE	Glucocorticoid receptor agonist	1
+rheumatoid_arthritis	MONDO_0008383	TNF	ENSG00000232810	INFLIXIMAB	TNF-alpha inhibitor	1
+rheumatoid_arthritis	MONDO_0008383	DHFR	ENSG00000228716	METHOTREXATE	Dihydrofolate reductase inhibitor	1
+rheumatoid_arthritis	MONDO_0008383	JAK1	ENSG00000162434	FILGOTINIB MALEATE	Tyrosine-protein kinase JAK1 inhibitor	4
+rheumatoid_arthritis	MONDO_0008383	JAK2	ENSG00000096968	FILGOTINIB MALEATE	Tyrosine-protein kinase JAK2 inhibitor	4
+rheumatoid_arthritis	MONDO_0008383	TYK2	ENSG00000105397	FILGOTINIB MALEATE	Tyrosine-protein kinase TYK2 inhibitor	4
+rheumatoid_arthritis	MONDO_0008383	JAK3	ENSG00000105639	FILGOTINIB MALEATE	Tyrosine-protein kinase JAK3 inhibitor	4
+rheumatoid_arthritis	MONDO_0008383	TNF	ENSG00000232810	OZORALIZUMAB	TNF-alpha inhibitor	1
+rheumatoid_arthritis	MONDO_0008383	PTGS1	ENSG00000095303	ALCLOFENAC	Cyclooxygenase-1 inhibitor	1
+rheumatoid_arthritis	MONDO_0008383	NR3C1	ENSG00000113580	TRIAMCINOLONE ACETONIDE	Glucocorticoid receptor agonist	1
+rheumatoid_arthritis	MONDO_0008383	PTGS2	ENSG00000073756	DICLOFENAC SODIUM	Cyclooxygenase inhibitor	2
+rheumatoid_arthritis	MONDO_0008383	PTGS1	ENSG00000095303	DICLOFENAC SODIUM	Cyclooxygenase inhibitor	2
+rheumatoid_arthritis	MONDO_0008383	TYK2	ENSG00000105397	UPADACITINIB HEMIHYDRATE	Tyrosine-protein kinase TYK2 inhibitor	4
+rheumatoid_arthritis	MONDO_0008383	JAK3	ENSG00000105639	UPADACITINIB HEMIHYDRATE	Tyrosine-protein kinase JAK3 inhibitor	4
+rheumatoid_arthritis	MONDO_0008383	JAK2	ENSG00000096968	UPADACITINIB HEMIHYDRATE	Tyrosine-protein kinase JAK2 inhibitor	4
+rheumatoid_arthritis	MONDO_0008383	JAK1	ENSG00000162434	UPADACITINIB HEMIHYDRATE	Tyrosine-protein kinase JAK1 inhibitor	4
+rheumatoid_arthritis	MONDO_0008383	NR3C1	ENSG00000113580	METHYLPREDNISOLONE ACETATE	Glucocorticoid receptor agonist	1
+rheumatoid_arthritis	MONDO_0008383	TYK2	ENSG00000105397	UPADACITINIB	Tyrosine-protein kinase TYK2 inhibitor	4
+rheumatoid_arthritis	MONDO_0008383	JAK3	ENSG00000105639	UPADACITINIB	Tyrosine-protein kinase JAK3 inhibitor	4
+rheumatoid_arthritis	MONDO_0008383	JAK2	ENSG00000096968	UPADACITINIB	Tyrosine-protein kinase JAK2 inhibitor	4
+rheumatoid_arthritis	MONDO_0008383	JAK1	ENSG00000162434	UPADACITINIB	Tyrosine-protein kinase JAK1 inhibitor	4
+rheumatoid_arthritis	MONDO_0008383	CD86	ENSG00000114013	ABATACEPT	T-lymphocyte activation antigen CD86 inhibitor	2
+rheumatoid_arthritis	MONDO_0008383	CD80	ENSG00000121594	ABATACEPT	T-lymphocyte activation antigen CD80 inhibitor	2
+rheumatoid_arthritis	MONDO_0008383	NR3C1	ENSG00000113580	DEXAMETHASONE	Glucocorticoid receptor agonist	1
+rheumatoid_arthritis	MONDO_0008383	ALOX5	ENSG00000012779	MECLOFENAMATE SODIUM	Arachidonate 5-lipoxygenase inhibitor	3
+rheumatoid_arthritis	MONDO_0008383	PTGS2	ENSG00000073756	MECLOFENAMATE SODIUM	Cyclooxygenase inhibitor	3
+rheumatoid_arthritis	MONDO_0008383	PTGS1	ENSG00000095303	MECLOFENAMATE SODIUM	Cyclooxygenase inhibitor	3
+rheumatoid_arthritis	MONDO_0008383	PPIA	ENSG00000196262	CYCLOSPORINE	Cyclophilin A modulator	1
+rheumatoid_arthritis	MONDO_0008383	NR3C1	ENSG00000113580	METHYLPREDNISOLONE	Glucocorticoid receptor agonist	1
+rheumatoid_arthritis	MONDO_0008383	PTGS2	ENSG00000073756	VALDECOXIB	Cyclooxygenase-2 inhibitor	1
+rheumatoid_arthritis	MONDO_0008383	PTGS2	ENSG00000073756	FLURBIPROFEN	Cyclooxygenase inhibitor	2
+rheumatoid_arthritis	MONDO_0008383	PTGS1	ENSG00000095303	FLURBIPROFEN	Cyclooxygenase inhibitor	2
+rheumatoid_arthritis	MONDO_0008383	PTGS2	ENSG00000073756	DICLOFENAC	Cyclooxygenase inhibitor	2
+rheumatoid_arthritis	MONDO_0008383	PTGS1	ENSG00000095303	DICLOFENAC	Cyclooxygenase inhibitor	2
+rheumatoid_arthritis	MONDO_0008383	JAK1	ENSG00000162434	BARICITINIB	Tyrosine-protein kinase JAK1 inhibitor	2
+rheumatoid_arthritis	MONDO_0008383	JAK2	ENSG00000096968	BARICITINIB	Tyrosine-protein kinase JAK2 inhibitor	2
+rheumatoid_arthritis	MONDO_0008383	PTGS2	ENSG00000073756	DIFLUNISAL	Cyclooxygenase inhibitor	2
+rheumatoid_arthritis	MONDO_0008383	PTGS1	ENSG00000095303	DIFLUNISAL	Cyclooxygenase inhibitor	2
+rheumatoid_arthritis	MONDO_0008383	NR3C1	ENSG00000113580	PREDNISOLONE	Glucocorticoid receptor agonist	1
+rheumatoid_arthritis	MONDO_0008383	TNF	ENSG00000232810	CERTOLIZUMAB PEGOL	TNF-alpha inhibitor	1
+rheumatoid_arthritis	MONDO_0008383	PTGS2	ENSG00000073756	DICLOFENAC POTASSIUM	Cyclooxygenase inhibitor	2
+rheumatoid_arthritis	MONDO_0008383	PTGS1	ENSG00000095303	DICLOFENAC POTASSIUM	Cyclooxygenase inhibitor	2
+rheumatoid_arthritis	MONDO_0008383	PTGS2	ENSG00000073756	IBUPROFEN	Cyclooxygenase inhibitor	2
+rheumatoid_arthritis	MONDO_0008383	PTGS1	ENSG00000095303	IBUPROFEN	Cyclooxygenase inhibitor	2
+rheumatoid_arthritis	MONDO_0008383	PTGS2	ENSG00000073756	SULINDAC	Cyclooxygenase inhibitor	2
+rheumatoid_arthritis	MONDO_0008383	PTGS1	ENSG00000095303	SULINDAC	Cyclooxygenase inhibitor	2
+rheumatoid_arthritis	MONDO_0008383	PTGS2	ENSG00000073756	ETORICOXIB	Cyclooxygenase-2 inhibitor	1
+rheumatoid_arthritis	MONDO_0008383	NR3C1	ENSG00000113580	DEXAMETHASONE SODIUM PHOSPHATE	Glucocorticoid receptor agonist	1
+rheumatoid_arthritis	MONDO_0008383	TNF	ENSG00000232810	GOLIMUMAB	TNF-alpha inhibitor	1
+rheumatoid_arthritis	MONDO_0008383	PTGS2	ENSG00000073756	OXAPROZIN	Cyclooxygenase inhibitor	2
+rheumatoid_arthritis	MONDO_0008383	PTGS1	ENSG00000095303	OXAPROZIN	Cyclooxygenase inhibitor	2
+rheumatoid_arthritis	MONDO_0008383	ATP4A	ENSG00000105675	OMEPRAZOLE	Potassium-transporting ATPase inhibitor	2
+rheumatoid_arthritis	MONDO_0008383	ATP4B	ENSG00000186009	OMEPRAZOLE	Potassium-transporting ATPase inhibitor	2
+rheumatoid_arthritis	MONDO_0008383	NR3C1	ENSG00000113580	CORTISONE ACETATE	Glucocorticoid receptor agonist	1
+ibd	MONDO_0005265	ALOX5	ENSG00000012779	BALSALAZIDE	Arachidonate 5-lipoxygenase inhibitor	4
+ibd	MONDO_0005265	PPARG	ENSG00000132170	BALSALAZIDE	Peroxisome proliferator-activated receptor gamma agonist	4
+ibd	MONDO_0005265	PTGS2	ENSG00000073756	BALSALAZIDE	Cyclooxygenase inhibitor	4
+ibd	MONDO_0005265	PTGS1	ENSG00000095303	BALSALAZIDE	Cyclooxygenase inhibitor	4
+ibd	MONDO_0005011	PPAT	ENSG00000128059	AZATHIOPRINE	Amidophosphoribosyltransferase inhibitor	1
+ibd	MONDO_0005011	NR3C1	ENSG00000113580	METHYLPREDNISOLONE	Glucocorticoid receptor agonist	1
+ibd	MONDO_0005011	IL12B	ENSG00000113302	GUSELKUMAB	Interleukin-23 inhibitor	2
+ibd	MONDO_0005011	IL23A	ENSG00000110944	GUSELKUMAB	Interleukin-23 inhibitor	2
+ibd	MONDO_0005011	IL12B	ENSG00000113302	MIRIKIZUMAB	Interleukin-23 inhibitor	2
+ibd	MONDO_0005011	IL23A	ENSG00000110944	MIRIKIZUMAB	Interleukin-23 inhibitor	2
+ibd	MONDO_0005011	ITGA4	ENSG00000115232	VEDOLIZUMAB	Integrin alpha-4/beta-7 inhibitor	2
+ibd	MONDO_0005011	ITGB7	ENSG00000139626	VEDOLIZUMAB	Integrin alpha-4/beta-7 inhibitor	2
+ibd	MONDO_0005011	NR3C1	ENSG00000113580	BUDESONIDE	Glucocorticoid receptor agonist	1
+ibd	MONDO_0005011	NR3C1	ENSG00000113580	DEXAMETHASONE	Glucocorticoid receptor agonist	1
+ibd	MONDO_0005011	NR3C1	ENSG00000113580	DEXAMETHASONE SODIUM PHOSPHATE	Glucocorticoid receptor agonist	1
+ibd	MONDO_0005011	IL12B	ENSG00000113302	USTEKINUMAB	Interleukin-23 inhibitor	3
+ibd	MONDO_0005011	IL12A	ENSG00000168811	USTEKINUMAB	Interleukin-12 inhibitor	3
+ibd	MONDO_0005011	IL23A	ENSG00000110944	USTEKINUMAB	Interleukin-23 inhibitor	3
+ibd	MONDO_0005011	NR3C1	ENSG00000113580	PREDNISOLONE	Glucocorticoid receptor agonist	1
+ibd	MONDO_0005011	IMPDH1	ENSG00000106348	MYCOPHENOLIC ACID	Inosine-5'-monophosphate dehydrogenase (IMPDH) inhibitor	2
+ibd	MONDO_0005011	IMPDH2	ENSG00000178035	MYCOPHENOLIC ACID	Inosine-5'-monophosphate dehydrogenase (IMPDH) inhibitor	2
+ibd	MONDO_0005011	NR3C1	ENSG00000113580	HYDROCORTISONE	Glucocorticoid receptor agonist	1
+ibd	MONDO_0005011	NR3C1	ENSG00000113580	PREDNISONE	Glucocorticoid receptor agonist	1
+ibd	MONDO_0005011	TNF	ENSG00000232810	INFLIXIMAB	TNF-alpha inhibitor	1
+ibd	MONDO_0005011	TNF	ENSG00000232810	ADALIMUMAB	TNF-alpha inhibitor	1
+ibd	MONDO_0005011	IL12B	ENSG00000113302	RISANKIZUMAB	Interleukin-23 inhibitor	2
+ibd	MONDO_0005011	IL23A	ENSG00000110944	RISANKIZUMAB	Interleukin-23 inhibitor	2
+ibd	MONDO_0005011	TNF	ENSG00000232810	CERTOLIZUMAB PEGOL	TNF-alpha inhibitor	1
+ibd	MONDO_0005011	TYK2	ENSG00000105397	UPADACITINIB	Tyrosine-protein kinase TYK2 inhibitor	4
+ibd	MONDO_0005011	JAK3	ENSG00000105639	UPADACITINIB	Tyrosine-protein kinase JAK3 inhibitor	4
+ibd	MONDO_0005011	JAK2	ENSG00000096968	UPADACITINIB	Tyrosine-protein kinase JAK2 inhibitor	4
+ibd	MONDO_0005011	JAK1	ENSG00000162434	UPADACITINIB	Tyrosine-protein kinase JAK1 inhibitor	4
+ibd	MONDO_0005011	ITGA4	ENSG00000115232	NATALIZUMAB	Integrin alpha-4/beta-1 inhibitor	3
+ibd	MONDO_0005011	ITGB7	ENSG00000139626	NATALIZUMAB	Integrin alpha-4/beta-7 inhibitor	3
+ibd	MONDO_0005011	ITGB1	ENSG00000150093	NATALIZUMAB	Integrin alpha-4/beta-1 inhibitor	3
+ibd	MONDO_0005101	TNF	ENSG00000232810	GOLIMUMAB	TNF-alpha inhibitor	1
+ibd	MONDO_0005101	ALOX5	ENSG00000012779	OLSALAZINE SODIUM	Arachidonate 5-lipoxygenase inhibitor	4
+ibd	MONDO_0005101	PPARG	ENSG00000132170	OLSALAZINE SODIUM	Peroxisome proliferator-activated receptor gamma agonist	4
+ibd	MONDO_0005101	PTGS2	ENSG00000073756	OLSALAZINE SODIUM	Cyclooxygenase inhibitor	4
+ibd	MONDO_0005101	PTGS1	ENSG00000095303	OLSALAZINE SODIUM	Cyclooxygenase inhibitor	4
+ibd	MONDO_0005101	ALOX5	ENSG00000012779	OLSALAZINE	Arachidonate 5-lipoxygenase inhibitor	4
+ibd	MONDO_0005101	PPARG	ENSG00000132170	OLSALAZINE	Peroxisome proliferator-activated receptor gamma agonist	4
+ibd	MONDO_0005101	PTGS2	ENSG00000073756	OLSALAZINE	Cyclooxygenase inhibitor	4
+ibd	MONDO_0005101	PTGS1	ENSG00000095303	OLSALAZINE	Cyclooxygenase inhibitor	4
+ibd	MONDO_0005101	NR3C1	ENSG00000113580	BETAMETHASONE ACETATE	Glucocorticoid receptor agonist	1
+ibd	MONDO_0005101	MC2R	ENSG00000185231	CORTICOTROPIN ZINC HYDROXIDE	Melanocortin receptor 2 agonist	1
+ibd	MONDO_0005101	ALOX5	ENSG00000012779	BALSALAZIDE DISODIUM	Arachidonate 5-lipoxygenase inhibitor	4
+ibd	MONDO_0005101	PPARG	ENSG00000132170	BALSALAZIDE DISODIUM	Peroxisome proliferator-activated receptor gamma agonist	4
+ibd	MONDO_0005101	PTGS2	ENSG00000073756	BALSALAZIDE DISODIUM	Cyclooxygenase inhibitor	4
+ibd	MONDO_0005101	PTGS1	ENSG00000095303	BALSALAZIDE DISODIUM	Cyclooxygenase inhibitor	4
+ibd	MONDO_0005101	TYK2	ENSG00000105397	UPADACITINIB HEMIHYDRATE	Tyrosine-protein kinase TYK2 inhibitor	4
+ibd	MONDO_0005101	JAK3	ENSG00000105639	UPADACITINIB HEMIHYDRATE	Tyrosine-protein kinase JAK3 inhibitor	4
+ibd	MONDO_0005101	JAK2	ENSG00000096968	UPADACITINIB HEMIHYDRATE	Tyrosine-protein kinase JAK2 inhibitor	4
+ibd	MONDO_0005101	JAK1	ENSG00000162434	UPADACITINIB HEMIHYDRATE	Tyrosine-protein kinase JAK1 inhibitor	4
+ibd	MONDO_0005101	S1PR1	ENSG00000170989	OZANIMOD	Sphingosine 1-phosphate receptor Edg-1 modulator	2
+ibd	MONDO_0005101	S1PR5	ENSG00000180739	OZANIMOD	Sphingosine 1-phosphate receptor 5 modulator	2
+ibd	MONDO_0005101	S1PR1	ENSG00000170989	ETRASIMOD	Sphingosine 1-phosphate receptor Edg-1 modulator	3
+ibd	MONDO_0005101	S1PR4	ENSG00000125910	ETRASIMOD	Sphingosine 1-phosphate receptor Edg-6 modulator	3
+ibd	MONDO_0005101	S1PR5	ENSG00000180739	ETRASIMOD	Sphingosine 1-phosphate receptor Edg-8 modulator	3
+ibd	MONDO_0005101	ALOX5	ENSG00000012779	SULFASALAZINE	Arachidonate 5-lipoxygenase inhibitor	3
+ibd	MONDO_0005101	PTGS2	ENSG00000073756	SULFASALAZINE	Cyclooxygenase inhibitor	3
+ibd	MONDO_0005101	PTGS1	ENSG00000095303	SULFASALAZINE	Cyclooxygenase inhibitor	3
+ibd	MONDO_0005101	S1PR1	ENSG00000170989	OZANIMOD HYDROCHLORIDE	Sphingosine 1-phosphate receptor Edg-1 modulator	1
+ibd	MONDO_0005101	NR3C1	ENSG00000113580	BETAMETHASONE SODIUM PHOSPHATE	Glucocorticoid receptor agonist	1
+ibd	MONDO_0005101	S1PR4	ENSG00000125910	ETRASIMOD ARGININE	Sphingosine 1-phosphate receptor Edg-6 modulator	3
+ibd	MONDO_0005101	S1PR1	ENSG00000170989	ETRASIMOD ARGININE	Sphingosine 1-phosphate receptor Edg-1 modulator	3
+ibd	MONDO_0005101	S1PR5	ENSG00000180739	ETRASIMOD ARGININE	Sphingosine 1-phosphate receptor Edg-8 modulator	3
+ibd	MONDO_0005101	ALOX5	ENSG00000012779	MESALAMINE	Arachidonate 5-lipoxygenase inhibitor	4
+ibd	MONDO_0005101	PPARG	ENSG00000132170	MESALAMINE	Peroxisome proliferator-activated receptor gamma agonist	4
+ibd	MONDO_0005101	PTGS2	ENSG00000073756	MESALAMINE	Cyclooxygenase inhibitor	4
+ibd	MONDO_0005101	PTGS1	ENSG00000095303	MESALAMINE	Cyclooxygenase inhibitor	4

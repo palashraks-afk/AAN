@@ -14,6 +14,7 @@ from pathlib import Path
 
 import pandas as pd
 
+import gene_property
 import gwas_readers
 
 TOOLS = Path("D:/AAN_data/tools")
@@ -43,8 +44,6 @@ def main():
     ap.add_argument("--format", choices=["decodeme", "harmonised", "pgc3"], required=True)
     ap.add_argument("--n", type=int, help="total sample size, used when the file has no per-SNP N")
     ap.add_argument("--map", default=str(DERIVED / "decodeme_rsid_map.parquet"))
-    ap.add_argument("--covar", default=str(DERIVED / "gene_covar.txt"))
-    ap.add_argument("--condition", default="avg_all,avg_neuron")
     ap.add_argument("--jobs", type=int, default=6, help="chromosomes analysed in parallel")
     ap.add_argument("--reuse", action="store_true", help="skip rebuilding the SNP files if annotation exists")
     args = ap.parse_args()
@@ -81,9 +80,8 @@ def main():
         list(pool.map(gene_analysis, [str(c) for c in range(1, 23)]))
     run([MAGMA, "--merge", workdir / "genes", "--out", workdir / "genes"])
 
-    run([MAGMA, "--gene-results", workdir / "genes.genes.raw", "--gene-covar", args.covar,
-         "--model", f"condition-hide={args.condition}", "direction=pos",
-         "--out", workdir / "cluster_prop"])
+    for model in ("A", "B"):
+        gene_property.run_model(args.name, model)
 
 
 if __name__ == "__main__":
