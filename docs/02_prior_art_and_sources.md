@@ -50,6 +50,23 @@ whether the striatal medium spiny neuron hit is just what every polygenic brain 
 conditioning on shared genetics, a subtype contrast at cell-type level, or a benchmark-validated
 target ranking.
 
+## Searched 2026-10-08 for the neglected-condition extension (cell-type work that already exists)
+- Tinnitus: 2025 GWAS meta-analysis (888,214 people) mapped to a human brain atlas, amygdala and midbrain
+  neurons. https://pmc.ncbi.nlm.nih.gov/articles/PMC12687797/
+- Restless legs: 2024 meta-analysis, mouse single-cell nervous system data, neurons and neuroblasts.
+  https://www.nature.com/articles/s41588-024-01763-1
+- Essential tremor: 2024 GWAS (16,480 cases) with FUMA gene-set enrichment (embryonic midbrain
+  dopaminergic cells); cerebellum single-cell eQTL preprint pointing to oligodendrocytes.
+  https://www.nature.com/articles/s42003-024-06207-4
+  https://www.biorxiv.org/content/10.1101/2024.05.22.595233v1.full
+- Cross-disorder single-nucleus TWAS of 12 neuropsychiatric/neurodegenerative GWAS (Nature 2026).
+  https://www.nature.com/articles/s41586-026-10836-6
+- Neurodegenerative cell-type enrichment preprint: only the PD meta-GWAS reached significance, the others
+  were too small. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10680930/
+- Not found: any GWAS-based cell-type analysis of trigeminal neuralgia or cluster headache, or of Meniere's
+  disease. Caveat: FinnGen R13 has only about 2,356 (TN) and 1,600-2,050 (cluster headache) cases, so
+  they may not pass the heritability gate.
+
 ## Cell-type enrichment methods / analogues
 - scDRS (Zhang et al., Nature Genetics 2022; 74 traits, 1.3M cells) —
   https://www.nature.com/articles/s41588-022-01167-z
