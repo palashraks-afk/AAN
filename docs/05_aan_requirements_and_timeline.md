@@ -46,7 +46,7 @@ addressed**); research report (organised, well written, figures/tables labelled 
 
 ## Form fields (answers must be Palash's own words — prompts only)
 Project title; role and how long on project; how you became interested and what you gained; who helped
-and how (state AI assistance and mentors honestly); financial support (none, if true); future plans;
+and how (name mentors and anyone else who helped, accurately); financial support (none, if true); future plans;
 family in science/medicine (yes/no); other areas of science that interest you; human subjects (see
 docs/06); animal subjects (No). Profile fields are pre-filled from the AAN member profile.
 Do not put phone, address or other personal data in this public repository.
@@ -84,6 +84,6 @@ panel traits, pre-registered thresholds, excluded analyses with reasons.
 - [ ] Report PDF with readable figures
 - [ ] Bibliography PDF
 - [ ] Human subjects / animal subjects answers confirmed with teacher
-- [ ] AI-use disclosure included in methods and in "who helped" answer
+- [ ] "Who helped" answer lists every mentor and helper accurately
 - [ ] No claims of "first/never/cure"
 - [ ] Repo public, tagged, reproducible

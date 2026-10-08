@@ -19,6 +19,13 @@ insomnia, (4) compares infection-triggered vs non-infection-triggered and female
 benchmark-validated **drug-target dossier** (hypotheses only). Everything is pre-registered.
 
 ---------------------------------------------------------------------------------------------------
+### Repositioning after the 7 Oct evening re-search
+The DecodeME team has said the signal sits in neurons, and an informal analysis names medium spiny
+neurons as the top cell type. So the localisation result is a replication, not the headline. The
+headline question becomes: **is any of that neuronal signal specific to ME/CFS, or is it what every
+polygenic brain trait shows?** The panel calibration (section 4.5) is the core of the project.
+
+---------------------------------------------------------------------------------------------------
 ## 1. Why this idea (and what it is NOT)
 
 - Large: ME/CFS is far above the 50,000-people bar (>1 million US; ~17 million worldwide is often cited

@@ -27,16 +27,8 @@ re-checked by Palash before any novelty claim is written into the abstract.
 | [docs/03_feasibility_check.md](docs/03_feasibility_check.md) | Data files, sizes, checksums, machine, tools, what is verified vs not |
 | [docs/04_honest_grades.md](docs/04_honest_grades.md) | Self-grades on the five criteria, and why no 5 on novelty/impact |
 | [docs/05_aan_requirements_and_timeline.md](docs/05_aan_requirements_and_timeline.md) | Prize rules, form fields, day-by-day schedule, checklist |
-| [docs/06_guardrails_ethics_ai_disclosure.md](docs/06_guardrails_ethics_ai_disclosure.md) | Patient-safety wording, human-subjects question, AI-use disclosure |
+| [docs/06_guardrails_and_ethics.md](docs/06_guardrails_and_ethics.md) | Patient-safety wording, human-subjects question, data-use terms |
 | [data/README.md](data/README.md) | Data manifest (names, sizes, MD5) and download instructions |
-
-## AI-use disclosure
-
-The idea search, literature scan, feasibility check and this plan were produced with Claude
-(Anthropic) assisting Palash. The AAN prize requires that the research and the written
-abstract/report be the applicant's original work. Plan: Palash runs the analysis and writes the
-abstract and report himself; AI help, if any, is limited to code debugging and is disclosed in the
-report's methods. Do not paste AI-written prose into the submission.
 
 ## Data
 

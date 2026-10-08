@@ -11,6 +11,7 @@ import csv
 import hashlib
 import shutil
 import sys
+import time
 from pathlib import Path
 
 import requests
@@ -32,12 +33,24 @@ def md5_of(path):
     return h.hexdigest()
 
 
-def fetch(url, out, expected_bytes):
-    with requests.get(url, stream=True, allow_redirects=True, timeout=60) as r:
+def fetch(url, out, expected_bytes, tries=8):
+    # OSF answers 429 if you ask for several big files in a row, so back off and retry
+    for attempt in range(tries):
+        r = requests.get(url, stream=True, allow_redirects=True, timeout=60)
+        if r.status_code == 429:
+            wait = int(r.headers.get("Retry-After", 0)) or 30 * (attempt + 1)
+            print(f"  429 from server, waiting {wait}s")
+            r.close()
+            time.sleep(wait)
+            continue
         r.raise_for_status()
         with open(out, "wb") as fh:
             for block in r.iter_content(CHUNK):
                 fh.write(block)
+        r.close()
+        break
+    else:
+        raise RuntimeError(f"gave up on {out.name} after {tries} tries")
     got = out.stat().st_size
     if got != expected_bytes:
         raise RuntimeError(f"{out.name}: got {got} bytes, expected {expected_bytes}")

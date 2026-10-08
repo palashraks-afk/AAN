@@ -10,7 +10,7 @@ meet that request.
 | Super advanced | 5 (design) / execution risk | Specificity-calibrated cell-type statistics, conditioning, colocalisation, Mendelian randomisation and benchmark validation are graduate-level. Risk: 12 days; core path must be finished first |
 | Groundbreaking / impact | 4 | Reach is a 5 (>1M people, neglected). "Changes lives" is unproven: a mapping + hypothesis list can direct research and trials but cannot treat. Raised from 3 by the translational dossier |
 | Strong foundation | 5 | Public data from the largest ME/CFS GWAS; standard peer-reviewed methods (MAGMA, LDSC, Human Brain Cell Atlas, Open Targets) |
-| New and novel | 4 | Components exist: brain-tissue enrichment (DecodeME), informal MAGMA on Siletti clusters (S4ME), gene-level repurposing (Realomics-type, PrecisionLife), pan-trait scDRS (74 traits). The calibrated / conditioned / subtype / direction-aware / benchmarked combination was not found |
+| New and novel | 3 (was 4) | Updated 2026-10-07 evening. Localisation to neurons is already reported by the DecodeME team (conference talk) and informally (medium spiny neurons, forum). Also existing: tissue enrichment, informal MAGMA on Siletti clusters, gene-level repurposing, pan-trait scDRS. Not found: the trait-panel-calibrated specificity test, conditioning, cell-type subtype contrast, benchmark-validated targets. Those layers could justify a 4 if they survive the 17 Oct re-search |
 | Genuinely unique | 5 (provisional) | No neglect-weighted or specificity-calibrated nervous-system genetic atlas of ME/CFS found across ~12 targeted searches. Provisional until the 8 Oct and 17 Oct re-search |
 
 ## What would change a grade

@@ -29,6 +29,27 @@ Re-verify each before citing. Search-snippet knowledge only unless marked "read"
   https://www.medrxiv.org/content/10.1101/2024.10.07.24315052v1
 - Fibromyalgia GWAS 2026 — https://www.nature.com/articles/s41467-026-75256-6
 
+## Found on the 2026-10-07 evening re-search (changes the novelty grade)
+- Chris Ponting's talk at the 2026 International ME/CFS Conference says the DecodeME final paper is
+  still a preprint awaiting review, that heritability concentrates in **neural tissue rather than the
+  peripheral immune system**, and (per a conference summary) points to **neurons rather than glia**.
+  https://events.mecfs-research.org/en/events/conference_2026/videos/chris-ponting-decodeme-genetics
+  https://www.meresearch.org.uk/highlights-from-the-international-me-cfs-conference-2026-including-decode-me-pet/
+- Phoenix Rising forum post (21 Jul 2026, informal): top cell-type hit is the **medium spiny neuron**
+  (striatum). https://forums.phoenixrising.me/threads/cell-and-tissue-enrichment-in-me-cfsposted-on-july-21-2026.94698/
+- Newsletter report (not verified, Substack): a larger ME/CFS meta-analysis, 46,450 cases and
+  2,461,268 controls across 20 biobank-scale cohorts (lead: Martin Broberg).
+  https://connectivedigest.substack.com/p/summer-2026-mecfs-and-long-covid
+- Preprint: St-Jean et al. 2026, symptom cluster analysis of DecodeME finds two subgroups linked to
+  onset type. https://s4me.info/threads/cluster-analysis-of-me-cfs-symptoms-in-decodeme-reveals-two-subgroups-and-a-link-to-onset-type-2026-st-jean-et-al.51038/
+- SequenceME: whole-genome sequencing follow-up (up to 9,000 ME + 9,000 long COVID).
+
+Consequence: "ME/CFS signal sits in neurons" is no longer new. What I still did not find is a
+trait-panel-calibrated test of whether any of those neuronal hits is specific to ME/CFS (for example,
+whether the striatal medium spiny neuron hit is just what every polygenic brain trait shows),
+conditioning on shared genetics, a subtype contrast at cell-type level, or a benchmark-validated
+target ranking.
+
 ## Cell-type enrichment methods / analogues
 - scDRS (Zhang et al., Nature Genetics 2022; 74 traits, 1.3M cells) —
   https://www.nature.com/articles/s41588-022-01167-z
