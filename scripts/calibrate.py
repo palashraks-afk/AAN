@@ -27,9 +27,17 @@ NON_NEURONAL = {
 }
 
 
+def gsa_path(name, model):
+    # the Windows build of MAGMA appends .txt to its output names
+    base = DERIVED / "magma" / name
+    for suffix in (".gsa.out.txt", ".gsa.out"):
+        if (base / f"cluster_{model}{suffix}").exists():
+            return base / f"cluster_{model}{suffix}"
+    return None
+
+
 def load_model(name, model):
-    path = DERIVED / "magma" / name / f"cluster_{model}.gsa.out"
-    df = pd.read_csv(path, comment="#", sep=r"\s+")
+    df = pd.read_csv(gsa_path(name, model), comment="#", sep=r"\s+")
     df = df[df["VARIABLE"].str.match(r"^c\d+$")].copy()
     df["cluster_id"] = df["VARIABLE"].str[1:].astype(int)
     return df.set_index("cluster_id").sort_index()
@@ -47,7 +55,7 @@ def robust_standardise(z):
 
 def traits_with_results(model="A"):
     base = DERIVED / "magma"
-    return sorted(d.name for d in base.iterdir() if (d / f"cluster_{model}.gsa.out").exists())
+    return sorted(d.name for d in base.iterdir() if gsa_path(d.name, model))
 
 
 def passes_heritability_gate(names):
@@ -76,7 +84,7 @@ def main():
     model_a = load_model(args.target, "A")
     out = ann.join(model_a[["NGENES", "BETA", "SE", "P"]].rename(columns={"P": "p_A"}))
     out["fdr_A"] = multipletests(out["p_A"], method="fdr_bh")[1]
-    if (DERIVED / "magma" / args.target / "cluster_B.gsa.out").exists():
+    if gsa_path(args.target, "B"):
         out["p_B"] = load_model(args.target, "B")["P"]
     out["z"] = z_from_p(out["p_A"])
     out["z_std"] = robust_standardise(out["z"])

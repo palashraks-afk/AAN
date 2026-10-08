@@ -79,7 +79,13 @@ def main():
 
     with ThreadPoolExecutor(max_workers=args.jobs) as pool:
         list(pool.map(gene_analysis, [str(c) for c in range(1, 23)]))
-    run([MAGMA, "--merge", workdir / "genes", "--out", workdir / "genes"])
+    # the merge only works with plain relative names, run from inside the folder
+    print("merging chromosome batches", flush=True)
+    subprocess.run([str(MAGMA), "--merge", "genes", "--out", "genes"], check=True, cwd=workdir)
+    # --merge writes genes.genes.raw only; stitch the per-chromosome tables together for the gene z-scores
+    parts = [workdir / f"genes.batch{c}_chr.genes.out.txt" for c in range(1, 23)]
+    frames = [pd.read_csv(p, sep=r"\s+") for p in parts if p.exists()]
+    pd.concat(frames).to_csv(workdir / "genes.genes.out", sep="\t", index=False)
 
     for model in ("A", "B"):
         gene_property.run_model(args.name, model)

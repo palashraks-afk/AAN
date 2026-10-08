@@ -8,9 +8,21 @@ import pandas as pd
 AUTOSOMES = {str(i) for i in range(1, 23)}
 
 
-def read_decodeme(path, rsid_map, min_maf=0.01):
+QC_LIST = "D:/AAN_data/decodeme/gwas_qced.var.gz"
+
+
+def read_decodeme(path, rsid_map, min_maf=0.01, qc_list=QC_LIST):
+    """DecodeME REGENIE output, keeping only the variants on the team's QC list.
+
+    The shared files are raw REGENIE output (filtered on MAF only). The team's README says to keep
+    the variants that passed QC (INFO >= 0.9 plus a DENTIST-style test); without that filter
+    there are hundreds of artefact SNPs at p < 1e-30 in the pericentromeric regions of chr15 and chr21.
+    """
     cols = ["CHROM", "GENPOS", "ID", "A1FREQ", "N", "LOG10P"]
     g = pd.read_csv(path, sep=r"\s+", usecols=cols, dtype={"CHROM": str})
+    if qc_list:
+        passed = pd.read_csv(qc_list, header=None, names=["ID"])["ID"]
+        g = g[g["ID"].isin(set(passed))]
     maf = np.minimum(g["A1FREQ"], 1 - g["A1FREQ"])
     g = g[maf >= min_maf]
     g = g.merge(rsid_map[["ID", "rsid"]], on="ID", how="inner")
