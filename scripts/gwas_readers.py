@@ -51,6 +51,20 @@ def read_harmonised(path, total_n):
     return out.drop_duplicates("rsid")
 
 
+def read_finngen(path, total_n, min_maf=0.01):
+    """FinnGen R13 summary statistics (GRCh38, rsIDs included, no per-SNP N)."""
+    cols = ["#chrom", "pos", "rsids", "pval", "af_alt"]
+    g = pd.read_csv(path, sep="\t", usecols=cols, dtype={"#chrom": str})
+    g = g[g["#chrom"].isin(AUTOSOMES) & g["rsids"].notna() & (g["pval"] > 0)]
+    maf = np.minimum(g["af_alt"], 1 - g["af_alt"])
+    g = g[maf >= min_maf]
+    g["rsid"] = g["rsids"].str.split(",").str[0]
+    g = g[g["rsid"].str.startswith("rs")]
+    out = pd.DataFrame({"rsid": g["rsid"], "chrom": g["#chrom"], "pos": g["pos"].astype(int),
+                        "p": g["pval"], "n": total_n})
+    return out.drop_duplicates("rsid")
+
+
 def read_pgc3(path):
     """PGC3 schizophrenia release (GRCh37), columns CHROM ID POS ... PVAL NCAS NCON NEFF."""
     skip = 0

@@ -116,7 +116,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--name", required=True)
     ap.add_argument("--gwas", required=True)
-    ap.add_argument("--format", choices=["decodeme", "harmonised", "pgc3"], required=True)
+    ap.add_argument("--format", choices=["decodeme", "harmonised", "pgc3", "finngen"], required=True)
     ap.add_argument("--n", type=int)
     ap.add_argument("--map", default="D:/AAN_data/derived/decodeme_rsid_map.parquet")
     ap.add_argument("--out", default="D:/AAN_data/derived/ldsc_results.tsv")
@@ -127,6 +127,8 @@ def main():
         raw = gwas_readers.read_decodeme(args.gwas, pd.read_parquet(args.map), min_maf=0.0)
     elif args.format == "harmonised":
         raw = gwas_readers.read_harmonised(args.gwas, args.n)
+    elif args.format == "finngen":
+        raw = gwas_readers.read_finngen(args.gwas, args.n)
     else:
         raw = gwas_readers.read_pgc3(args.gwas)
     raw = raw.drop_duplicates("rsid")

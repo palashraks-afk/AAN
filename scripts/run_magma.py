@@ -42,7 +42,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--name", required=True)
     ap.add_argument("--gwas", required=True)
-    ap.add_argument("--format", choices=["decodeme", "harmonised", "pgc3"], required=True)
+    ap.add_argument("--format", choices=["decodeme", "harmonised", "pgc3", "finngen"], required=True)
     ap.add_argument("--n", type=int, help="total sample size, used when the file has no per-SNP N")
     ap.add_argument("--map", default=str(DERIVED / "decodeme_rsid_map.parquet"))
     ap.add_argument("--jobs", type=int, default=6, help="chromosomes analysed in parallel")
@@ -60,6 +60,8 @@ def main():
             g = gwas_readers.read_decodeme(args.gwas, pd.read_parquet(args.map))
         elif args.format == "harmonised":
             g = gwas_readers.read_harmonised(args.gwas, args.n)
+        elif args.format == "finngen":
+            g = gwas_readers.read_finngen(args.gwas, args.n)
         else:
             g = gwas_readers.read_pgc3(args.gwas)
         g = g.drop_duplicates("rsid")
