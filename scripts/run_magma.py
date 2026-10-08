@@ -19,7 +19,8 @@ import gwas_readers
 
 TOOLS = Path("D:/AAN_data/tools")
 MAGMA = TOOLS / "magma" / "magma.exe"
-REF = Path("C:/AAN_ref/g1000_eur")   # copied to the SSD, the D: drive is a slow hard disk
+# reference split by chromosome (scripts/split_reference.py) and kept on the SSD; the D: drive is a slow hard disk
+REF = "C:/AAN_ref/by_chr/g1000_eur_chr#CHR#"
 GENELOC = {"GRCh38": TOOLS / "ref" / "NCBI38.gene.loc", "GRCh37": TOOLS / "ref" / "NCBI37.3.gene.loc"}
 DERIVED = Path("D:/AAN_data/derived")
 
