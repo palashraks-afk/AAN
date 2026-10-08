@@ -2,6 +2,15 @@
 
 Each entry: date, what changed, why, and whether any ME/CFS result had been seen.
 
+## 2026-10-08 (01:00) - C2 permutation count and S-LDSC simplification (before any result was opened)
+- C2: PREREG_v1.3 asked for 5,000 gene-level permutations. Each permutation needs a MAGMA gene-property run, so 1,000
+  permutations are used (smallest possible empirical p is about 0.001, enough for the p < 0.05 rule).
+- C1: the standard S-LDSC needs the 75-annotation baseline model and LD scores over all reference SNPs. The first is not
+  available offline here and the second would take far longer. The own implementation uses HapMap3 SNPs for LD scores and
+  two control annotations (all SNPs, expressed genes +/- 100 kb). It is for confirming and ranking clusters, not for quoting
+  enrichment fold-changes, and the report must say so.
+- No ME/CFS cluster-level result had been opened.
+
 ## 2026-10-08 (00:00) - G2: the DecodeME files are NOT already QC'd
 - PREREG_v1 G2 assumed the shared GWAS files were already QC'd. They are not: the README
   (`README_shared_sum_stats.txt`) says they are raw REGENIE output filtered on MAF only, and tells users to
