@@ -1,0 +1,16 @@
+# Python 3.11. Pin exact versions after the environment works (pip freeze > requirements.lock).
+numpy
+pandas
+scipy
+scikit-learn
+statsmodels
+matplotlib
+seaborn
+pyarrow
+requests
+h5py
+loompy
+anndata
+pyliftover
+# External tools (not pip): MAGMA >= 1.10 (standalone binary), LDSC (Python 3 port), R + coloc + TwoSampleMR
+# (or a Python approximate-Bayes-factor colocalisation). Record exact versions in docs/03_feasibility_check.md.
