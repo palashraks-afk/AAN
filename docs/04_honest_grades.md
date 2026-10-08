@@ -24,3 +24,6 @@ Describe the gap precisely ("to my knowledge no calibrated cell-type specificity
 reported; I searched X, Y, Z on date D"). Do not write "first", "never", or "groundbreaking".
 Judges score creativity, interpretation of data, and awareness of pitfalls; a modest, rigorous,
 honestly-limited claim scores better than an overclaim a judge can disprove in 30 seconds.
+
+## Update 2026-10-08
+Maccallini et al. 2026 (DecodeME+MVP, cell-type enrichment, eMSN/cerebellar glutamatergic) makes plain localisation published. Novelty stays 3 at best; it rises to 4 only if panel calibration / conditioning / benchmark layers give a clear result and the full-text check confirms Maccallini lacks them.

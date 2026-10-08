@@ -118,3 +118,18 @@ target ranking.
 - "DecodeME" + cell-type; "DecodeME" + Mendelian randomization + druggable.
 - Has the DecodeME paper been formally published with added analyses?
 - Citations of the S4ME post and of the Siletti atlas + "chronic fatigue".
+
+## Re-search 2026-10-08 (Mac session) — changes novelty again
+- Maccallini et al. 2026 preprint, "Biological Insights from GWAS and Whole Genome Sequencing of ME/CFS": meta-analysis of
+  DecodeME + Million Veteran Program (19,470 cases / 699,111 controls), MAGMA tissue, cell-type (single-nucleus) and gene-set
+  enrichment; reports eccentric medium spiny neurons (claustrum) and cerebellar white-matter glutamatergic neurons, "glutamatergic
+  synapses most specific replicated signal", no peripheral tissue significant, rare-variant WGS module (HEAL2) replication.
+  https://www.s4me.info/threads/biological-insights-from-genome-wide-association-studies-and-whole-genome-sequencing-of-me-cfs-2026-maccallini-et-al.50225/
+  (read via forum summary only; find and read the preprint itself before citing). No trait-panel calibration or conditioning
+  on depression/BMI/insomnia was visible in the summary — verify in the full text.
+- Consequence: cell-type localisation to neurons AND to specific striatal/claustral and cerebellar neuron types is published.
+  Do not present localisation as a discovery. The defensible contribution is: (a) is it ME/CFS-specific (panel calibration),
+  (b) is it independent of depression/BMI/insomnia, (c) does the tested method rediscover known drug targets, (d) layers not in
+  Maccallini (brain-vs-body ranking, circuit/transmitter groups, Reactome beyond synapse, comorbidity cell-profile map).
+- Methods preprints to cite for comparison: ICePop (bioRxiv 2026.04.01.715877), GWAS x single-cell benchmark (medRxiv 2025.05.24.25328275).
+- Still to read in full: https://www.biorxiv.org/content/10.64898/2026.09.24.754059v1.full (single-nuclei multiomics, 4 brain regions, brain traits).
