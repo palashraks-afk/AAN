@@ -60,7 +60,7 @@ def step_locus(name):
     print(f"{n_hits} genome-wide significant SNPs; dropping {len(drop & set(covar['GENE']))} genes within 1 Mb")
     path = workdir / "covar_locusdrop.txt"
     covar[~covar["GENE"].isin(drop)].to_csv(path, sep="\t", index=False, float_format="%.5f")
-    run_model_a(workdir, path, "locusdrop")
+    run_model_a(workdir, path, "cluster_locusdrop")
 
     genes = gene_positions().set_index("GENE")["chr"]
     covar["chr"] = covar["GENE"].map(genes)
@@ -68,7 +68,7 @@ def step_locus(name):
         sub = covar[covar["chr"] != str(c)].drop(columns="chr")
         path = workdir / f"covar_loco_{c}.txt"
         sub.to_csv(path, sep="\t", index=False, float_format="%.5f")
-        run_model_a(workdir, path, f"loco_chr{c}")
+        run_model_a(workdir, path, f"cluster_loco_chr{c}")
         path.unlink()
         print("left out chromosome", c, flush=True)
 
