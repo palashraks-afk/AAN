@@ -98,3 +98,26 @@ between methods (Spearman across 461 clusters), and run time. Rules in `preregis
 | Autonomic and brainstem evidence is the most replicated | brainstem, hypothalamus and sensory-ganglia cell types included in the atlas analysis; atlas limitation (no peripheral nerves) stated |
 | Genetic support makes a drug target about 2.6 times more likely to succeed (Minikel 2024) | translational layer, benchmarked on diseases with known drugs, never presented as treatment advice |
 | Prior ME/CFS work reports neurons but not specificity | the specificity calibration against a 23-trait panel is the main new test |
+
+## E. More statistics on the problem (added 2026-10-08, evening)
+| Measure | Value | Source and caveat |
+|---|---|---|
+| Time to diagnosis | median 12.0 years, mean 14.9 years among people diagnosed in 2022; median 1.5 years in 1987 | Solve ME/CFS registry analysis (solvecfs.org, 2023); weak trend, R2 = 0.39 |
+| Full recovery in follow-up | median 5% (systematic review of 14 studies, Cairns and Hotopf 2005); 0 to 66% across 22 studies in a 2014 review | definitions and follow-up lengths differ; children recover more often (68% reported recovery by 10 years in one cohort) |
+| Funding against burden | about 7% of the NIH funding its burden would predict, the lowest ratio in that analysis | Mirin, Dimmock and Jason 2020 (Work) |
+| Projection with long COVID | 5 to 9 million US cases | projection, not a count (Jason and Mirin 2022 update) |
+
+## F. How the other research approaches compare (immune, metabolomic, imaging, animal), added 2026-10-08
+| Approach | What it can tell us | Typical sample | Main weakness | Where this project connects |
+|---|---|---|---|---|
+| GWAS (DecodeME) | inherited risk; genes come before illness | 15,579 cases, 259,909 controls | not the current disease state; UK Biobank controls; European ancestry | the data used here |
+| Neuroimaging (PET, MRI, fMRI) | where the living brain differs | tens of patients (for example 26 cases, 18 controls) | small, inconsistent; brain-wide studies in other diseases need hundreds per group | independent check of the regions genetics points to (E1) |
+| Immune profiling (cytokines, single-cell) | blood-cell differences | tens to hundreds (one multicentre study: 298) | no robust reproducible biomarker; sex and batch confound results | genetics tests whether signal sits in neural or immune cells (D2) |
+| Metabolomics | chemical state of blood | 26 to 52 patients in several studies | no metabolite consistently altered; power weakened by many metabolites and few people | not used |
+| Animal models | mechanism and treatment tests | lab cohorts | induced-inflammation models do not reproduce the human illness; protocols not standardised | later testing ground for candidate genes |
+| This project | which cell types carry the inherited risk | same 15,579 cases | association only; three-donor atlas; CNS only | adds cellular resolution and checks it against the others |
+Take-away: GWAS is the only ME/CFS approach with sample sizes in the tens of thousands; the others share small cohorts, mixed
+case definitions and weak replication. A genetic signal that agrees with independent imaging and physiology is worth more
+than any one alone, and one that disagrees is worth reporting. Sources: Solve ME/CFS 2023; Cairns and Hotopf 2005; reviews of
+neuroimaging (PLoS One 2020), immune profiling, metabolomics and animal models (2025) found in searches of 2026-10-08;
+verify before citing. No source compared replication rates head to head, so the ranking is qualitative.
