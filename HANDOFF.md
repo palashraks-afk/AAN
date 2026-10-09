@@ -9,6 +9,11 @@ ME/CFS primary GWAS (`decodeme_gwas_1`) and Alzheimer's (control) are finished. 
 by anyone**; the rule is that the three control traits must pass first (`scripts/check_controls.py`), and height and
 schizophrenia have not finished their MAGMA run yet. After that gate the order of work is in section 4.
 
+## 1b. Most important practical thing
+**The computer must stay awake and plugged in while the jobs run.** On 2026-10-08 the jobs stopped at 01:26 when the machine
+slept and nothing ran for 14 hours. Set sleep to "never" while plugged in (Windows: Settings, System, Power). Everything is
+resumable, so a stop costs time, not results. About 12 to 14 hours of compute remain in total.
+
 ## 2. Hard rules (do not break these)
 1. Do not open or interpret ME/CFS cluster-level results until `check_controls.py` prints `G3 overall: PASS`. If it fails,
    debug the pipeline, not the ME/CFS result.
@@ -29,7 +34,7 @@ schizophrenia have not finished their MAGMA run yet. After that gate the order o
 | Heritability (own LDSC), simulation tests | done; 9 tests pass | `scripts/ldsc.py`, `tests/` |
 | MAGMA gene-level + models A/B for `decodeme_gwas_1` | **done, unopened** | `AAN_data/derived/magma/decodeme_gwas_1` |
 | MAGMA for Alzheimer's (control) | done | `.../magma/alzheimer` |
-| MAGMA for height, schizophrenia (controls) | **not done** (height reader bug, fixed in next commit; schizophrenia never started) | rerun, section 4 |
+| MAGMA for height, schizophrenia (controls) | **running since 2026-10-08 17:17** (reader bug fixed; the first attempt died when the computer slept) | `scripts/run_overnight.py`; check `AAN_data/derived/overnight.log` |
 | MAGMA for `decodeme_gwas_2`, female, male, infection subsets, panel traits | not done | rerun |
 | Simplified S-LDSC (own) | done for Alzheimer's, schizophrenia, RA, IBD, ME/CFS gwas_1 and gwas_2 | `results/sldsc_*.tsv` (ME/CFS ones unopened) |
 | Discovery inputs (groups, HPA cell types, Reactome) | built | `AAN_data/derived/gene_covar_*.txt`, `reactome.sets` |
