@@ -57,6 +57,12 @@ def run_hpa(name):
            "--model", "condition-hide=avg_all", "direction=pos", "--out", workdir / "hpa_A"])
 
 
+def run_regions(name):
+    workdir = DERIVED / "magma" / name
+    magma([MAGMA, "--gene-results", workdir / "genes.genes.raw", "--gene-covar", DERIVED / "gene_covar_regions.txt",
+           "--model", "condition-hide=avg_all", "direction=pos", "--out", workdir / "regions_A"])
+
+
 def run_reactome(name, top_cluster=None):
     workdir = DERIVED / "magma" / name
     base = pd.read_csv(DERIVED / "gene_covar.txt", sep="\t", usecols=["GENE", "avg_all", "avg_neuron"]
@@ -78,7 +84,7 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--name", required=True)
     ap.add_argument("--model", choices=sorted(MODELS))
-    ap.add_argument("--layer", choices=["groups", "hpa", "reactome"])
+    ap.add_argument("--layer", choices=["groups", "hpa", "regions", "reactome"])
     ap.add_argument("--top-cluster", type=int)
     a = ap.parse_args()
     if a.model:
@@ -87,5 +93,7 @@ if __name__ == "__main__":
         run_groups(a.name)
     elif a.layer == "hpa":
         run_hpa(a.name)
+    elif a.layer == "regions":
+        run_regions(a.name)
     elif a.layer == "reactome":
         run_reactome(a.name, a.top_cluster)

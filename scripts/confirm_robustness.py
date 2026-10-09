@@ -122,9 +122,51 @@ def step_permute(name):
     print(out.to_string(index=False))
 
 
+def significant_loci(workdir, window=1_000_000):
+    """Merge SNPs with p < 5e-8 into loci (SNPs closer than 1 Mb join the same locus)."""
+    p = pd.read_csv(workdir / "pval.txt", sep="	")
+    loc = pd.read_csv(workdir / "snploc.txt", sep="	", header=None, names=["SNP", "chr", "pos"])
+    hits = p.merge(loc, on="SNP")
+    hits = hits[hits["P"] < 5e-8].copy()
+    hits["chr"] = hits["chr"].astype(str)
+    loci = []
+    for chrom, h in hits.groupby("chr"):
+        pos = np.sort(h["pos"].to_numpy())
+        start = prev = pos[0]
+        for x in pos[1:]:
+            if x - prev > window:
+                loci.append((chrom, start, prev))
+                start = x
+            prev = x
+        loci.append((chrom, start, prev))
+    return loci
+
+
+def step_perlocus(name):
+    workdir = DERIVED / "magma" / name
+    covar = pd.read_csv(DERIVED / "gene_covar.txt", sep="	")
+    genes = gene_positions()
+    base = calibrate.load_model(name, "A")
+    top = base["P"].nsmallest(3).index.tolist()
+    rows = [{"locus": "none (full data)", **{f"z_c{c}": float(calibrate.z_from_p(base.loc[c, "P"])) for c in top}}]
+    for chrom, start, end in significant_loci(workdir):
+        g = genes[genes["chr"] == chrom]
+        drop = set(g.loc[(g["end"] > start - 1_000_000) & (g["start"] < end + 1_000_000), "GENE"])
+        path = workdir / "covar_perlocus.txt"
+        covar[~covar["GENE"].isin(drop)].to_csv(path, sep="	", index=False, float_format="%.5f")
+        run_model_a(workdir, path, "perlocus_tmp")
+        m = pd.read_csv(workdir / "perlocus_tmp.gsa.out.txt", comment="#", sep=r"\s+").set_index("VARIABLE")
+        rows.append({"locus": f"chr{chrom}:{start}-{end} ({len(drop)} genes dropped)",
+                     **{f"z_c{c}": float(calibrate.z_from_p(m.loc[f"c{c}", "P"])) for c in top}})
+        print(rows[-1], flush=True)
+    out = pd.DataFrame(rows)
+    out.to_csv(Path("D:/AAN/results") / f"perlocus_{name}.tsv", sep="	", index=False, float_format="%.4g")
+    print(out.to_string(index=False))
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--name", required=True)
-    ap.add_argument("--step", choices=["locus", "permute"], required=True)
+    ap.add_argument("--step", choices=["locus", "permute", "perlocus"], required=True)
     a = ap.parse_args()
-    step_locus(a.name) if a.step == "locus" else step_permute(a.name)
+    {"locus": step_locus, "permute": step_permute, "perlocus": step_perlocus}[a.step](a.name)
