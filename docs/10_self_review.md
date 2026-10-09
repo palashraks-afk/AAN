@@ -22,9 +22,9 @@ Problems found by checking my own work, what fixed them, and what could still be
 - ME/CFS gene-level results after the QC filter match DecodeME's published loci (ARFGEF2, CSE1L, STAU1, TAOK3, histone cluster).
 
 ## Still to check or could be wrong
-- NOT YET VERIFIED: that the per-chromosome reference gives the same gene-level results as the full reference. Only the
-  speed was measured. A direct comparison on chromosome 22 (gene z-scores, full against split) is queued
-  (`scripts/check_split_reference.py`); until it is done, do not claim equivalence.
+- VERIFIED 2026-10-08 17:45: the per-chromosome reference gives identical gene-level results to the full reference on
+  chromosome 22 of decodeme_gwas_1 (444 genes in both, maximum |z difference| 0, correlation 1.000000, same SNP counts;
+  `scripts/check_split_reference.py`).
 - MAGMA-based controls for height and schizophrenia have not finished; nothing about ME/CFS is read until they pass.
 - The 1000G reference lacks the synonym file in per-chromosome form, so panel GWAS using merged rsIDs lose a few SNPs.
 - S-LDSC uses HapMap3 SNPs only and two control annotations, not the 75-annotation baseline: good for confirming and ranking,
