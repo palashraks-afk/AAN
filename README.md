@@ -26,6 +26,7 @@ No ME/CFS cell-type result has been read: the control traits must pass first. No
 | [preregistration/](preregistration/) | Also: `PREREG_v1.1_extension.md` (neglected conditions), `PREREG_v1.2_discovery_layer.md` (circuits, brain vs body, pathways, comorbidity map), `PREREG_v1.3_confirmation.md` (S-LDSC, permutation null, locus drop, independent GWAS, literature convergence), `DEVIATIONS.md` (every change, dated) |
 | [paper/DRAFT_report.md](paper/DRAFT_report.md) | Report draft: methods and limitations written from the code, results left empty until they exist |
 | [docs/07_run_order.md](docs/07_run_order.md) | Which script runs when, and what went wrong along the way |
+| [docs/11_novelty_evidence.md](docs/11_novelty_evidence.md) | Novelty grade of 4: closest prior work per layer, every search run, what would lower it, exact wording to use |
 | [docs/01_idea_selection_log.md](docs/01_idea_selection_log.md) | Every idea considered and why each was kept or dropped |
 | [docs/02_prior_art_and_sources.md](docs/02_prior_art_and_sources.md) | What already exists, with links; the gaps; what to re-search |
 | [docs/03_feasibility_check.md](docs/03_feasibility_check.md) | Data files, sizes, checksums, machine, tools, what is verified vs not |

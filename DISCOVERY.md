@@ -26,6 +26,8 @@ by the generic signal that every brain trait shows (specificity against the 23-t
 | G | ME/CFS shares its cellular profile with specific other conditions | D4 comorbidity map against the spread of correlations among other trait pairs (PREREG v1.2, v1.6) | cellular rather than gene-level comorbidity | nothing stands out |
 | H | Candidate genes ranked by cell-type specificity and genetic support | X1 to X3: only interpreted if the benchmark on migraine, rheumatoid arthritis and IBD passes (PREREG v1) | cell-type-restricted, benchmark-validated ranking | labelled exploratory, no target interpretation |
 
+Full novelty evidence (closest prior work, searches run, grade conditions): `docs/11_novelty_evidence.md`.
+
 ## 3. How "unique" will be judged
 The uniqueness claim rests on the combination: a pre-registered, panel-calibrated, multi-method confirmed, conditioned
 analysis with a benchmark and an independent-literature convergence test, applied to a neglected neurological condition.
