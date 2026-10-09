@@ -136,14 +136,14 @@ def block_wls(X, y, w, n_blocks=N_BLOCKS):
     """Weighted least squares with a block jackknife; returns coefficients and standard errors."""
     sw = np.sqrt(w)[:, None]
     Xw, yw = X * sw, y * sw[:, 0]
-    edges = np.linspace(0, len(y), n_blocks + 1).astype(int)       # SNPs are in genome order, blocks are contiguous
+    ids = np.minimum((np.arange(len(y)) * n_blocks) // len(y), n_blocks - 1)
     p = X.shape[1]
     xtx = np.zeros((n_blocks, p, p))
     xty = np.zeros((n_blocks, p))
     for b in range(n_blocks):
-        sl = slice(edges[b], edges[b + 1])
-        xtx[b] = Xw[sl].T @ Xw[sl]
-        xty[b] = Xw[sl].T @ yw[sl]
+        rows = ids == b
+        xtx[b] = Xw[rows].T @ Xw[rows]
+        xty[b] = Xw[rows].T @ yw[rows]
     tot_xx, tot_xy = xtx.sum(axis=0), xty.sum(axis=0)
     est = np.linalg.solve(tot_xx, tot_xy)
     loo = np.array([np.linalg.solve(tot_xx - xtx[b], tot_xy - xty[b]) for b in range(n_blocks)])
@@ -169,12 +169,8 @@ def run_trait(name, raw):
     names = pd.read_csv(CACHE / "cluster_names.txt", header=None)[0].tolist()
     out = []
     base = np.column_stack([n * la, n * le, np.ones(len(y))])
-    chunk_start, chunk = -1, None
     for j, nm in enumerate(names):
-        if j >= chunk_start + 50 or chunk is None:                      # read the cluster LD scores 50 columns at a time
-            chunk_start = j
-            chunk = np.asarray(l_clu[:, j:j + 50])[rows]
-        X = np.column_stack([base[:, 0], base[:, 1], n * chunk[:, j - chunk_start], base[:, 2]])
+        X = np.column_stack([base[:, 0], base[:, 1], n * np.asarray(l_clu[rows, j]), base[:, 2]])
         w = 1.0 / np.maximum(la, 1.0)
         for _ in range(2):                                      # reweight by the fitted mean (var(chi2) ~ 2 mean^2)
             est, _se = block_wls(X, y, w / w.sum(), n_blocks=20)

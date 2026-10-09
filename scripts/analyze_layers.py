@@ -40,7 +40,7 @@ def gsa(name, prefix, id_pattern=r".+"):
 def panel_traits(prefix):
     out = []
     for d in sorted((DERIVED / "magma").iterdir()):
-        if d.name.startswith("decodeme_") or d.name in calibrate.NOT_IN_PANEL:
+        if d.name.startswith("decodeme_"):
             continue
         if gsa(d.name, prefix) is not None:
             out.append(d.name)
@@ -119,7 +119,7 @@ def convergence(clusters):
 
     me_scores = brain3d.region_scores(clusters["z"])
     me = stat(me_scores)
-    traits = [t for t in calibrate.traits_with_results("A") if t in calibrate.panel_names([t])]
+    traits = [t for t in calibrate.traits_with_results("A") if not t.startswith("decodeme_")]
     panel = {t: stat(brain3d.region_scores(calibrate.z_from_p(calibrate.load_model(t, "A")["P"]))) for t in traits}
     pct = float(np.mean([v < me for v in panel.values()]))
     rng = np.random.default_rng(20261008)

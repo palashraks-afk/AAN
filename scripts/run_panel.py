@@ -19,12 +19,8 @@ PY = sys.executable
 
 
 def run(cmd):
-    """Run one step; a failure is logged and the loop carries on with the next trait."""
     print(" ".join(str(c) for c in cmd), flush=True)
-    result = subprocess.run([str(c) for c in cmd], cwd=HERE)
-    if result.returncode != 0:
-        print(f"STEP FAILED (exit {result.returncode}): {cmd[1:4]}", flush=True)
-    return result.returncode == 0
+    subprocess.run([str(c) for c in cmd], check=True, cwd=HERE)
 
 
 def main():
