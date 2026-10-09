@@ -54,7 +54,7 @@ def robust_standardise(z):
 
 
 # traits that are analysed on their own and must never sit in the null panel (PREREG v1.1 and v1.3)
-NOT_IN_PANEL = {"trigeminal_neuralgia", "cluster_headache", "menieres", "dystonia", "mecfs_ukb_donertas"}
+NOT_IN_PANEL = {"trigeminal_neuralgia", "cluster_headache", "menieres", "dystonia", "mecfs_ukb_donertas", "longcovid_strict"}
 
 
 def panel_names(names):
