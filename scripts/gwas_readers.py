@@ -33,22 +33,31 @@ def read_decodeme(path, rsid_map, min_maf=0.01, qc_list=QC_LIST):
 
 def read_harmonised(path, total_n):
     """EBI GWAS Catalog harmonised file (GRCh38). Uses hm_rsid / hm_chrom / hm_pos."""
+    # two layouts exist among the harmonised files: hm_* columns, or the newer chromosome/base_pair_location/rsid layout
+    # (both are GRCh38 after harmonisation)
     head = pd.read_csv(path, sep="\t", nrows=1)
-    want = ["hm_rsid", "hm_chrom", "hm_pos", "p_value"]
-    extra = [c for c in ("n", "n_cas", "n_con") if c in head.columns]
-    g = pd.read_csv(path, sep="\t", usecols=want + extra, dtype={"hm_chrom": str})
-    g = g.dropna(subset=["hm_rsid", "hm_pos", "p_value"])
-    g = g[g["hm_chrom"].isin(AUTOSOMES)]
-    g = g[g["p_value"] > 0]
-    if "n" in extra and g["n"].notna().any():
+    cols = set(head.columns)
+    chrom_c = "hm_chrom" if "hm_chrom" in cols else "chromosome"
+    pos_c = "hm_pos" if "hm_pos" in cols else "base_pair_location"
+    rs_c = "hm_rsid" if "hm_rsid" in cols else ("rsid" if "rsid" in cols else "variant_id")
+    n_cols = [c for c in ("n", "N", "n_cas", "n_con", "N_cases", "N_controls") if c in cols]
+    g = pd.read_csv(path, sep="\t", usecols=[chrom_c, pos_c, rs_c, "p_value"] + n_cols, dtype={chrom_c: str})
+    g = g.dropna(subset=[rs_c, pos_c, "p_value"])
+    g = g[g[chrom_c].isin(AUTOSOMES) & (g["p_value"] > 0)]
+    g = g[g[rs_c].astype(str).str.startswith("rs")]
+    if "n" in n_cols and g["n"].notna().any():
         n = g["n"].fillna(total_n)
-    elif {"n_cas", "n_con"} <= set(extra) and g["n_cas"].notna().any():
+    elif {"n_cas", "n_con"} <= set(n_cols) and g["n_cas"].notna().any():
         n = (g["n_cas"] + g["n_con"]).fillna(total_n)
+    elif {"N_cases", "N_controls"} <= set(n_cols) and g["N_cases"].notna().any():
+        n = (g["N_cases"] + g["N_controls"]).fillna(total_n)
     else:
         n = total_n
-    out = pd.DataFrame({"rsid": g["hm_rsid"], "chrom": g["hm_chrom"], "pos": g["hm_pos"].astype(int),
-                        "p": g["p_value"], "n": n})
-    return out.drop_duplicates("rsid")
+    out = pd.DataFrame({"rsid": g[rs_c], "chrom": g[chrom_c], "pos": g[pos_c].astype(int), "p": g["p_value"], "n": n})
+    out = out.drop_duplicates("rsid")
+    if len(out) < 300_000:
+        raise ValueError(f"only {len(out)} usable SNPs in {path}; check the file layout")
+    return out
 
 
 def read_finngen(path, total_n, min_maf=0.01):
