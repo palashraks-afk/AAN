@@ -67,7 +67,7 @@ def fig_calibration(df):
 
 def fig_profile_similarity(df):
     names = calibrate.traits_with_results("A")
-    panel = [n for n in names if not n.startswith("decodeme_")]
+    panel = calibrate.panel_names(names)
     z = {n: calibrate.z_from_p(calibrate.load_model(n, "A")["P"]) for n in panel}
     z["ME/CFS"] = df["z"]
     mat = pd.DataFrame(z)

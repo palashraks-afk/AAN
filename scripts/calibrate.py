@@ -53,6 +53,14 @@ def robust_standardise(z):
     return (z - np.median(z)) / mad
 
 
+# traits that are analysed on their own and must never sit in the null panel (PREREG v1.1 and v1.3)
+NOT_IN_PANEL = {"trigeminal_neuralgia", "cluster_headache", "menieres", "dystonia", "mecfs_ukb_donertas"}
+
+
+def panel_names(names):
+    return [n for n in names if not n.startswith("decodeme_") and n not in NOT_IN_PANEL]
+
+
 def traits_with_results(model="A"):
     base = DERIVED / "magma"
     return sorted(d.name for d in base.iterdir() if gsa_path(d.name, model))
@@ -76,7 +84,7 @@ def main():
     ann = pd.read_csv(DERIVED / "cluster_annotation.tsv", sep="\t").set_index("cluster_id")
 
     names = traits_with_results("A")
-    panel = [n for n in names if not n.startswith("decodeme_") and n not in args.panel_exclude]
+    panel = [n for n in panel_names(names) if n not in args.panel_exclude]
     gate = passes_heritability_gate(panel)
     panel = [n for n in panel if gate.get(n) is not False]
     print("target:", args.target, "| panel traits:", len(panel))
