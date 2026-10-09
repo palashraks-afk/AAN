@@ -86,11 +86,14 @@ def run(cmd, cwd=HERE):
 
 def wait_for_magma(name):
     """If an earlier run left MAGMA jobs for this trait running, let them finish instead of starting duplicates."""
-    marker = f"magma\\{name}\\".lower()
+    marker = f"magma\\{name}\\".lower()  # compared after "/" is turned into "\\"
     while True:
-        ps = subprocess.run(["powershell", "-NoProfile", "-Command",
-                             "Get-CimInstance Win32_Process -Filter \"Name='magma.exe'\" | "
-                             "Select-Object -ExpandProperty CommandLine"], capture_output=True, text=True).stdout.lower()
+        if sys.platform == "win32":
+            ps = subprocess.run(["powershell", "-NoProfile", "-Command",
+                                 "Get-CimInstance Win32_Process -Filter \"Name='magma.exe'\" | "
+                                 "Select-Object -ExpandProperty CommandLine"], capture_output=True, text=True).stdout.lower()
+        else:
+            ps = subprocess.run(["pgrep", "-fl", "magma"], capture_output=True, text=True).stdout.lower()
         if marker not in ps.replace("/", "\\"):
             return
         say(f"waiting for running MAGMA jobs of {name}")

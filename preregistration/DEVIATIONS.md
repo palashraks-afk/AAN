@@ -1,5 +1,11 @@
 # Deviations from PREREG_v1
 
+## 2026-10-09 - p-value floor of 1e-300 for MAGMA input (Mac rerun, before any ME/CFS cell-type result was opened)
+- The analysis was rerun on a Mac. Its MAGMA build rejects p-values below about 2.2e-308 (denormal numbers) as "not a number";
+  the Windows build accepted them. Height has SNPs down to 5e-324. `run_magma.py` now clips p at 1e-300 for every trait.
+- Effect: only SNPs with p < 1e-300 change, and their evidence is already far beyond any threshold. No ME/CFS cluster-level
+  result had been opened. Also fixed: the `.genes.out` file suffix and the PowerShell check, both Windows-only assumptions.
+
 Each entry: date, what changed, why, and whether any ME/CFS result had been seen.
 
 ## 2026-10-08 (01:00) - C2 permutation count and S-LDSC simplification (before any result was opened)

@@ -36,3 +36,12 @@ Problems found by checking my own work, what fixed them, and what could still be
 - Case-control sample size for FinnGen conditions was set to a round 480,000 (affects the scale of h2, not its z-score).
 - The literature convergence region list was fixed from searches; other reviewers might choose a slightly different list.
 - Prior-art search is time-limited. Re-run it on 17 Oct.
+
+## 2026-10-09 Mac rerun (session notes)
+- The pipeline was rebuilt on a Mac (data, MAGMA Mac binary, LD scores, atlas, 1000G reference, PGC3 schizophrenia, panel in
+  progress). Reproduced: rsID map 97.6% matched, 14,049 genes. MAGMA finished for all six DecodeME GWAS and for Alzheimer's.
+- Windows-only assumptions fixed in the code (all keep Windows working): `.genes.out` vs `.genes.out.txt`, PowerShell process
+  check, p-value floor 1e-300 (see DEVIATIONS.md).
+- **No discovery yet.** Schizophrenia and height controls were still running; G3 had NOT been checked; no ME/CFS cell-type
+  table was opened. Nothing in this repo is a result. Next step: `python run_everything.py` (it runs G3 first).
+- Prior art: Maccallini et al. 2026 already reports cell-type enrichment for ME/CFS (see docs/02), so localisation is a replication.

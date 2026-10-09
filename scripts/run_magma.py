@@ -65,6 +65,9 @@ def main():
         else:
             g = gwas_readers.read_pgc3(args.gwas)
         g = g.drop_duplicates("rsid")
+        # macOS/Linux MAGMA rejects denormal p-values (below about 2.2e-308) as "not a number"; Windows MAGMA accepted
+        # them. Clipping at 1e-300 changes no gene-level result in a way that matters (z is already > 36 there).
+        g["p"] = g["p"].clip(lower=1e-300)
         print(f"{len(g):,} SNPs read ({build})", flush=True)
 
         g[["rsid", "p", "n"]].to_csv(workdir / "pval.txt", sep="\t", index=False,
@@ -93,8 +96,14 @@ def main():
     print("merging chromosome batches", flush=True)
     subprocess.run([str(MAGMA), "--merge", "genes", "--out", "genes"], check=True, cwd=workdir)
     # --merge writes genes.genes.raw only; stitch the per-chromosome tables together for the gene z-scores
-    parts = [workdir / f"genes.batch{c}_chr.genes.out.txt" for c in range(1, 23)]
-    frames = [pd.read_csv(p, sep=r"\s+") for p in parts if p.exists()]
+    parts = []
+    for c in range(1, 23):
+        for suffix in (".genes.out.txt", ".genes.out"):  # Windows writes .txt, macOS and Linux do not
+            f = workdir / f"genes.batch{c}_chr{suffix}"
+            if f.exists():
+                parts.append(f)
+                break
+    frames = [pd.read_csv(p, sep=r"\s+") for p in parts]
     pd.concat(frames).to_csv(workdir / "genes.genes.out", sep="\t", index=False)
 
     for model in ("A", "B"):
