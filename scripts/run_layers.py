@@ -25,6 +25,8 @@ def main():
             gene_property.run_groups(name)
         if not have(name, "hpa_A"):
             gene_property.run_hpa(name)
+        if not have(name, "regions_A") and (DERIVED / "gene_covar_regions.txt").exists():
+            gene_property.run_regions(name)
         if name.startswith("decodeme_gwas") and name in ("decodeme_gwas_1", "decodeme_gwas_2"):
             if not have(name, "reactome_A"):
                 gene_property.run_reactome(name)

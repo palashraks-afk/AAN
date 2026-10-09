@@ -37,29 +37,32 @@ Jobs have been killed twice by the computer sleeping (01:26 on 8 Oct, 23:20 on 8
 to "never" while plugged in (Windows: Settings, System, Power). Everything resumes: `run_magma.py` skips chromosomes that are
 already finished, and the other scripts skip finished traits.
 
-## 4. What to do next, in order
-Start (or restart after any interruption) with:
+## 4. How to run everything that is left: one command
 ```
 cd D:\AAN\scripts
-python run_overnight.py            # finishes height, then the other ME/CFS GWAS, LDSC for all, then the panel
-python run_extension.py            # FinnGen neglected conditions, waits for the above
-python run_related.py              # long COVID and UK Biobank fatigue, outside the null panel
+python run_everything.py --dry-run      # shows every step and whether it is already DONE or still TODO
+python run_everything.py                # does everything that is left, in order, then writes results/RUN_REPORT.md
 ```
-Then, in this order:
-1. `python check_controls.py` needs `G3 overall: PASS` (schizophrenia, Alzheimer's, height). If FAIL: stop and debug.
-2. `python calibrate.py --target decodeme_gwas_1`, the ME/CFS cell-type table with specificity calibration (T1 and T2).
-3. `python make_conditioning_covar.py` then `python gene_property.py --name decodeme_gwas_1 --model C` (T3; needs the
-   depression, BMI and insomnia panel traits finished).
-4. Confirmation: `python confirm_robustness.py --name decodeme_gwas_1 --step locus`, then `--step permute`; S-LDSC results
-   already exist; then `python make_evidence_ledger.py` (writes `results/EVIDENCE_LEDGER.md`).
-5. Discovery layers: `python build_region_covars.py`, `python run_layers.py`, `python analyze_layers.py`,
-   `python independent_signals.py --name decodeme_gwas_1`, `python landscape3d.py --trait decodeme_gwas_1`.
-6. Translational: `python rank_targets.py --trait decodeme_gwas_1`; benchmark with `--trait migraine --disease migraine`,
-   `rheumatoid_arthritis`, `ibd`; then `python smr_lite.py --candidates results/candidate_genes_decodeme_gwas_1.tsv`;
-   `python structure3d.py GENE1 GENE2 ...` for 3D protein models.
-7. Figures: `python make_figures.py` (3D brain: `figures/fig7_brain3d.png` and `.html`).
-8. Fill `DISCOVERY.md` section 4 and `paper/DRAFT_report.md` Results from the real numbers, then write the abstract (under 300
-   words) last, in your own words.
+It is safe to start again at any time (after sleep, a crash, or a new session): a step whose outputs exist is skipped and MAGMA
+resumes by chromosome. It never commits to git. Progress: `D:\AAN_data\derived\pipeline.log`.
+
+Order inside the runner:
+1. ME/CFS primary and the three controls (schizophrenia, Alzheimer's, height).
+2. **Control gate G3** (`check_controls.py`). If it prints FAIL the run stops and writes `results/G3_FAILED.txt`; nothing that reads
+   ME/CFS cell-type results runs. If PASS it continues.
+3. All remaining compute: the other five ME/CFS GWAS, heritability for all, the 19-trait comparison panel, the FinnGen neglected
+   conditions, long COVID and the UK Biobank fatigue GWAS, simplified S-LDSC, the method benchmark (v1.4).
+4. Discovery-layer MAGMA runs (groups, whole-body cell types, regions, Reactome).
+5. Analysis of ME/CFS (only after G3 PASS): calibration for all six GWAS, conditioning (model C), locus and chromosome drop,
+   permutation null, per-locus contributions, independent signals, discovery layers, gene ranking and benchmark on migraine,
+   rheumatoid arthritis and IBD, effect direction, 3D protein models of the top genes, 3D cell landscape, figures (including the 3D
+   brain), and the evidence ledger.
+6. `results/RUN_REPORT.md` lists every step as done, skipped or failed.
+
+To run just some steps: `python run_everything.py --only calibrate_gwas_1 figures` (names as in `--dry-run`).
+
+After it finishes, the manual part: read `results/EVIDENCE_LEDGER.md`, fill `DISCOVERY.md` section 4 and the report Results from the
+real numbers, then write the abstract (under 300 words) last, in your own words.
 
 ## 5. Where everything is
 | Thing | Path | Notes |
@@ -79,7 +82,8 @@ Then, in this order:
 | `download_decodeme.py`, `download_panel.py`, `make_panel.py` | fetch and list the data (MD5 or integrity checked) |
 | `build_rsid_map.py`, `build_specificity.py`, `build_region_covars.py`, `build_discovery_covars.py`, `split_reference.py` | inputs for the analysis |
 | `ldsc.py` | own LD score regression (heritability gate); tests in `tests/` |
-| `run_magma.py`, `gene_property.py`, `run_panel.py`, `run_overnight.py`, `run_extension.py`, `run_related.py`, `run_layers.py` | the MAGMA runs and orchestration |
+| **`run_everything.py`** | **the one command that runs every remaining step in order, with the control gate** (older `run_overnight.py` does only the compute part) |
+| `run_magma.py`, `gene_property.py`, `run_panel.py`, `run_extension.py`, `run_related.py`, `run_layers.py`, `method_benchmark.py` | the MAGMA runs, discovery layers and the v1.4 method benchmark |
 | `sldsc_lite.py`, `run_sldsc_batch.py` | simplified partitioned heritability (confirmation method C1) |
 | `check_controls.py`, `check_split_reference.py` | the control gate G3; split-reference equivalence check |
 | `calibrate.py`, `analyze_layers.py`, `independent_signals.py`, `confirm_robustness.py`, `make_evidence_ledger.py` | results, discovery layers, confirmation, evidence ledger |

@@ -52,7 +52,7 @@ reported (searched [date])", "suggests", "genetic evidence supports prioritising
 ## If something goes wrong
 | Problem | Do this |
 |---|---|
-| Jobs stopped (sleep, restart) | `cd D:\AAN\scripts` then `python run_overnight.py`; it skips finished work |
+| Jobs stopped (sleep, restart) | `cd D:\AAN\scripts` then `python run_everything.py`; it skips finished work and carries on |
 | Control check says FAIL | stop; debug the pipeline; do not read the ME/CFS result; note it in `docs/10_self_review.md` |
 | Behind schedule on 13 Oct | drop the translational layer and the neglected-conditions extension; the core is T1, T2, the controls and the confirmation checks |
 | Someone publishes the same analysis | cite it, say yours is an independent replication, lower the novelty claim in `SCORES.md` |
