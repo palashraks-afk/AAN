@@ -14,6 +14,8 @@ Problems found by checking my own work, what fixed them, and what could still be
 | 7 | Output file names from the Windows build of MAGMA (`.gsa.out.txt`) did not match what the loaders expected | first end-to-end test | loaders try both names |
 | 8 | OSF and the GTEx, FinnGen, Open Targets, GWAS Catalog interfaces had changed or rate-limited | download failures | retry with backoff; new API queries; documented in docs/07 |
 | 9 | Background jobs died when the session ended or the computer slept | process list showed nothing running after 14 hours | detached launch; scripts skip finished work; keep the machine awake |
+| 10 | A commit made from a stale working tree (f590919, 2026-10-08 17:54) deleted 14 files (HANDOFF.md, the v1.4 to v1.6 pre-registrations, several scripts and docs) and rolled some scripts back to older versions | `git diff --stat HEAD~1` showed deletions I had not made | restored everything to 33c8deb in commit b6e8aac, kept only the new files; lesson: run `git status` and `git diff --stat` before any `git add -A` after a session restart |
+| 11 | Height (N = 2.2 million) is far slower in MAGMA than every other trait: about 3 hours for the first six chromosomes, because thousands of SNPs have p-values below 1e-100 (the minimum is 5e-324, the double-precision floor) | a timing test on chromosome 22 | no change to the pre-registered setup. Flooring p-values at 1e-12 roughly halves the time, but it is still several times slower, so it is not worth a deviation. Plan for about 8 hours for height |
 
 ## Checks that passed
 - Own LDSC: recovers simulated heritability and intercept (4 tests); gives an ME/CFS liability-scale value close to DecodeME's published 0.095 at a prevalence of 0.5%.
