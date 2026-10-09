@@ -74,7 +74,15 @@ def main():
         run([MAGMA, "--annotate", "window=35,10", "--snp-loc", workdir / "snploc.txt",
              "--gene-loc", GENELOC[build], "--out", workdir / "annot"])
     # one job per chromosome, a few at a time: much faster than a single run and it keeps memory down
+    def chromosome_done(chrom):
+        log = workdir / f"genes.batch{chrom}_chr.log"
+        raw = workdir / f"genes.batch{chrom}_chr.genes.raw"
+        return raw.exists() and log.exists() and "End time" in log.read_text(errors="replace")
+
     def gene_analysis(chrom):
+        if chromosome_done(chrom):
+            print(f"chromosome {chrom} already finished, skipping", flush=True)
+            return
         run([MAGMA, "--bfile", REF, "--pval", workdir / "pval.txt", "ncol=N",
              "--gene-annot", find_annot(workdir), "--batch", chrom, "chr",
              "--out", workdir / "genes"])
