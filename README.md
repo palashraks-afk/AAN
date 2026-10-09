@@ -10,11 +10,12 @@ Prize: AAN / Child Neurology Society **Neuroscience Research Prize**, 2027 cycle
 A pre-registered, specificity-calibrated cell-type map of ME/CFS (DecodeME) with a direction-aware
 drug-target dossier, benchmarked on diseases whose successful drugs are known.
 
-## Status
+## Status (2026-10-09)
 
-PLANNING. No analysis has been run. Nothing in this repo is a result.
-Everything below was produced by a literature/feasibility scan on 2026-10-07 and must be
-re-checked by Palash before any novelty claim is written into the abstract.
+Analysis is running. Read **[HANDOFF.md](HANDOFF.md)** first (state, rules, exact commands), then **[TODO_PALASH.md](TODO_PALASH.md)**
+(what only the applicant can do, with dates), **[SCORES.md](SCORES.md)** (honest grades) and **[DISCOVERY.md](DISCOVERY.md)**
+(what could be discovered and the pre-registered rule that decides each; results not yet opened).
+No ME/CFS cell-type result has been read: the control traits must pass first. Nothing in this repo is a result yet.
 
 ## Read in this order
 
