@@ -18,7 +18,7 @@ import calibrate
 DERIVED = Path("D:/AAN_data/derived")
 MAGMA = Path("D:/AAN_data/tools/magma/magma.exe")
 GENELOC = "D:/AAN_data/tools/ref/NCBI38.gene.loc"
-N_PERM_TOTAL = 1000          # preregistered 5,000; reduced to 1,000 for runtime, logged in DEVIATIONS.md
+N_PERM_TOTAL = 5000          # preregistered value (v1.3); PREREG v1.8 R1 restores it after a 1,000 run
 PERM_BATCH = 100             # permutations per MAGMA run (x 20 clusters = 2,000 columns)
 TOP_CLUSTERS = 20
 SEED = 20261008
