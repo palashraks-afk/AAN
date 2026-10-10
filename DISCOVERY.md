@@ -67,6 +67,13 @@ written in the report as "to my knowledge not previously reported (searched [dat
   panel-dependent: ULIT_121 (77% of half panels), Splat_402 (80%, borderline), DLIT_150 (37% of leave-one-out, s about 1.94 to 2.0) and DLIT_152
   (53%, s about 1.96 to 2.0). Updated reading of A: the specific, panel-robust result is **amygdala excitatory neurons**; the cortical
   clusters are borderline and should be described as such.
+- **Later checks that did not strengthen A (run by the second session, 2026-10-10; see `EXTENSION_LAYERS.md`, `docs/12_discovery_novelty_check.md`).**
+  (1) R1' (PREREG v1.9): conditioning inside MAGMA on the first five principal components of the 19 other traits leaves **no cluster at
+  FDR < 0.05** (best 0.073); Amex_153 still has the highest specificity score (3.69). (2) GTEx independent check (v1.10, bulk tissue,
+  different donors): Brain - Amygdala is significant against all tissues like every brain tissue, but is **not special among brain regions**
+  (p 0.49). Bulk tissue may hide a small cell population, so this does not refute the single-cell result, but it gives no support either.
+  Reading: A meets its pre-registered rule, but the evidence is modest and fragile. It is to be written as a hypothesis, never as a
+  confirmed discovery.
 - **Prior-art check 2026-10-10 (web search; to be repeated in PubMed, bioRxiv, medRxiv on 17 Oct).** Not new as localisation: an informal
   forum analysis of the same Siletti atlas (S4ME thread "Using MAGMA on ME/CFS genetic data": forestglip, Tralfamadorian97, ME/CFS
   Science Blog) already noted amygdala excitatory neurons, deep-layer and upper-layer intratelencephalic cells next to eccentric medium
