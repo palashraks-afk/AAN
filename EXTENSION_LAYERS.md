@@ -11,8 +11,9 @@ The main pipeline asks which cell types carry ME/CFS signal and whether that bea
 
 | Layer | Question | Method | Decided by | Status |
 |---|---|---|---|---|
-| V (gate) | Does the new method work on known biology? | OLS plus permutation vs MAGMA on controls; Alzheimer's keeps microglia after residualisation; height stays non-neuronal | PREREG v1.7 V1 to V3 | pending (waiting for panel MAGMA) |
-| R1 | What cell types carry the ME/CFS signal that is **not** shared with 20+ other traits? | gene-level z of ME/CFS residualised on the principal components of the panel's gene z, then cell-type regression with a size-and-expression-matched permutation null | FDR < 0.05 in gwas_1, p < 0.05 in gwas_2, s >= 2 | pending |
+| V (gate) | Does the new method work on known biology? | OLS plus permutation vs MAGMA on controls | PREREG v1.7 V1 to V3 | **failed** (schizophrenia agreement 0.768 < 0.8; height check stricter than G3). Recorded in `results/x_R1_validation.tsv`; no ME/CFS output of this version was run |
+| R1' (v1.9) | Same question, done inside MAGMA: condition on the principal components of the other panel traits | MAGMA gene-property conditioning on avg_all, avg_neuron, PC1 to PC5 (leave-one-out panel for the s score) | FDR < 0.05 gwas_1, p < 0.05 gwas_2, s >= 2 | **done: not declared** (gate V' passed; best FDR 0.073) |
+| R1 (v1.7, superseded) | What cell types carry the ME/CFS signal that is **not** shared with 20+ other traits? | gene-level z of ME/CFS residualised on the principal components of the panel's gene z, then cell-type regression with a size-and-expression-matched permutation null | FDR < 0.05 in gwas_1, p < 0.05 in gwas_2, s >= 2 | pending |
 | R2 | Which genes carry that specific component? | residual z >= 3.5, overlap with DecodeME loci and approved-drug targets | descriptive; benchmark rule before any target is read as a hypothesis | pending |
 | F1 | Do drug-relevant gene families carry signal beyond brain expression? | MAGMA competitive set test on 8 pre-fixed HGNC families, conditioned on expression | FDR < 0.05 gwas_1 and p < 0.05 gwas_2 | **done: not supported.** Best are ion channels (p 0.021, FDR 0.12) and nuclear receptors (p 0.030, FDR 0.12) in gwas_1, same direction and similar size in gwas_2 (p 0.027, 0.041; FDR 0.16). None passes FDR < 0.05. |
 
@@ -37,4 +38,16 @@ it is a robustness check, not an independent replication. As a reference, Alzhei
 immunoglobulin-related genes (p 0.015, FDR 0.12). Output: `results/x_F1_families.tsv`. Reading: a hint worth following up with a larger
 GWAS, not a finding.
 
-### V, R1, R2: waiting for the comparison panel's MAGMA runs (the panel needs about 20 traits; downloads and MAGMA are still running).
+### R1' (2026-10-10), signal left after removing what 19 other traits share: not declared
+Panel of 19 traits (insomnia dropped by the heritability gate, h2 z = 1.4). Gate V' passed first: Alzheimer's keeps a microglia cluster at
+FDR < 0.05 under leave-one-out conditioning, and height's three strongest clusters are all fibroblasts. For ME/CFS gwas_1, conditioning on
+the first five principal components of the panel's gene-level z leaves **no cluster at FDR < 0.05** (best 0.073), so by the pre-registered
+rule nothing is called ME/CFS-specific by this layer. The clusters at the top are the same ones the main pipeline found: upper- and
+deep-layer intratelencephalic neurons (ULIT_121 z 3.19, DLIT_150/151/152 z 3.1 to 3.2), the amygdala excitatory cluster Amex_153 (z 2.95,
+s 3.69, the highest specificity score), and two eccentric medium spiny neuron clusters (EMSN_224 z 2.95, s 3.51; EMSN_222 z 2.79, s 2.78).
+All pass p < 0.05 in gwas_2 (same cases, different controls). Reading: the amygdala and striatal-type clusters keep the highest
+specificity scores, but their signal is too weak to clear an FDR bar once the shared genetics is conditioned out. This agrees with the
+main pipeline's own caveat (none pass FDR under model B) and does not strengthen the amygdala claim to "confirmed". It is
+consistent with, and does not add to, the earlier reports of medium spiny neurons. Outputs: `results/x_R1p_mecfs.tsv`, `results/x_R1p_validation.tsv`.
+
+### R2: not run (it depended on the OLS version of R1).
