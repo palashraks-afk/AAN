@@ -10,7 +10,7 @@ meet that request.
 | Super advanced | 5 (design) / execution risk | Specificity-calibrated cell-type statistics, conditioning, colocalisation, Mendelian randomisation and benchmark validation are graduate-level. Risk: 12 days; core path must be finished first |
 | Groundbreaking / impact | 4 | Reach is a 5 (>1M people, neglected). "Changes lives" is unproven: a mapping + hypothesis list can direct research and trials but cannot treat. Raised from 3 by the translational dossier |
 | Strong foundation | 5 | Public data from the largest ME/CFS GWAS; standard peer-reviewed methods (MAGMA, LDSC, Human Brain Cell Atlas, Open Targets) |
-| New and novel | 4 (conditional, set 2026-10-09) | Neuron localisation is a replication (DecodeME team, forum). New and not found elsewhere: panel-calibrated specificity, conditioning, subtype contrast, independent-axis count, imaging convergence, benchmark-validated ranking. Drops to 3 if the 17 Oct re-search finds a calibrated cell-type analysis of ME/CFS. See `docs/11_novelty_evidence.md` for every search and the closest prior work |
+| New and novel | 3 now (4 if the conditions in `docs/11_novelty_evidence.md` section 5 hold) | Maccallini et al. 2026 already publishes cell-type localisation and an independent-signal test. New and not found elsewhere: panel calibration, conditioning on depression/BMI/insomnia, two-method confirmation, imaging convergence, sex and infection contrasts, benchmark-validated ranking |
 | Genuinely unique | 5 (provisional) | No neglect-weighted or specificity-calibrated nervous-system genetic atlas of ME/CFS found across ~12 targeted searches. Provisional until the 8 Oct and 17 Oct re-search |
 
 ## What would change a grade
