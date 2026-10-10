@@ -44,6 +44,25 @@ Jobs have been killed twice by the computer sleeping (01:26 on 8 Oct, 23:20 on 8
 to "never" while plugged in (Windows: Settings, System, Power). Everything resumes: `run_magma.py` skips chromosomes that are
 already finished, and the other scripts skip finished traits.
 
+## 3b. Two machines are running this project (Windows and Mac)
+Git history shows a second session rebuilt and ran the pipeline on a Mac (commits of 2026-10-08 and 2026-10-09). Data and results live
+outside git, so the two machines do **not** share outputs. State as last recorded:
+| | Windows (this repo's `D:\AAN_data`) | Mac (per `docs/10_self_review.md`) |
+|---|---|---|
+| ME/CFS gwas_1 MAGMA | done | done |
+| other five ME/CFS GWAS | not done | done |
+| Alzheimer's | done | done |
+| Schizophrenia | done | still running when last noted |
+| Height | 17 of 22 chromosomes, resuming | still running when last noted |
+Rules so the work does not clash:
+1. **Pick one machine as authoritative for the final results.** Whichever passes the control gate G3 first, with the fewest steps left.
+   Do not mix result files from the two machines in one analysis.
+2. Both run the same code (`run_everything.py`), the same p-value floor (1e-300) and the same pre-registrations, so the two should agree. If both
+   finish, compare `genes.genes.out` for `decodeme_gwas_1` (expect near-identical z-scores); a mismatch is itself a finding to log.
+3. Before any push: `git pull --rebase origin main`, then `git status` and `git diff --stat`. Pushes were rejected once because the
+   other machine had pushed first.
+4. Tag the machine in `results/RUN_REPORT.md` (the report shows the date; add the machine name by hand).
+
 ## 4. How to run everything that is left: one command
 ```
 cd D:\AAN\scripts
