@@ -61,10 +61,17 @@ written in the report as "to my knowledge not previously reported (searched [dat
     neuroticism (0.59). They sit above the 90th percentile of other trait pairs, but this mostly reflects the shared neuronal profile.
   - **H, exploratory.** The benchmark passed for 1 of 3 diseases (IBD; migraine and RA failed), and the rule needs 3, so gene
     rankings (top: ISL1, CACNA1E, STT3B, DCC, PCDH17) are labelled exploratory with no target interpretation.
-- The single most defensible new statement: after calibrating against 19 other traits, a small set of excitatory neuron clusters
-  (mainly amygdala excitatory neurons, plus deep- and upper-layer cortical clusters) carries ME/CFS signal beyond what
-  generic brain traits show, while the broader neuronal enrichment (including medium spiny neurons) is shared and not
-  ME/CFS-specific. It is a modest result to be reported as such.
+- **Prior-art check 2026-10-10 (web search; to be repeated in PubMed, bioRxiv, medRxiv on 17 Oct).** Not new as localisation: an informal
+  forum analysis of the same Siletti atlas (S4ME thread "Using MAGMA on ME/CFS genetic data": forestglip, Tralfamadorian97, ME/CFS
+  Science Blog) already noted amygdala excitatory neurons, deep-layer and upper-layer intratelencephalic cells next to eccentric medium
+  spiny neurons, and Maccallini's blog (4 Oct 2025) lists amygdala among enriched regions and layer 2/3, 5, 6 glutamatergic neurons.
+  Those analyses are uncorrected for other traits and are not peer reviewed. Not found anywhere: a test of whether these clusters are
+  specific to ME/CFS against a panel of other traits, with conditioning, permutation null and locus drop. So the new part is the
+  calibration, not the cell types.
+- The single most defensible new statement: earlier informal analyses pointed at amygdala and intratelencephalic excitatory neurons;
+  here a calibrated, pre-registered test against 19 other traits shows that a small subset of them (mainly amygdala excitatory
+  neurons) carries ME/CFS signal beyond what generic brain traits show, while the broader neuronal enrichment is shared. A modest
+  result: the cell types are not new, the specificity test is.
 - What the results do NOT show: association not causation; three-donor atlas; CNS only; European ancestry; hypotheses for
   researchers, not treatment advice; gwas_2 is not an independent replication; the evidence is modest (FDR 0.03 to 0.05, none
   under model B FDR); the medium spiny neuron finding of earlier work is not reproduced here.

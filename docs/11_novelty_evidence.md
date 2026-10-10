@@ -108,3 +108,15 @@ what cell-type analysis does it include? Record below.
 |---|---|---|---|---|
 | 2026-10-09 | Mac session found Maccallini; full text read here | see sections 2b and 3 | Maccallini et al. 2026 (cell types, independent signals, gene sets) | 3 (4 if section 5 holds) |
 | 2026-10-17 | | | | |
+
+
+## 10 Oct 2026 deep search (after the results)
+Queries (web search, extended): ME/CFS GWAS cell-type enrichment with amygdala; DecodeME follow-ups with cross-trait specificity; ME/CFS
+partitioned heritability with the Siletti atlas; ME/CFS GWAS with amygdala or intratelencephalic enrichment. The research-paper index tool
+returned an authentication error, so PubMed, bioRxiv and medRxiv were not searched directly.
+Found: Maccallini blog cell-type analysis (4 Oct 2025; amygdala and layer 2/3, 5, 6 glutamatergic neurons, no cross-trait comparison);
+S4ME forum thread "Using MAGMA on ME/CFS genetic data" (amygdala excitatory, intratelencephalic and eccentric MSN mentioned, no
+cross-trait comparison); Maccallini et al. 2026 preprint (already in section 2b); a Frontiers in Neuroscience review of 22 Apr 2026 on
+HPA axis and hippocampus in ME/CFS (not a GWAS analysis).
+Not found: any panel-calibrated specificity test for ME/CFS cell types. Consequence: localisation to amygdala and intratelencephalic
+excitatory neurons is **not** new; the calibrated specificity result is. Novelty grade stays 3 until the 17 Oct PubMed/bioRxiv/medRxiv search.
