@@ -50,4 +50,12 @@ specificity scores, but their signal is too weak to clear an FDR bar once the sh
 main pipeline's own caveat (none pass FDR under model B) and does not strengthen the amygdala claim to "confirmed". It is
 consistent with, and does not add to, the earlier reports of medium spiny neurons. Outputs: `results/x_R1p_mecfs.tsv`, `results/x_R1p_validation.tsv`.
 
+### GTEx check (v1.10, 2026-10-10): the amygdala result does not replicate in independent bulk data
+Pre-registered H1 (Brain - Amygdala vs other brain regions, within-brain specificity): p = 0.49 (gwas_2 p = 0.35), specificity 0.25: **not supported**.
+H2 (Nerve - Tibial, a peripheral nerve): p = 0.75, not supported. H3 (Pituitary): p = 7.6e-4 and gwas_2 p = 0.018, but specificity against 19 traits is
+1.1 (< 2), so **not supported** (pituitary is enriched, but not more than other traits). Across all 54 tissues every brain tissue is enriched
+(FDR about 0.001, caudate and nucleus accumbens strongest) with specificity below 1, which only confirms DecodeME's brain enrichment. Bulk tissue
+cannot resolve a small neuronal population, so this weakens but does not refute the single-nucleus amygdala result. Outputs: `results/x_GTEx_S54.tsv`, `results/x_GTEx_SB.tsv`.
+Deep novelty check of the whole claim: `docs/12_discovery_novelty_check.md`.
+
 ### R2: not run (it depended on the OLS version of R1).
