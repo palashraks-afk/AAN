@@ -126,7 +126,20 @@ non-neuronal ones, so the signal is not shown to be brain-only. Forward selectio
 and the gene list (ISL1, CACNA1E, STT3B, DCC, PCDH17) is exploratory only.
 
 ## 4. Interpretation
-[after results] Say what the result means for the question, what it does not mean, and what would change your mind.
+Notes for the author to rewrite; the claims are limited to what the numbers support.
+- **Question answered.** Earlier work says ME/CFS genetic risk sits in neurons. The question here was narrower: which cell types carry signal that
+  other brain traits do not show? Across 461 clusters, 11 are enriched; most of that is a neuronal pattern shared with other traits.
+- **What stands out.** Two amygdala excitatory clusters (Amex_153, Amex_175) keep a specificity score of 2 or more under every change to the
+  comparison panel, and the permutation null (5,000 permutations) is significant for all 11 clusters. The cortical clusters sit at the cutoff.
+- **What weakens it.** With neuronal expression also held constant (model B) no cluster passes FDR < 0.05, and conditioning on the principal
+  components of 19 other traits leaves none at FDR < 0.05 (best 0.073). In bulk GTEx tissue the amygdala is not special among brain regions
+  (bulk tissue can hide a small cell population). The second DecodeME analysis shares all cases, so it is not an independent replication.
+- **What it means.** A hypothesis: amygdala excitatory neurons may be a cell population where ME/CFS genetics differs from other brain traits.
+  It fits imaging reports of amygdala changes, but genetics here does not show mechanism, direction of effect or anything about treatment.
+- **What is new.** The cell types were named informally before (forum analyses, Maccallini 2026). To my knowledge a panel-calibrated specificity
+  test with robustness checks was not found in searches up to 10 October 2026 (to be repeated 17 October).
+- **What would change my mind.** A larger independent ME/CFS GWAS where the amygdala clusters lose their specificity, or a single-cell
+  amygdala atlas with more donors that places the signal elsewhere.
 
 ## 5. Pitfalls and limitations (true now, keep and extend)
 - Cell-type enrichment is a statistical association, not proof that those cells cause the illness.
