@@ -33,6 +33,13 @@ grades). Deadline: **Tuesday 2026-10-20, 11:59 p.m. CT.** Aim to submit Monday 1
    files (see `docs/10_self_review.md`, item 10). Several scripts and notes were written by different sessions.
 
 ## 3. The computer must stay awake
+**This has cost about 32 hours so far.** Jobs were killed by sleep at 01:26 and 23:20 on 8 Oct and at 07:54 on 9 Oct (the app's own
+keep-awake only lasts about 5 minutes after a session goes idle). Two protections now exist:
+1. `scripts/keep_awake.ps1`, a detached process that holds Windows awake until `pipeline.log` says "pipeline finished". Start it with
+   `powershell -NoProfile -WindowStyle Hidden -File D:\AAN\scripts\keep_awake.ps1`. It changes no settings; end it by stopping the process.
+2. **You should also set sleep to "never" while plugged in** (Windows: Settings, System, Power) and keep the lid open: a closed lid sleeps
+   whatever any program asks.
+
 Jobs have been killed twice by the computer sleeping (01:26 on 8 Oct, 23:20 on 8 Oct). Keep it plugged in, lid open, sleep set
 to "never" while plugged in (Windows: Settings, System, Power). Everything resumes: `run_magma.py` skips chromosomes that are
 already finished, and the other scripts skip finished traits.
