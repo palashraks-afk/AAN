@@ -67,6 +67,9 @@ written in the report as "to my knowledge not previously reported (searched [dat
   panel-dependent: ULIT_121 (77% of half panels), Splat_402 (80%, borderline), DLIT_150 (37% of leave-one-out, s about 1.94 to 2.0) and DLIT_152
   (53%, s about 1.96 to 2.0). Updated reading of A: the specific, panel-robust result is **amygdala excitatory neurons**; the cortical
   clusters are borderline and should be described as such.
+- **R1 (v1.8) permutation null at the pre-registered 5,000 permutations (2026-10-10):** all 11 clusters keep empirical p <= 0.0012
+  (nine at the minimum 0.0002, Splat_402 0.0012). The 1,000 run is kept as `results/permutation_decodeme_gwas_1_n1000.tsv`. This
+  confirms the C2 check; it says nothing new about specificity.
 - **Later checks that did not strengthen A (run by the second session, 2026-10-10; see `EXTENSION_LAYERS.md`, `docs/12_discovery_novelty_check.md`).**
   (1) R1' (PREREG v1.9): conditioning inside MAGMA on the first five principal components of the 19 other traits leaves **no cluster at
   FDR < 0.05** (best 0.073); Amex_153 still has the highest specificity score (3.69). (2) GTEx independent check (v1.10, bulk tissue,
