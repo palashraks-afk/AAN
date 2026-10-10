@@ -90,15 +90,40 @@ Candidates for ME/CFS are labelled exploratory unless the benchmark passes. Ever
 researchers, not a treatment suggestion.
 
 ## 3. Results
-[fill from results/ and figures/ only]
-- 3.1 Pipeline controls (Fig. S1)
-- 3.2 Which cell types are enriched for ME/CFS (Fig. 2, Table 1)
-- 3.3 Is the pattern specific to ME/CFS? (Fig. 3)
-- 3.4 Conditioning on generic neuronal expression and on depression, BMI, insomnia (Fig. 4)
-- 3.5 Robustness (second control set) and subtype/sex contrasts (Fig. 5)
-- 3.6 Where in the brain (Fig. 7, 3D)
-- 3.7 Candidate genes and the benchmark (Fig. 6, Table 2)
-- 3.8 Neglected-condition extension: which conditions passed the heritability gate and which did not
+Facts and numbers only, taken from `results/` on 2026-10-10. Rewrite in your own words; keep every number traceable to the file named.
+
+**3.1 Pipeline controls** (`results/G3_check.txt`, `results/method_benchmark.md`). Before any ME/CFS result was read, three control traits had to
+reproduce known biology. Schizophrenia had an excitatory-neuron cluster at FDR < 0.05 (280 of 461 clusters significant in model A). Alzheimer's
+disease was enriched in microglia (FDR 3e-7). Height's three strongest clusters were all fibroblasts. All three rules passed. Height also showed that
+the continuous MAGMA test gives some false-positive neuronal clusters (13), so it is not used on its own to claim neuron specificity.
+
+**3.2 Which cell types are enriched** (`results/clusters_decodeme_gwas_1.tsv`, `results/EVIDENCE_LEDGER.md`). 11 of 461 clusters pass FDR < 0.05 in
+model A: deep-layer intratelencephalic (6), upper-layer intratelencephalic (2), amygdala excitatory (2) and one splatter cluster. The strongest
+z is 3.58 (DLIT_136). All 11 meet the "confirmed" rule: S-LDSC, a gene-label permutation null (empirical p <= 0.002 at 1,000 permutations;
+see the 5,000 run in `results/permutation_decodeme_gwas_1.tsv`), locus and leave-one-chromosome-out drops, and the second DecodeME analysis.
+Medium spiny neurons, reported in earlier work, are not significant here (best z 2.8).
+
+**3.3 Specificity against 19 other traits** (`results/clusters_decodeme_gwas_1.tsv`, column s). Six of the 11 clusters have s >= 2:
+Amex_153 (s 2.98), Amex_175 (2.50), ULIT_121 (2.35), Splat_402 (2.41), DLIT_152 (2.03), DLIT_150 (2.01). The other five are enriched but shared with other traits.
+
+**3.4 Conditioning** (`results/EVIDENCE_LEDGER.md`, Fig. 4). With mean neuronal expression also held constant (model B) no cluster passes FDR < 0.05
+(best 0.067; all 11 have nominal p < 0.003). With depression, BMI and insomnia gene z-scores added (model C) 7 clusters pass, including DLIT_152,
+DLIT_150, ULIT_121 and Amex_153.
+
+**3.5 Robustness of the specificity** (`results/panel_robustness.tsv`, preregistration v1.8). Rule fixed beforehand: s >= 2 in at least 90% of
+leave-one-trait-out panels and at least 80% of random half panels. Only the two amygdala excitatory clusters pass. The cortical clusters sit at
+the cutoff (DLIT_150 and DLIT_152 have s of about 1.94 to 2.0 when one trait is dropped).
+
+**3.6 Subtypes and sex** (`results/clusters_decodeme_gwas_1_*.tsv`; overlapping samples, descriptive). Infection-triggered onset: 55 clusters at FDR < 0.05;
+non-infectious onset: 11; female-only 0; male-only 0. These counts follow sample size and power and are not tested as a difference.
+
+**3.7 Where in the brain, and other layers** (Fig. 7, `results/layers_summary.txt`). The literature-region imaging convergence test is not significant
+(10th percentile of the panel, permutation p 0.91). No Reactome pathway reaches FDR < 0.05. Of 154 whole-body cell types, 12 are at FDR < 0.05, including
+non-neuronal ones, so the signal is not shown to be brain-only. Forward selection keeps one cluster for ME/CFS (two for schizophrenia).
+
+**3.8 Candidate genes** (`results/candidate_genes_decodeme_gwas_1.tsv`, `results/benchmark.tsv`). The ranking placed known drug targets high for IBD
+(median rank percentile 91%, permutation p 0.0002) but not for migraine or rheumatoid arthritis, so it fails the pre-registered benchmark (needs 3 of 3)
+and the gene list (ISL1, CACNA1E, STT3B, DCC, PCDH17) is exploratory only.
 
 ## 4. Interpretation
 [after results] Say what the result means for the question, what it does not mean, and what would change your mind.
