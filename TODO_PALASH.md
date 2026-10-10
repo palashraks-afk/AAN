@@ -30,6 +30,12 @@ Updated 2026-10-09. The computer does the analysis. These are the things only yo
 | Mon 19 Oct | | **submit.** Do the project-information answers (role, interest, who helped, funding, future, family, other interests) |
 | Tue 20 Oct | backup only | deadline 11:59 p.m. CT; do not plan to use this day |
 
+## Useful additions from the extension work (2026-10-10)
+- In the report's Limitations, add one honest sentence from `docs/12_discovery_novelty_check.md`: the amygdala signal is modest, does not survive the
+  stricter conditioning models, and does not replicate in bulk GTEx (which may hide a small cell population).
+- Read the originals before citing: Maccallini et al. 2026, Duncan et al. 2025, and the S4ME / ME/CFS Science posts (all were read through summaries).
+- 17 Oct prior-art search: add "amygdala", "calibrated", "specificity" and "panel of traits" to the terms; update `docs/12`.
+
 ## What you write yourself (the prize needs your own words)
 - The abstract, the report and the project-information answers in the form. Drafts in `paper/` are scaffolding only.
 - In "who helped", name every mentor and helper accurately.

@@ -56,6 +56,13 @@ outside git, so the two machines do **not** share outputs. State as last recorde
 | Alzheimer's | done | done |
 | Schizophrenia | done | still running when last noted |
 | Height | 17 of 22 chromosomes, resuming | still running when last noted |
+**Update 2026-10-10 (Mac):** the Mac finished all six ME/CFS MAGMA runs, the controls and a 19-trait panel, and ran extra pre-registered layers
+that do not change the Windows results (Windows stays authoritative for the main tables). Everything is in `EXTENSION_LAYERS.md`: gene families (F1, not
+supported), panel-PC conditioning (R1', pre-reg v1.9, nothing at FDR < 0.05), and a GTEx independent check (v1.10, the amygdala result does not replicate in
+bulk data). The deep novelty check is `docs/12_discovery_novelty_check.md`. To run the Mac layers: `scripts/sync_mac.sh` (makes `~/AAN_mac` with macOS paths),
+then `x_pc_conditioning.py --validate --mecfs`, `x_gtex.py --build --run`, `x_families.py --names ...`. The Mac needs the macOS MAGMA binary and the
+p-value floor (DEVIATIONS.md, 2026-10-09).
+
 Rules so the work does not clash:
 1. **Pick one machine as authoritative for the final results.** Whichever passes the control gate G3 first, with the fewest steps left.
    Do not mix result files from the two machines in one analysis.
