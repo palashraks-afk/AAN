@@ -17,8 +17,9 @@ grades). Deadline: **Tuesday 2026-10-20, 11:59 p.m. CT.** Aim to submit Monday 1
   | Comparison panel (19 GWAS) | the null for the specificity test | not done yet |
   | FinnGen neglected conditions (4) | extension | heritability gate only; trigeminal neuralgia fails (z = 1.9) |
   | Simplified S-LDSC (own code) | confirmation method | done for the controls, ME/CFS gwas_1 and gwas_2 (files exist, unopened) |
-- **Nothing about ME/CFS cell types has been read.** The rule: the controls must pass first (`check_controls.py` must print
-  `G3 overall: PASS`). That check takes seconds once height finishes.
+- **Control gate G3: PASS (2026-10-09 19:36).** After that, the first ME/CFS look (T1 only) was taken: see `DISCOVERY.md` section 4. It is
+  preliminary: 11 clusters at FDR < 0.05 in model A (excitatory cortical and amygdala neurons, z about 3.6), none in model B.
+  Calibration against the panel, confirmation and replication are still to come; the pipeline is running them.
 
 ## 2. Hard rules (do not break these)
 1. Do not open or interpret ME/CFS cluster-level results until `check_controls.py` prints `G3 overall: PASS`. If it fails,

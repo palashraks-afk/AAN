@@ -1,0 +1,31 @@
+PASS  schizophrenia: an excitatory-neuron cluster at FDR<0.05
+PASS  alzheimer: a microglia cluster at FDR<0.05
+PASS  height: top-3 clusters all non-neuronal
+G3 overall: PASS
+
+ schizophrenia top clusters
+           cluster_name     supercluster         z           fdr
+cluster_id                                                      
+404.0          Misc_404    Miscellaneous  7.093084  3.023146e-10
+403.0         Splat_403         Splatter  6.136861  9.700362e-08
+280.0           CGE_280  CGE interneuron  6.062908  1.027123e-07
+296.0           CGE_296  CGE interneuron  5.931565  1.729096e-07
+239.0           MGE_239  MGE interneuron  5.824231  2.645034e-07
+
+ alzheimer top clusters
+           cluster_name supercluster         z           fdr
+cluster_id                                                  
+11.0             Mgl_11    Microglia  5.989722  3.296457e-07
+10.0             Mgl_10    Microglia  5.877981  3.296457e-07
+7.0               Mgl_7    Microglia  5.872589  3.296457e-07
+9.0               Mgl_9    Microglia  5.708321  6.574782e-07
+8.0               Mgl_8    Microglia  5.564556  1.113776e-06
+
+ height top clusters
+           cluster_name supercluster          z           fdr
+cluster_id                                                   
+26.0             Fbl_26   Fibroblast  10.423834  4.448927e-23
+25.0             Fbl_25   Fibroblast  10.018797  1.452473e-21
+27.0             Fbl_27   Fibroblast   9.759386  1.292106e-20
+28.0             Fbl_28   Fibroblast   9.656789  2.651096e-20
+22.0             Per_22     Vascular   9.332552  4.764527e-19

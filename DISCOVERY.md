@@ -35,8 +35,8 @@ No single layer is claimed as new unless the 17 October prior-art search still f
 written in the report as "to my knowledge not previously reported (searched [date])", never as "first".
 
 ## 4. Final statement (filled from the results, not before)
-- Gate G3 (controls): [pending]
-- ME/CFS localisation (T1): [pending]
+- Gate G3 (controls): **PASS** (2026-10-09 19:36). Schizophrenia: excitatory-neuron cluster at FDR < 0.05. Alzheimer's: microglia (FDR 3e-7). Height: strongest three clusters all fibroblasts, none neuronal. Output in `results/G3_check.txt`.
+- ME/CFS localisation (T1), **preliminary, first look 2026-10-09, before calibration and confirmation**: 11 of 461 clusters at FDR < 0.05 in model A (MAGMA gene-property, DecodeME gwas_1): deep-layer intratelencephalic (6), amygdala excitatory (2), upper-layer intratelencephalic (2) and one splatter cluster; strongest z about 3.6 (smallest p 1.7e-4). In model B (also conditioning on mean neuronal expression) no cluster reaches FDR < 0.05 (best FDR 0.067). The medium spiny neuron superclusters are not significant here (best z 2.8). The signal is modest compared with the controls (schizophrenia z about 7, Alzheimer's about 6). Reading: a weak glutamatergic (excitatory) cortical and amygdala signal that has not yet been tested for specificity. Not a discovery until T2 (panel calibration), confirmation (C1 to C4) and gwas_2 replication are run.
 - Discovery A to H: [pending, one line each: declared / not declared, with the number behind it and the checks passed]
 - The single most defensible new statement: [pending]
 - What the results do NOT show: [pending, always includes: association not causation; three-donor atlas; CNS only; European
