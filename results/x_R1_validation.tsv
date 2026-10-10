@@ -1,0 +1,6 @@
+check	value	pass
+V1_schizophrenia	0.7679505985585553	False
+V1_alzheimer	0.8239455630665666	True
+V1_height	0.9434270624216868	True
+V2_alzheimer_microglia	1.0	True
+V3_height_no_neurons	1.0	False
