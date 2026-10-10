@@ -40,3 +40,12 @@ Each entry: date, what changed, why, and whether any ME/CFS result had been seen
 - Resulting lists are in `data/benchmark_targets.tsv` (migraine 24, rheumatoid arthritis 25, IBD 18
   selective targets). No gene ranking had been computed and no ME/CFS enrichment result had been seen
   when this was decided.
+
+## 2026-10-10 - code fixes after the first full run (no analysis choice changed, no extra results opened)
+- Four steps crashed and were rerun after fixing: `method_benchmark.py` and `analyze_layers.py` (z was a numpy array, needs the
+  cluster index), `confirm_robustness.py` (permutation columns such as `c136_p0` were dropped by the cluster-name filter), and
+  `make_evidence_ledger.py` (permutation cluster ids are integers).
+- `make_conditioning_covar.py`: genes MAGMA could not test for depression, BMI or insomnia had empty fields, which MAGMA rejects. They now
+  get the median z of that trait (about 0). Model C was only run after this fix.
+- The permutation null uses 1,000 permutations (already recorded above). Smallest possible empirical p is 0.001.
+- Results were read only after the pipeline finished, and the discovery rules in DISCOVERY.md section 2 were applied as written.

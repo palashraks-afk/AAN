@@ -1,0 +1,46 @@
+trait	method	n_fdr_sig	n_neuronal_fdr_sig	recovers_expected	top3_all_non_neuronal	magma_continuous_seconds	top10_set_seconds
+adhd	magma_continuous	0	0			38	
+adhd	magma_top10_set	0	0			38	
+als	magma_continuous	0	0			38	15.606727600097656
+als	magma_top10_set	0	0			38	15.606727600097656
+alzheimer	magma_continuous	11	0	True		51	16.496512413024902
+alzheimer	magma_top10_set	11	0	True		51	16.496512413024902
+alzheimer	sldsc	49	18	True		51	16.496512413024902
+anxiety	magma_continuous	0	0			39	16.010371685028076
+anxiety	magma_top10_set	0	0			39	16.010371685028076
+autism	magma_continuous	0	0			39	15.653403520584106
+autism	magma_top10_set	0	0			39	15.653403520584106
+bmi	magma_continuous	163	151			39	16.573233604431152
+bmi	magma_top10_set	7	6			39	16.573233604431152
+chronotype	magma_continuous	0	0			39	17.60046648979187
+chronotype	magma_top10_set	0	0			39	17.60046648979187
+crp	magma_continuous	34	1			38	16.723668813705444
+crp	magma_top10_set	0	0			38	16.723668813705444
+depression_broad	magma_continuous	0	0			50	15.203435182571411
+depression_broad	magma_top10_set	0	0			50	15.203435182571411
+education_years	magma_continuous	206	193			39	16.276560068130493
+education_years	magma_top10_set	110	99			39	16.276560068130493
+epilepsy	magma_continuous	0	0			39	16.284910678863525
+epilepsy	magma_top10_set	0	0			39	16.284910678863525
+height	magma_continuous	95	13		True	48	15.852754831314087
+height	magma_top10_set	30	0		True	48	15.852754831314087
+height	sldsc	103	27		True	48	15.852754831314087
+ibd	magma_continuous	25	0	True		39	15.965948343276978
+ibd	magma_top10_set	18	0	True		39	15.965948343276978
+ibd	sldsc	61	18	True		39	15.965948343276978
+ibs	magma_continuous	0	0			39	15.639453887939453
+ibs	magma_top10_set	0	0			39	15.639453887939453
+insomnia	magma_continuous	0	0			71	16.197248697280884
+insomnia	magma_top10_set	0	0			71	16.197248697280884
+migraine	magma_continuous	0	0			38	15.732746601104736
+migraine	magma_top10_set	0	0			38	15.732746601104736
+neuroticism	magma_continuous	310	293			49	15.986240148544312
+neuroticism	magma_top10_set	48	42			49	15.986240148544312
+parkinson	magma_continuous	0	0			39	15.819469928741455
+parkinson	magma_top10_set	0	0			39	15.819469928741455
+rheumatoid_arthritis	magma_continuous	20	0	True		39	15.73737907409668
+rheumatoid_arthritis	magma_top10_set	13	0	True		39	15.73737907409668
+rheumatoid_arthritis	sldsc	37	5	True		39	15.73737907409668
+schizophrenia	magma_continuous	280	263	True		100	15.60917067527771
+schizophrenia	magma_top10_set	159	144	True		100	15.60917067527771
+schizophrenia	sldsc	260	240	True		100	15.60917067527771

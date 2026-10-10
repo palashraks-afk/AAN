@@ -1,0 +1,32 @@
+supercluster	n	n_fdr	n_specific	max_z
+Upper-layer intratelencephalic	16	0	0	1.861
+Oligodendrocyte	8	0	0	1.841
+Midbrain-derived inhibitory	12	0	0	1.688
+Miscellaneous	22	0	0	1.579
+Lower rhombic lip	8	0	0	1.369
+Medium spiny neuron	18	0	0	1.28
+Deep-layer intratelencephalic	16	0	0	1.216
+Vascular	11	0	0	1.161
+Splatter	92	0	0	1.129
+Committed oligodendrocyte precursor	7	0	0	0.9401
+Upper rhombic lip	6	0	0	0.9293
+Thalamic excitatory	17	0	0	0.9211
+Astrocyte	13	0	0	0.8543
+Eccentric medium spiny neuron	14	0	0	0.7814
+Amygdala excitatory	20	0	0	0.7573
+Hippocampal CA1-3	15	0	0	0.6419
+MGE interneuron	26	0	0	0.6112
+Deep-layer corticothalamic and 6b	17	0	0	0.6024
+Mammillary body	11	0	0	0.3458
+Deep-layer near-projecting	13	0	0	0.2078
+Fibroblast	8	0	0	0.1786
+Ependymal	10	0	0	0.1591
+Microglia	9	0	0	0.0924
+Oligodendrocyte precursor	5	0	0	-0.02178
+CGE interneuron	21	0	0	-0.02865
+Cerebellar inhibitory	10	0	0	-0.03583
+Choroid plexus	7	0	0	-0.3723
+Bergmann glia	1	0	0	-0.4756
+Hippocampal dentate gyrus	7	0	0	-0.588
+Hippocampal CA4	9	0	0	-0.7246
+LAMP5-LHX6 and Chandelier	12	0	0	-0.8088

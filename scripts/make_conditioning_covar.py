@@ -18,7 +18,8 @@ def main():
         z = genes.set_index("GENE")["ZSTAT"]
         base[col] = base["GENE"].map(z)
         print(trait, "genes with z:", int(base[col].notna().sum()), "of", len(base))
-    # genes MAGMA could not test for a trait get the median; max-miss in MAGMA drops a column above 5%
+    # genes MAGMA could not test for a trait get the median (an empty field makes MAGMA reject the file)
+    base[list(TRAITS.values())] = base[list(TRAITS.values())].fillna(base[list(TRAITS.values())].median())
     base.to_csv(DERIVED / "gene_covar_C.txt", sep="\t", index=False, float_format="%.5f")
     print("wrote", DERIVED / "gene_covar_C.txt")
 

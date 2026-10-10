@@ -57,7 +57,7 @@ def main():
     # C2 permutation
     pm = read(f"permutation_{TARGET}.tsv")
     if pm is not None:
-        pm["cluster_id"] = pm["cluster"].str[1:].astype(int)
+        pm["cluster_id"] = pm["cluster"].astype(str).str.lstrip("c").astype(int)
         pm = pm.set_index("cluster_id")
         rows["C2_perm_p"] = pm["empirical_p"].reindex(rows.index)
         rows["C2"] = rows["C2_perm_p"] < 0.05

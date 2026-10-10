@@ -1,0 +1,65 @@
+
+groups_A: 0 of 16 FDR<0.05, 0 supported
+                                  z       fdr         s  supported
+VARIABLE                                                          
+subtype_INT-PVALB          2.527805  0.067376  1.204482      False
+subtype_MSN-D1             2.390095  0.067376  1.854360      False
+subtype_MSN-D2             2.177678  0.078480  1.300491      False
+transmitter_glutamatergic  1.519010  0.257520  0.408248      False
+subtype_DG-GRAN            1.264697  0.317947  1.215994      False
+transmitter_GABAergic      1.178845  0.317947  0.765170      False
+subtype_INT-LAMP5          0.659274  0.582537 -0.363889      False
+subtype_INT-LAMP5-LHX6     0.307267  0.758640 -0.120742      False
+
+groups_B: 0 of 16 FDR<0.05, 0 supported
+                                  z       fdr         s  supported
+VARIABLE                                                          
+subtype_INT-PVALB          2.369300  0.093944  1.014358      False
+subtype_MSN-D1             2.265435  0.093944  1.884324      False
+subtype_MSN-D2             2.053832  0.106645  1.391875      False
+transmitter_glutamatergic  1.437120  0.301368  0.450146      False
+subtype_DG-GRAN            1.188085  0.375680  1.152183      False
+transmitter_GABAergic      1.039010  0.398400  0.736426      False
+subtype_INT-LAMP5          0.526962  0.683680 -0.341833      False
+subtype_INT-LAMP5-LHX6     0.134813  0.892760 -0.107588      False
+
+hpa: 12 of 154 FDR<0.05, 2 supported
+                                        z       fdr         s  supported
+VARIABLE                                                                
+brain_inhibitory_neurons         4.284865  0.001408  1.185700      False
+brain_excitatory_neurons         3.878979  0.004038  0.993636      False
+other_brain_neurons              3.765353  0.004269  1.031767      False
+somatotrophs                     3.476999  0.008190  2.083751       True
+lactotrophs                      3.443630  0.008190  1.430238      False
+oligodendrocyte_progenitor_c...  3.414846  0.008190  1.267031      False
+oligodendrocytes                 3.230824  0.011919  1.317000      False
+retinal_amacrine_cells           3.229899  0.011919  1.128446      False
+
+pathways FDR<0.05 (model A): 0
+                                                                                      title       p_A     fdr_A
+VARIABLE                                                                                                       
+R-HSA-2980766                                                    Nuclear Envelope Breakdown  0.003174  0.688806
+R-HSA-68882                                                                Mitotic Anaphase  0.003814  0.688806
+R-HSA-418890                                Role of second messengers in netrin-1 signaling  0.003817  0.688806
+R-HSA-202403                                                                  TCR signaling  0.004374  0.688806
+R-HSA-3301854                                        Nuclear Pore Complex (NPC) Disassembly  0.004618  0.688806
+R-HSA-2555396                                                Mitotic Metaphase and Anaphase  0.004675  0.688806
+R-HSA-176814   Activation of APC/C and APC/C:Cdc20 mediated degradation of mitotic proteins  0.005062  0.688806
+R-HSA-176409                           APC/C:Cdc20 mediated degradation of mitotic proteins  0.005348  0.688806
+R-HSA-202433                                       Generation of second messenger molecules  0.005796  0.688806
+R-HSA-3928665                                        EPH-ephrin mediated repulsion of cells  0.006292  0.688806
+
+cellular comorbidity map (top 8 by correlation with ME/CFS):
+                  spearman_with_mecfs  percentile_among_other_trait_pairs
+decodeme_gwas_1              1.000000                            1.000000
+education_years              0.782419                            0.991342
+schizophrenia                0.765267                            0.982684
+bmi                          0.596514                            0.939394
+neuroticism                  0.585451                            0.930736
+autism                       0.582700                            0.922078
+adhd                         0.574496                            0.917749
+depression_broad             0.502348                            0.874459
+
+E1 literature-region convergence: statistic -0.455; percentile among panel 0.10; permutation p 0.9135 -> no convergence beyond generic brain traits
+
+E2 inflation: [{'what': 'gene-level p (MAGMA)', 'lambda_GC': 1.200888331079378, 'n': 18878}, {'what': 'cluster-level p (model A)', 'lambda_GC': 1.4786716937978186, 'n': 461}]

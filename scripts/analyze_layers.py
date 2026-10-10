@@ -120,7 +120,10 @@ def convergence(clusters):
     me_scores = brain3d.region_scores(clusters["z"])
     me = stat(me_scores)
     traits = [t for t in calibrate.traits_with_results("A") if t in calibrate.panel_names([t])]
-    panel = {t: stat(brain3d.region_scores(calibrate.z_from_p(calibrate.load_model(t, "A")["P"]))) for t in traits}
+    panel = {}
+    for t in traits:
+        m = calibrate.load_model(t, "A")
+        panel[t] = stat(brain3d.region_scores(pd.Series(calibrate.z_from_p(m["P"]), index=m.index)))
     pct = float(np.mean([v < me for v in panel.values()]))
     rng = np.random.default_rng(20261008)
     k = len(me_scores.reindex(LITERATURE_REGIONS).dropna())
@@ -139,7 +142,7 @@ def qq_and_lambda(clusters):
     rows = []
     fig, axes = plt.subplots(1, 2, figsize=(7.5, 3.6))
     for ax, (label, p) in zip(axes, (("gene-level p (MAGMA)", genes["P"].to_numpy()),
-                                      ("cluster-level p (model A)", clusters["P"].to_numpy()))):
+                                      ("cluster-level p (model A)", clusters["p_A"].to_numpy()))):
         p = np.sort(p[p > 0])
         obs, exp = -np.log10(p), -np.log10((np.arange(1, len(p) + 1) - 0.5) / len(p))
         ax.scatter(exp, obs, s=4, c="#34495e", linewidth=0)

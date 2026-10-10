@@ -76,7 +76,7 @@ def step_locus(name):
 def beta_std(workdir, prefix):
     base = workdir / f"{prefix}.gsa.out.txt"
     df = pd.read_csv(base, comment="#", sep=r"\s+")
-    return df[df["VARIABLE"].str.match(r"^c\d+$")].set_index("VARIABLE")["BETA_STD"]
+    return df[df["VARIABLE"].str.match(r"^c\d+(_p\d+)?$")].set_index("VARIABLE")["BETA_STD"]
 
 
 def step_permute(name):

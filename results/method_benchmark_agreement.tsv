@@ -1,0 +1,6 @@
+trait	cont_vs_set	cont_vs_sldsc	set_vs_sldsc
+alzheimer	0.749	0.310	0.325
+height	0.807	0.698	0.754
+ibd	0.787	0.375	0.451
+rheumatoid_arthritis	0.686	0.549	0.558
+schizophrenia	0.898	0.911	0.912

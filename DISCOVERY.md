@@ -1,8 +1,7 @@
 # What this project could discover, and how it will be decided
 
-Status: **NOT YET DETERMINED.** No ME/CFS cell-type result has been opened. The rule (HANDOFF.md, PREREG_v1 G3) is that
-the control traits must reproduce known biology first. Everything below was written before the results, so it cannot be
-bent to fit them. The final section is filled in only from `results/`.
+Status: **results in (2026-10-10), see section 4.** The control traits reproduced known biology first (G3 PASS). Sections 1 to 3
+were written before the results; section 4 is filled only from `results/`.
 
 ## 1. Where the project starts: what is already known (so it is not claimed as new)
 - ME/CFS has a modest inherited component (liability h2 about 0.095) and 8 genome-wide significant loci (DecodeME, preprint).
@@ -37,7 +36,35 @@ written in the report as "to my knowledge not previously reported (searched [dat
 ## 4. Final statement (filled from the results, not before)
 - Gate G3 (controls): **PASS** (2026-10-09 19:36). Schizophrenia: excitatory-neuron cluster at FDR < 0.05. Alzheimer's: microglia (FDR 3e-7). Height: strongest three clusters all fibroblasts, none neuronal. Output in `results/G3_check.txt`.
 - ME/CFS localisation (T1), **preliminary, first look 2026-10-09, before calibration and confirmation**: 11 of 461 clusters at FDR < 0.05 in model A (MAGMA gene-property, DecodeME gwas_1): deep-layer intratelencephalic (6), amygdala excitatory (2), upper-layer intratelencephalic (2) and one splatter cluster; strongest z about 3.6 (smallest p 1.7e-4). In model B (also conditioning on mean neuronal expression) no cluster reaches FDR < 0.05 (best FDR 0.067). The medium spiny neuron superclusters are not significant here (best z 2.8). The signal is modest compared with the controls (schizophrenia z about 7, Alzheimer's about 6). Reading: a weak glutamatergic (excitatory) cortical and amygdala signal that has not yet been tested for specificity. Not a discovery until T2 (panel calibration), confirmation (C1 to C4) and gwas_2 replication are run.
-- Discovery A to H: [pending, one line each: declared / not declared, with the number behind it and the checks passed]
-- The single most defensible new statement: [pending]
-- What the results do NOT show: [pending, always includes: association not causation; three-donor atlas; CNS only; European
-  ancestry; hypotheses for researchers, not treatment advice]
+- Full pipeline finished 2026-10-10 (`results/RUN_REPORT.md`, `results/EVIDENCE_LEDGER.md`, `results/layers_summary.txt`).
+  All 11 clusters from T1 are "confirmed" under the v1.3 rule (S-LDSC, permutation null with empirical p <= 0.002, locus and
+  chromosome drop, gwas_2). **Caveat for C4:** gwas_2 uses the same cases with a different control subset (cluster z correlation
+  0.978 with gwas_1), so it tests stability to the control set and is not an independent replication.
+- Discovery A to H, decided by the rules in section 2:
+  - **A, declared, modest.** Six of the 11 clusters pass FDR < 0.05, model B p < 0.05 and s >= 2 against the panel:
+    amygdala excitatory Amex_153 (s 2.98) and Amex_175 (2.50); deep-layer intratelencephalic DLIT_152 (2.03) and DLIT_150 (2.01);
+    upper-layer intratelencephalic ULIT_121 (2.35); splatter Splat_402 (2.41). The other five (DLIT_136, 147, 148, 151, ULIT_126)
+    are real but shared with other brain traits. Limits: z is 3.0 to 3.4 and FDR 0.03 to 0.05; with the stricter model B (FDR) none pass
+    (best 0.067); with model C (also conditioning on depression, BMI and insomnia genetics) 7 clusters pass FDR < 0.05, of which 4
+    are among the six (DLIT_152, DLIT_150, ULIT_121, Amex_153); cluster-level lambda is 1.48; the panel has 19 traits, so s is
+    noisy. Amygdala excitatory neurons are the most specific.
+  - **B, declared as "one axis".** Forward selection keeps one cluster (DLIT_136) for ME/CFS, Alzheimer's and RA, two for
+    schizophrenia. Same conclusion as Maccallini 2026, so a replication.
+  - **C, not declared.** 12 of 154 whole-body cell types are at FDR < 0.05, including non-neuronal ones (somatotrophs, lactotrophs,
+    oligodendrocyte precursors, oligodendrocytes). Only somatotrophs (s 2.08) and one other are "supported" by gwas_2.
+  - **D, not declared.** Literature-region convergence statistic -0.455, 10th percentile of the panel, permutation p 0.91.
+  - **E, not declared.** No Reactome pathway reaches FDR < 0.05 (best 0.69).
+  - **F, descriptive only (overlapping samples).** Clusters at FDR < 0.05: infectious onset 55 (12 specific, top DLIT_146),
+    non-infectious onset 11 (11 specific, top MGE_259, an interneuron cluster), female 0, male 0. The counts mostly reflect sample
+    size and power; no claim of a difference.
+  - **G, descriptive.** Highest profile correlations with ME/CFS: education years (0.78), schizophrenia (0.77), BMI (0.60),
+    neuroticism (0.59). They sit above the 90th percentile of other trait pairs, but this mostly reflects the shared neuronal profile.
+  - **H, exploratory.** The benchmark passed for 1 of 3 diseases (IBD; migraine and RA failed), and the rule needs 3, so gene
+    rankings (top: ISL1, CACNA1E, STT3B, DCC, PCDH17) are labelled exploratory with no target interpretation.
+- The single most defensible new statement: after calibrating against 19 other traits, a small set of excitatory neuron clusters
+  (mainly amygdala excitatory neurons, plus deep- and upper-layer cortical clusters) carries ME/CFS signal beyond what
+  generic brain traits show, while the broader neuronal enrichment (including medium spiny neurons) is shared and not
+  ME/CFS-specific. It is a modest result to be reported as such.
+- What the results do NOT show: association not causation; three-donor atlas; CNS only; European ancestry; hypotheses for
+  researchers, not treatment advice; gwas_2 is not an independent replication; the evidence is modest (FDR 0.03 to 0.05, none
+  under model B FDR); the medium spiny neuron finding of earlier work is not reproduced here.

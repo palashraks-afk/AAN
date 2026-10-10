@@ -98,10 +98,10 @@ def main():
     for t in traits:
         seconds[t] = run_set_test(t, sets, covar)
         a, s, l = load_gsa(t, "cluster_A"), load_gsa(t, "top10_sets"), sldsc_table(t)
-        z = {"magma_continuous": calibrate.z_from_p(a["P"]).reindex(ann.index)}
+        z = {"magma_continuous": pd.Series(calibrate.z_from_p(a["P"]), index=a.index).reindex(ann.index)}
         p = {"magma_continuous": a["P"].reindex(ann.index)}
         if s is not None:
-            z["magma_top10_set"] = calibrate.z_from_p(s["P"]).reindex(ann.index)
+            z["magma_top10_set"] = pd.Series(calibrate.z_from_p(s["P"]), index=s.index).reindex(ann.index)
             p["magma_top10_set"] = s["P"].reindex(ann.index)
         if l is not None:
             z["sldsc"] = l["z"].reindex(ann.index)

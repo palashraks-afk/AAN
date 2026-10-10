@@ -1,0 +1,12 @@
+cluster_id	cluster_name	supercluster	z	fdr_A	p_B	s	T2_specific	C1_sldsc_p	C1	C2_perm_p	C2	C3_locusdrop_p	C3_loco_runs_ok	C3	C4_gwas2_p	C4	checks_passed	status
+121	ULIT_121	Upper-layer intratelencephalic	3.337	0.03259	0.0008698	2.349	True	0.0002393	True	0.001998	True	0.000522	22	True	0.0001006	True	4	confirmed
+126	ULIT_126	Upper-layer intratelencephalic	3.367	0.03259	0.0007648	1.642	False	5.964e-05	True	0.000999	True	0.0004797	22	True	0.0001626	True	4	confirmed
+136	DLIT_136	Deep-layer intratelencephalic	3.576	0.03259	0.0003747	0.8726	False	1.797e-05	True	0.000999	True	0.0002155	22	True	0.0007031	True	4	confirmed
+147	DLIT_147	Deep-layer intratelencephalic	3.079	0.04787	0.002253	1.102	False	0.0007807	True	0.000999	True	0.001469	22	True	0.001908	True	4	confirmed
+148	DLIT_148	Deep-layer intratelencephalic	3.285	0.03357	0.001059	1.292	False	0.0001306	True	0.000999	True	0.0007669	22	True	0.0003293	True	4	confirmed
+150	DLIT_150	Deep-layer intratelencephalic	3.227	0.03602	0.001398	2.008	True	9.012e-05	True	0.000999	True	0.001006	22	True	0.0002461	True	4	confirmed
+151	DLIT_151	Deep-layer intratelencephalic	3.477	0.03259	0.0005335	1.876	False	0.0005087	True	0.000999	True	0.0004572	22	True	0.0002345	True	4	confirmed
+152	DLIT_152	Deep-layer intratelencephalic	3.372	0.03259	0.0007728	2.031	True	0.001812	True	0.000999	True	0.000561	22	True	0.0001148	True	4	confirmed
+153	Amex_153	Amygdala excitatory	3.432	0.03259	0.0006355	2.978	True	1.06e-05	True	0.000999	True	0.0003744	22	True	7.267e-05	True	4	confirmed
+175	Amex_175	Amygdala excitatory	3.163	0.03998	0.001696	2.496	True	0.00195	True	0.000999	True	0.0009147	22	True	0.00037	True	4	confirmed
+402	Splat_402	Splatter	3.043	0.04903	0.002641	2.405	True	0.0173	True	0.001998	True	0.001235	22	True	0.001777	True	4	confirmed
