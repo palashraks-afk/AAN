@@ -61,6 +61,12 @@ written in the report as "to my knowledge not previously reported (searched [dat
     neuroticism (0.59). They sit above the 90th percentile of other trait pairs, but this mostly reflects the shared neuronal profile.
   - **H, exploratory.** The benchmark passed for 1 of 3 diseases (IBD; migraine and RA failed), and the rule needs 3, so gene
     rankings (top: ISL1, CACNA1E, STT3B, DCC, PCDH17) are labelled exploratory with no target interpretation.
+- **Robustness of A to the choice of panel (PREREG v1.8 R2 to R4, run 2026-10-10, `results/panel_robustness.tsv`).** Rule fixed beforehand: robust
+  if s >= 2 in at least 90% of leave-one-trait-out panels and at least 80% of random half panels. **Only the two amygdala excitatory
+  clusters pass**: Amex_153 (s 2.89 to 4.02 across every variant) and Amex_175 (s >= 2.4; 88% of half panels). The other four are
+  panel-dependent: ULIT_121 (77% of half panels), Splat_402 (80%, borderline), DLIT_150 (37% of leave-one-out, s about 1.94 to 2.0) and DLIT_152
+  (53%, s about 1.96 to 2.0). Updated reading of A: the specific, panel-robust result is **amygdala excitatory neurons**; the cortical
+  clusters are borderline and should be described as such.
 - **Prior-art check 2026-10-10 (web search; to be repeated in PubMed, bioRxiv, medRxiv on 17 Oct).** Not new as localisation: an informal
   forum analysis of the same Siletti atlas (S4ME thread "Using MAGMA on ME/CFS genetic data": forestglip, Tralfamadorian97, ME/CFS
   Science Blog) already noted amygdala excitatory neurons, deep-layer and upper-layer intratelencephalic cells next to eccentric medium

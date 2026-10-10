@@ -1,0 +1,7 @@
+cluster	full panel	R2 min s	R2 share >= 2	R3 share >= 2	R4 s without similar	R4 s without psych	R2 worst trait left out	robust
+ULIT_121	2.350	2.272	1.000	0.770	2.381	2.946	epilepsy	False
+DLIT_150	2.008	1.939	0.368	0.556	2.316	1.998	autism	False
+DLIT_152	2.031	1.961	0.526	0.543	2.476	2.185	migraine	False
+Amex_153	2.978	2.887	1.000	1.000	4.022	3.057	anxiety	True
+Amex_175	2.496	2.415	1.000	0.883	2.663	3.572	bmi	True
+Splat_402	2.406	2.327	1.000	0.796	2.243	2.185	alzheimer	False
