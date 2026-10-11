@@ -165,7 +165,9 @@ immune single-cell references; test top candidate genes in cell models with ME/C
 Data: DecodeME (University of Edinburgh), Human Brain Cell Atlas, PGC, EBI GWAS Catalog, FinnGen, GTEx,
 gnomAD, Open Targets. Code and pre-registration: github.com/palashraks-afk/AAN. List everyone who helped.
 
-## References (to verify and format)
-Bulik-Sullivan 2015 Nat Genet; de Leeuw 2015 PLoS Comput Biol (MAGMA); Siletti 2023 Science; DecodeME medRxiv 2025;
-Minikel 2024 Nature; Watanabe 2019 Nat Commun (cell-type enrichment practice); Bryois 2020 Nat Genet (specificity
-and MAGMA); Trubetskoy 2022 Nature (PGC3); Bellenguez 2022 Nat Genet; Yengo 2022 Nature; Kurki 2023 Nature (FinnGen).
+## References (checked 2026-10-10 against Europe PMC; full table with DOIs in docs/13_references_and_related_work.md)
+Bulik-Sullivan 2015 Nat Genet 10.1038/ng.3211; Finucane 2015 Nat Genet 10.1038/ng.3404; Finucane 2018 Nat Genet 10.1038/s41588-018-0081-4; de Leeuw 2015 PLoS Comput Biol
+10.1371/journal.pcbi.1004219; Siletti 2023 Science 10.1126/science.add7046; Watanabe 2019 Nat Commun 10.1038/s41467-019-11181-1; Bryois 2020 Nat Genet 10.1038/s41588-020-0610-9;
+Trubetskoy 2022 Nature 10.1038/s41586-022-04434-5; Bellenguez 2022 Nat Genet 10.1038/s41588-022-01024-z; Yengo 2022 Nature 10.1038/s41586-022-05275-y; Kurki 2023 Nature
+10.1038/s41586-022-05473-8; Minikel 2024 Nature 10.1038/s41586-024-07316-0; DecodeME medRxiv 2025 10.1101/2025.08.06.25333109 (preprint); Maccallini 2026 Research Square
+10.21203/rs.3.rs-9702020/v1 (preprint); Lee 2026 medRxiv 10.64898/2026.06.08.26355171 (preprint); Cao 2020 Science 10.1126/science.aba7721; Tran 2021 Neuron 10.1016/j.neuron.2021.09.001.
