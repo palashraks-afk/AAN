@@ -89,6 +89,13 @@ selective drugs (Open Targets) rank higher than random genes matched on size and
 Candidates for ME/CFS are labelled exploratory unless the benchmark passes. Everything is a hypothesis for
 researchers, not a treatment suggestion.
 
+### 2.8 Additional pre-registered checks (written down before each was run; see EXTENSION_LAYERS.md and preregistration/PREREG_v1.7 to v1.17)
+- Robustness of the specificity score: matched-power panel, chromosome jackknife, alternative definitions of specificity, gene-driver analysis, subset tests, a single amygdala region score (PREREG v1.14, run on the main pipeline).
+- Conditioning inside MAGMA on the first five principal components of the 19 comparison traits (v1.9); gene-family sets from HGNC (v1.7).
+- Independent expression sources: GTEx v8 bulk tissues (v1.10); the Tran et al. 2021 single-nucleus atlas of amygdala, nucleus accumbens, prefrontal cortex, anterior cingulate and hippocampus (v1.11, v1.17); the Cao et al. 2020 fetal whole-body atlas with peripheral and autonomic neurons (v1.13).
+- Independent or related cohorts: FinnGen R13 "malaise and fatigue", fibromyalgia and "pain" endpoints, irritable bowel syndrome, and the Million Veteran Program ME/CFS GWAS (GCST90479178) (v1.11, v1.15, v1.16). These never enter the comparison panel.
+- Validation of the specificity score with each comparison trait as the target (v1.12). A null result was pre-committed to for every test; thresholds were fixed before any result was seen.
+
 ## 3. Results
 Facts and numbers only, taken from `results/` on 2026-10-10. Rewrite in your own words; keep every number traceable to the file named.
 
@@ -125,21 +132,42 @@ non-neuronal ones, so the signal is not shown to be brain-only. Forward selectio
 (median rank percentile 91%, permutation p 0.0002) but not for migraine or rheumatoid arthritis, so it fails the pre-registered benchmark (needs 3 of 3)
 and the gene list (ISL1, CACNA1E, STT3B, DCC, PCDH17) is exploratory only.
 
+**3.9 Solidity checks of the specificity score** (`results/w_checks.txt`, preregistration v1.14; DISCOVERY.md). With only the 13 low-power comparison traits all six clusters keep s >= 2
+(Amex_153 4.01). The chromosome jackknife gives wide intervals (Amex_153 0.58 to 5.21), so no cluster meets the "stable" rule, although every leave-one-chromosome-out s stays above 1.65. Dropping the 20
+top-contributing genes lowers z gradually (Amex_153 3.43 to 2.81) and both amygdala-labelled clusters stay nominally significant, so the signal is spread over many genes. Among the cells of Amex_153, 93% come
+from amygdala dissections, but 91% of the cells of Amex_175 come from cerebral cortex dissections; the clean amygdala claim therefore rests on Amex_153. A single pre-set amygdala region score ranks second of 17 regions
+but sits at the 79th percentile of the comparison traits (below the pre-set 90th), so that rule fails. In the infection-onset subset all six clusters pass Bonferroni; in non-infection onset, female-only and male-only
+they do not (overlapping samples; descriptive). The specificity score recovered the expected cell class in 4 of 5 control traits when each was made the target in turn (schizophrenia, whose neuronal signal is shared, was the exception).
+
+**3.10 Independent and additional checks** (`EXTENSION_LAYERS.md`; all pre-registered). None of them confirmed the amygdala result.
+| Check | Result |
+|---|---|
+| Gene families (8 HGNC families) | none at FDR < 0.05 (best: ion channels and nuclear receptors, FDR 0.12) |
+| Conditioning on the principal components of 19 traits | no cluster at FDR < 0.05 (best 0.073); Amex_153 keeps the highest specificity score (3.69) |
+| GTEx v8 bulk tissue | every brain tissue enriched (FDR about 0.001); amygdala not special among brain regions (p 0.49); pituitary enriched but not specific (s 1.1); peripheral nerve p 0.75 |
+| Tran 2021 atlas, amygdala excitatory groups | p = 0.12 and 0.15 (two regions); p = 0.14 and 0.18 (five regions); the strongest excitatory signal is in the subgenual anterior cingulate cortex (p 0.006) |
+| FinnGen "malaise and fatigue" (31,709 cases) | mean z of the six clusters 0.32 vs 0.44 for random sets (p 0.099); 3 of 6 positive |
+| Fetal whole-body atlas | peripheral/autonomic neuron groups not supported (best p 0.054, sympathoblasts); fetal limbic neurons enriched but not specific (s 0.97) |
+| Replicated-loci genes (5 genes) | not supported (p 0.28, 0.38) |
+| MVP-only ME/CFS GWAS (3,891 cases) | below the heritability gate (z 2.9), descriptive: mean z of the six 0.28; 4 of 6 positive |
+The Siletti amygdala clusters do correspond to amygdala excitatory neurons in the second atlas (Spearman 0.66), so that atlas is the right counterpart, but it contains only 344 and 55 excitatory amygdala nuclei and each of the other checks has
+limited power or a different tissue or phenotype, so these nulls are weak evidence against the result and not refutations.
+
+**3.11 Related conditions** (`results/x_M4_related_conditions.tsv`). In a large FinnGen pain phenotype (246,393 cases) all six clusters are positive (mean z 2.46 vs 1.39 for random sets, p = 0.0001); fibromyalgia (4,005 cases) is borderline (p = 0.040,
+bar 0.0167) and irritable bowel syndrome is null (p 0.69). The pattern called specific to ME/CFS against 19 traits (none of them a pain trait) is therefore shared with pain.
+
 ## 4. Interpretation
 Notes for the author to rewrite; the claims are limited to what the numbers support.
-- **Question answered.** Earlier work says ME/CFS genetic risk sits in neurons. The question here was narrower: which cell types carry signal that
-  other brain traits do not show? Across 461 clusters, 11 are enriched; most of that is a neuronal pattern shared with other traits.
-- **What stands out.** Two amygdala excitatory clusters (Amex_153, Amex_175) keep a specificity score of 2 or more under every change to the
-  comparison panel, and the permutation null (5,000 permutations) is significant for all 11 clusters. The cortical clusters sit at the cutoff.
-- **What weakens it.** With neuronal expression also held constant (model B) no cluster passes FDR < 0.05, and conditioning on the principal
-  components of 19 other traits leaves none at FDR < 0.05 (best 0.073). In bulk GTEx tissue the amygdala is not special among brain regions
-  (bulk tissue can hide a small cell population). The second DecodeME analysis shares all cases, so it is not an independent replication.
-- **What it means.** A hypothesis: amygdala excitatory neurons may be a cell population where ME/CFS genetics differs from other brain traits.
-  It fits imaging reports of amygdala changes, but genetics here does not show mechanism, direction of effect or anything about treatment.
-- **What is new.** The cell types were named informally before (forum analyses, Maccallini 2026). To my knowledge a panel-calibrated specificity
-  test with robustness checks was not found in searches up to 10 October 2026 (to be repeated 17 October).
-- **What would change my mind.** A larger independent ME/CFS GWAS where the amygdala clusters lose their specificity, or a single-cell
-  amygdala atlas with more donors that places the signal elsewhere.
+- **Question answered.** Earlier work says ME/CFS genetic risk sits in neurons. The question here was narrower: which cell types carry signal that other brain traits do not show? Across 461 clusters, 11 are enriched; most of that is a neuronal pattern shared with other traits.
+- **What stands out.** Six clusters (deep- and upper-layer intratelencephalic cortical neurons, one splatter cluster, and two clusters labelled amygdala excitatory) score s >= 2 against 19 other traits, and the permutation null (5,000 permutations) is significant for all 11 enriched clusters.
+  Only Amex_153 and Amex_175 keep s >= 2 under every change to the comparison panel, but Amex_175 is made mostly of cortical cells, so the amygdala-specific part rests on Amex_153.
+- **What weakens it.** Holding neuronal expression constant (model B) or conditioning on the principal components of other traits leaves no cluster at FDR < 0.05 (best 0.067 and 0.073). Independent data did not confirm it: bulk amygdala tissue is not special, the second single-nucleus atlas
+  points to cortical rather than amygdala excitatory neurons, a fatigue cohort does not carry it, and the peripheral and fetal atlases add nothing. Several of these tests are underpowered, so they do not refute it, but they give no support.
+- **A shared pattern.** The same clusters carry signal in a large pain phenotype. So the result is better read as "limbic and cortical excitatory neurons, a pattern shared with chronic pain, beyond what 19 other brain and body traits show" than as an ME/CFS-only amygdala result.
+  This fits the pain-related gene reported by DecodeME and the amygdala's role in pain and stress, but genetics here does not show mechanism, direction of effect or anything about treatment.
+- **What it means.** A hypothesis for researchers: ME/CFS and chronic pain may share cortical-limbic excitatory circuitry. A larger cohort, or the final 21,620-case DecodeME data (a projection suggests all six clusters would then pass the stricter model), could settle it.
+- **What is new.** The cell types were named informally before (forum analyses, Maccallini 2026). To my knowledge a panel-calibrated, pre-registered specificity test of ME/CFS cell types, with robustness and independent checks, was not found in searches up to 10 October 2026 (to be repeated 17 and 18 October). The contribution is the calibration and the honest set of checks, not the cell types.
+- **What would change my mind.** A larger independent ME/CFS GWAS in which these clusters lose their specificity, a comparison panel with pain traits in which they are no longer ME/CFS-specific, or a single-cell atlas with many more amygdala donors that places the signal elsewhere.
 
 ## 5. Pitfalls and limitations (true now, keep and extend)
 - Cell-type enrichment is a statistical association, not proof that those cells cause the illness.
@@ -155,11 +183,16 @@ Notes for the author to rewrite; the claims are limited to what the numbers supp
 - Gene prioritisation here uses association and cell-type specificity; it does not show direction of effect or causal
   mechanism. A genetic link to a gene does not mean a drug acting on it would help or be safe.
 - The heritability code is a re-implementation (tested against simulations and one published figure).
-- Some prior work could be missing from my literature searches, which stopped on [date].
+- The specificity score is imprecise at this sample size: chromosome-jackknife intervals are wide, and the six clusters sit at s of 2.0 to 3.0 against a cutoff of 2.
+- The comparison panel has no pain trait (no full-genome pain file was available when it was fixed), so "specific" does not hold against pain; see 3.11. Related conditions were kept out of the panel on purpose.
+- Many tests were run. Every one was pre-registered with a decision rule and nulls are reported, but the headline FDR across 461 clusters (0.03 to 0.05) is not corrected for the number of separate checks.
+- Independent checks were underpowered or used a different tissue or phenotype (2 and 3 amygdala excitatory groups with 344 and 55 nuclei; bulk tissue; a broad symptom code; an EHR-defined cohort below the heritability gate).
+- Two analysis errors (a corrupted download and newer traits leaking into the comparison panel) were caught before any result was read and are logged in DEVIATIONS.md.
+- Some prior work could be missing: my searches (PubMed, Europe PMC with preprint servers, Google Scholar, citation lists; 10 October 2026) cover titles and abstracts, not methods sections or supplements, and several sources were forum posts. To be repeated on 17 and 18 October.
 
 ## 6. Future work
-Replicate in a larger ME/CFS cohort when summary statistics are released; add peripheral nervous system and
-immune single-cell references; test top candidate genes in cell models with ME/CFS researchers.
+Rerun on the larger ME/CFS meta-analyses when released (a conference report mentions 46,450 cases) and on the final DecodeME data (21,620 recruited cases). Add pain traits to the comparison panel to test whether the pattern is ME/CFS-specific or shared with chronic pain.
+Test the amygdala result in a single-nucleus dataset with many more amygdala excitatory nuclei and donors, add dorsal root ganglion, sympathetic ganglion and other peripheral atlases once labelled data are public, and follow up top genes with ME/CFS researchers in cell models.
 
 ## 7. Acknowledgements and data availability
 Data: DecodeME (University of Edinburgh), Human Brain Cell Atlas, PGC, EBI GWAS Catalog, FinnGen, GTEx,
