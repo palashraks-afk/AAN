@@ -134,3 +134,26 @@ Output: `results/x_M4_related_conditions.tsv`; scripts `x_related.py`.
 - **DecodeME + MVP meta-analysis (contains all DecodeME cases; descriptive, never a replication):** heritability z = 14.1; mean z of the six = 3.40 (DecodeME alone about 3.2), all 6 positive. Adding the MVP cases leaves the six clusters
   about as strong as in DecodeME alone (e.g. Amex_153 3.69 vs 3.43, DLIT_152 3.63 vs 3.37), so the extra cases neither dilute nor clearly add. Per-cluster values for the 11 main clusters in
   `results/x_M1_cluster_z_by_cohort.tsv`; summary in `results/x_M1_mvp_meta.tsv`.
+
+### M2 Independent amygdala atlas, five-region extension (PREREG v1.17, post-hoc amendment, exploratory), 2026-10-10: not supported
+Tran et al. 2021 with all five regions (amygdala, nucleus accumbens, DLPFC, subgenual anterior cingulate, hippocampus; 77 groups), 19-trait panel, same method as v1.11.
+- **H-A3: not supported.** AmyG Excit_C p = 0.139 (gwas_2 p = 0.104, s = 2.22), AmyG Excit_A p = 0.176 (s = 1.50); the bar was p < 0.025. No group reaches FDR < 0.05 (best FDR 0.178).
+- Strongest excitatory groups are cortical, not amygdalar: subgenual anterior cingulate Excit_C (p = 0.0062, gwas_2 p = 0.0057, s = 1.81) and Excit_D (p = 0.0069, gwas_2 p = 0.015, s = 1.76), sACC Excit_E (p = 0.017). These are nominal.
+  The best amygdala group overall is inhibitory (Inhib_H p = 0.0023, gwas_2 p = 0.0091, s = 1.89; Inhib_A s = 2.98 but p = 0.023, gwas_2 p = 0.051), plus indirect-pathway medium spiny neurons of the nucleus accumbens (D2_B p = 0.0097, s = 1.95).
+- Reading: in an independent dataset the ME/CFS signal in excitatory neurons points to cortical (limbic cortex) rather than amygdala excitatory neurons, which matches the Windows finding that Amex_175 is mostly cortical cells (W-checks) and the main atlas where most of the 11 clusters are intratelencephalic cortical neurons.
+  The "amygdala excitatory" label of the headline result is therefore the weakest part of it. Caveat as before: only 344 and 55 amygdala excitatory nuclei. A bug that let three newer traits leak into the null panel was caught from the printed panel size (21 instead of 19) before any result was read;
+  the panel is now a whitelist of `data/panel.tsv` (`x_specific_component.panel_traits`). Output: `results/x_ATLAS_tran5.tsv`.
+
+## Status of the Mac list (NEXT_20.md, M1 to M10): all ten done, 2026-10-10
+| Task | Done | Where |
+|---|---|---|
+| M1 independent replication data (MVP) | yes: MVP-only below the heritability gate (descriptive); meta-analysis descriptive | `results/x_M1_*`, section above |
+| M2 independent amygdala atlas | yes: Tran 2021 (v1.11, v1.17); other open amygdala sets are raw GEO matrices without labels and were not processed | `results/x_ATLAS_tran*.tsv` |
+| M3 replicated-loci genes | yes: not supported | `results/x_M3_*` |
+| M4 related conditions | yes: pain shares the six clusters (p = 0.0001); fibromyalgia borderline; IBS null | `results/x_M4_*` |
+| M5 cross-atlas identity | yes: Siletti amygdala clusters match Tran amygdala excitatory groups (rho 0.66) | `results/x_M5_*` |
+| M6 reproducibility package | yes | `README_REPRODUCE.md`, `requirements.lock`, `tests/` (14 pass) |
+| M7 figures | yes | `figures/fig_summary_panels.png` |
+| M8 reference check | yes | `docs/13_references_and_related_work.md` |
+| M9 judge Q&A pack | yes | `docs/14_judge_QA.md` |
+| M10 pre-registration timeline | yes | `figures/fig_prereg_timeline.png` |

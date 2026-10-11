@@ -27,3 +27,7 @@ M7. Publication-quality figures: the calibration figure, the amygdala map, the v
 M8. Reference check: verify every reference in `paper/DRAFT_report.md` against PubMed or the DOI, and build a related-work table (what each paper covers, what it does not).
 M9. Judge Q&A pack: the 30 questions a neurologist on the panel is most likely to ask about this project, with short honest answers and the file that backs each one.
 M10. Pre-registration timeline figure: planned versus changed versus deviations, from the git tags and `DEVIATIONS.md`, as one figure for the report (it shows the process was honest).
+
+
+## Status 2026-10-10 (Mac session)
+M1 to M10 are all done; results and files are listed in `EXTENSION_LAYERS.md` (last section). Two earlier-than-asked additions: v1.13 (peripheral/fetal atlas) and v1.17 (five-region amygdala atlas).

@@ -32,8 +32,13 @@ def load_genes(name):
     return g[["NSNPS", "NPARAM", "ZSTAT"]]
 
 
+def panel_labels():
+    """The pre-registered panel is exactly the labels of data/panel.tsv (schizophrenia is the PGC3 file); nothing analysed later can join it."""
+    return set(pd.read_csv(Path(__file__).resolve().parent.parent / "data" / "panel.tsv", sep="\t")["label"])
+
+
 def panel_traits():
-    names = calibrate.panel_names(calibrate.traits_with_results("A"))
+    names = [n for n in calibrate.panel_names(calibrate.traits_with_results("A")) if n in panel_labels()]
     gate = calibrate.passes_heritability_gate(names)
     keep = [n for n in names if n not in EXCLUDE and gate.get(n) is not False]
     return keep
