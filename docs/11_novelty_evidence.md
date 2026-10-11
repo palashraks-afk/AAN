@@ -133,3 +133,13 @@ genetic-correlation/Mendelian randomization preprint on DecodeME (Research Squar
 Not searched yet: Google Scholar, conference abstracts, the OSF DecodeME project page for new follow-up files. Repeat on 17 Oct.
 Result so far: the calibrated specificity test was not found. Grade stays 3 until the 17 Oct repeat; the conditions for 4 (section 5) are met on
 conditions 1 and 2 only partly (result is modest) and condition 3 is pending.
+
+## 10 Oct 2026, Google Scholar (run through Claude in Chrome)
+Queries (2025 onward): `"ME/CFS" "cell type" GWAS specificity`; `DecodeME "cell type" OR "cell-type" OR amygdala`. About 20 results read.
+No paper tests whether ME/CFS cell-type enrichment is specific against a panel of other traits. Related items seen: Maccallini 2026 (listed);
+Lee 2026 medRxiv, ME/CFS-IBS-psychiatric overlap with a Descartes-atlas cell-type step (listed); Zhang et al. medRxiv 2025 and Birch et al.
+J Transl Med 2025 (rare variants, deep learning; gene-level, not common-variant cell-type enrichment); Hirsch et al. BMC Infect Dis 2025 (Lyme
+GWAS compared with fibromyalgia and ME/CFS in a US biobank; not DecodeME, no cell-type specificity test); Kerrebijn et al. Nature Medicine 2026
+(fibromyalgia GWAS with cell-type enrichment in dentate gyrus neurons; a different disease, cites DecodeME).
+Not done: page 2 and beyond of each query, "Cited by" lists of the DecodeME preprint and Maccallini, bioRxiv site search, the OSF DecodeME page.
+Result: specificity test still not found. Repeat on 17 Oct and finish the not-done items.
