@@ -22,3 +22,6 @@ reasoning is in `docs/04_honest_grades.md`. Re-grade after the results exist and
 - Final round: relevance, creativity, interpretation of data **including pitfalls**, report quality with readable figures.
 A pre-registered design with controls, honest limits and a clear null-or-positive result scores better than a claim of
 "first" that a judge can disprove in thirty seconds.
+
+## Note 2026-10-10
+The prior-art search listed for 17 Oct was run early (docs/02, end of file). It found no calibrated-specificity analysis for ME/CFS, plus two new related preprints (Lee 2026, Slaughter 2026) that do not remove the gap. Novelty therefore holds at 3, with 4 still conditional on repeating the search on 17 and 18 Oct. Not changed to 4 yet.

@@ -133,3 +133,22 @@ target ranking.
   Maccallini (brain-vs-body ranking, circuit/transmitter groups, Reactome beyond synapse, comorbidity cell-profile map).
 - Methods preprints to cite for comparison: ICePop (bioRxiv 2026.04.01.715877), GWAS x single-cell benchmark (medRxiv 2025.05.24.25328275).
 - Still to read in full: https://www.biorxiv.org/content/10.64898/2026.09.24.754059v1.full (single-nuclei multiomics, 4 brain regions, brain traits).
+
+## Prior-art re-search run early: 2026-10-10 (the "17 Oct" search; repeat on 17 Oct and again on 18 Oct before submitting)
+Terms: ME/CFS with cell type, single-nucleus, GWAS; stratified LD score regression, specificity, brain atlas; DecodeME published or peer-reviewed;
+46,450-case meta-analysis; hypothalamus/brainstem cell types calibrated against other traits; (earlier the same day) amygdala excitatory, panel
+calibration, conditioning. Tool: web search (standard and extended) with PubMed/bioRxiv/medRxiv/PMC filters where noted. Search-engine coverage of
+preprints is incomplete; run PubMed, bioRxiv and medRxiv by hand on 17 Oct.
+- **Calibrated specificity of ME/CFS cell types against a panel of other traits: not found.** No ME/CFS paper using stratified LDSC with a cell-type
+  atlas found. The closest are descriptive comparisons (Duncan et al. 2025 cross-disease MAGMA, via the ME/CFS Science blog) and Maccallini et al. 2026.
+- DecodeME: still a preprint (medRxiv 2025.08.06.25333109); no journal version found.
+- Maccallini et al. 2026 (DecodeME + MVP, 19,470 cases): brain regions and pituitary, subcortical and cerebellar neuron populations, glutamatergic synapses.
+- **New: Lee et al. 2026** ("global and local genetic overlap among ME/CFS, IBS and psychiatric traits", hypothesis-generating): MAGMA with the Descartes
+  (fetal-derived) atlas; inhibitory neurons (P 1.2e-7) and enteric nervous system neurons (FDR 0.004); no peripheral immune enrichment. Different atlas, no panel calibration.
+  https://s4me.info/threads/global-and-local-genetic-overlap-among-me-cfs-irritable-bowel-syndrome-and-psychiatric-traits-a-hypothesis-generating-analysis-2026-lee.50633/
+- **New: Slaughter et al., medRxiv, Sept 2026**, "Seven replicated genomic associations of ME/CFS" (1,268 UK Biobank cases; reportedly not replicated by DecodeME at four tested loci).
+  Variant-level, not cell-type; read before citing. https://meassociation.org.uk/2026/09/research-medrxiv-preprint-seven-replicated-genomic-associations-of-me-cfs/
+- Broberg et al. (46,450 cases, 2,461,268 controls, 10 loci): conference report only; no preprint found.
+- Same atlas-plus-MAGMA method in other diseases (not ME/CFS): neurodegeneration (PMC10680930), tinnitus (PMC12687797), depression (PMC11829167).
+- Outcome for the novelty grade: nothing found that removes the "calibrated specificity" gap, so SCORES.md stays "3 now, 4 if the 17 Oct search is clean".
+  Caveats: forum and blog sources were read through summaries; the Lee and Slaughter items are new since the last search; repeat before submitting.
