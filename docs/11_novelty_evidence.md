@@ -120,3 +120,16 @@ cross-trait comparison); Maccallini et al. 2026 preprint (already in section 2b)
 HPA axis and hippocampus in ME/CFS (not a GWAS analysis).
 Not found: any panel-calibrated specificity test for ME/CFS cell types. Consequence: localisation to amygdala and intratelencephalic
 excitatory neurons is **not** new; the calibrated specificity result is. Novelty grade stays 3 until the 17 Oct PubMed/bioRxiv/medRxiv search.
+
+## 10 Oct 2026, database search (PubMed E-utilities and Europe PMC, which indexes medRxiv, bioRxiv and Research Square preprints)
+Run directly against the databases, not through a web search tool. PubMed: ME/CFS or chronic fatigue AND GWAS AND (cell type OR single-cell OR
+single-nucleus) = 0 hits; AND (MAGMA OR LDSC OR heritability enrichment) = 0; AND amygdala AND (GWAS OR genetic) = 0; "DecodeME" = 15 hits
+(2011 to 2026, none a cell-type specificity test; includes Identification of combinatorial risk factors in DecodeME, J Transl Med Apr 2026).
+Europe PMC, preprints and articles 2025 to 2026, five query framings: no paper found that tests ME/CFS cell-type enrichment against a panel of other
+traits. Closest new item: *Global and local genetic overlap among ME/CFS, irritable bowel syndrome and psychiatric traits* (medRxiv, 10 Jun 2026,
+doi 10.64898/2026.06.08.26355171): MAGMA cell-type enrichment with the Descartes fetal-adult atlas, ME/CFS enriched in inhibitory neurons
+(P 1.2e-7) and enteric neurons; no cross-trait specificity score and a different atlas. Also Maccallini et al. (already listed) and a
+genetic-correlation/Mendelian randomization preprint on DecodeME (Research Square, Apr 2026; no cell types).
+Not searched yet: Google Scholar, conference abstracts, the OSF DecodeME project page for new follow-up files. Repeat on 17 Oct.
+Result so far: the calibrated specificity test was not found. Grade stays 3 until the 17 Oct repeat; the conditions for 4 (section 5) are met on
+conditions 1 and 2 only partly (result is modest) and condition 3 is pending.
