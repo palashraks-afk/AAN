@@ -152,3 +152,37 @@ preprints is incomplete; run PubMed, bioRxiv and medRxiv by hand on 17 Oct.
 - Same atlas-plus-MAGMA method in other diseases (not ME/CFS): neurodegeneration (PMC10680930), tinnitus (PMC12687797), depression (PMC11829167).
 - Outcome for the novelty grade: nothing found that removes the "calibrated specificity" gap, so SCORES.md stays "3 now, 4 if the 17 Oct search is clean".
   Caveats: forum and blog sources were read through summaries; the Lee and Slaughter items are new since the last search; repeat before submitting.
+
+## Repeat search, 2026-10-10 (structured; Europe PMC covers PubMed/MEDLINE plus bioRxiv, medRxiv, Research Square and other preprint servers)
+Method: 14 database queries (title/abstract restricted so a hit means the words are in the title or abstract), 2022 to 2026, plus abstracts of every
+close hit read in full, plus web searches. Script logic is in the session notes: ME/CFS terms (myalgic encephalomyelitis, chronic fatigue syndrome, ME/CFS)
+combined with each group below.
+| Query group | Hits | What it contained |
+|---|---:|---|
+| GWAS + cell type / single-nucleus / single-cell | 3 | Lee 2026; Maccallini 2026; a hypermobile EDS GWAS (not ME/CFS) |
+| MAGMA / LD score / heritability / gene-set | 8 | Lee 2026; Maccallini 2026; genetic correlation + MR preprint (Research Square, 22 traits); iPSC myotube preprint; twin study; others unrelated |
+| DecodeME | 13 | DecodeME preprint; Slaughter 2026; St-Jean cluster analysis; Lee; Maccallini; PrecisionLife (J Transl Med 2026); mitochondrial tissue-expression paper; infection-typing |
+| GWAS + neuron/brain/amygdala/nervous system | 4 | Lee; Maccallini; EDS; Olduvai-domain neurodevelopment genes |
+| GWAS + meta-analysis / Million Veteran / replication | 8 | Slaughter; Lee; Maccallini; long COVID multi-ancestry GWAS; depression PRS in postinfective fatigue |
+| genetic correlation / pleiotropy / MR | 11 | genetic-correlation + MR preprint; MDD-ME/CFS MR; EBV MR; others |
+| fatigue + cell type + GWAS | 5 | nothing new |
+| amygdala / limbic / striatum / medium spiny | 10 | imaging and clinical papers only; **no genetic cell-type paper** |
+| scDRS / CELLECT / CELLEX / brain or cell atlas / Siletti | **0** | none |
+| specificity / calibration / "panel of" / "relative to other" (with GWAS) | **0** | none |
+| pre-registered genetics | 1 | unrelated review |
+| conditional / mtCOJO / adjusted for (with GWAS) | 3 | not cell-type analyses |
+| pituitary / tissue enrichment | 32 | Maccallini plus clinical neuroendocrine papers |
+| sex-stratified / infection-onset genetics | 2 | St-Jean; Lee |
+Close papers read (abstracts), with what they do and do not contain:
+- Maccallini et al. 2026, Research Square rs-9702020 (not medRxiv): DecodeME + MVP meta-analysis; brain regions and pituitary tissue; neuronal and synaptic gene sets;
+  cell-type signals in subcortical and cerebellar neuron populations; rare-variant replication. Abstract mentions no panel of other traits or conditioning. (Full text was read by the other session; see `docs/11`.)
+- Lee et al. 2026, medRxiv 10.64898/2026.06.08.26355171: global/local genetic correlation with IBS, MDD, loneliness; MAGMA with the Descartes (fetal) atlas; inhibitory and enteric neurons. No calibration.
+- Genetic correlation and Mendelian randomization preprint, Research Square rs-9363637 (v2, April 2026): 22 auxiliary traits, shared pleiotropy; whole-genome, not cell-type. It is the nearest thing to a trait panel, so cite it as related.
+- Slaughter et al. 2026, medRxiv 10.64898/2026.09.09.26362115: UK Biobank GWAS (1,268 cases); seven replicated variants; no overlap with DecodeME. Not cell-type.
+- PrecisionLife (J Transl Med 2026, 10.1186/s12967-026-08167-1): combinatorial SNP signatures; 259 core genes; drug repurposing. Not cell-type.
+- HEAL2 deep-learning rare-variant paper (medRxiv 2025): CNS and immune cell relevance of 115 genes. Not common-variant cell-type enrichment.
+- **Fibromyalgia, Nature Medicine 2026 (10.1038/s41591-026-04492-6):** 54,629 cases; 26 loci; heritability "exclusively" in brain tissue and neural cell types. This is the same style of analysis in a neighbouring condition,
+  so the method is established; it also prioritises DCC, which is also on our exploratory gene list. Cite as context.
+- Convergence evidence: amygdala subfield MRI in ME/CFS (Front Neurol 2026, 10.3389/fneur.2026.1913553; 38 patients; nominal only, nothing survived correction) and HPA-axis meta-analysis (Mol Psychiatry 2026, 10.1038/s41380-026-03608-1; lower cortisol).
+Result: the gap is unchanged. In title/abstract searches of PubMed and the main preprint servers, no ME/CFS study combines a cell-type atlas with a panel of other traits, conditioning, or pre-registration.
+Limits: title/abstract only (methods text and supplements are not searched); Google Scholar, conference talks and unpublished work are not covered; forum and blog items are secondary. Repeat by hand on 17 and 18 Oct, and re-run the same 14 queries.

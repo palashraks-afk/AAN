@@ -25,3 +25,9 @@ A pre-registered design with controls, honest limits and a clear null-or-positiv
 
 ## Note 2026-10-10
 The prior-art search listed for 17 Oct was run early (docs/02, end of file). It found no calibrated-specificity analysis for ME/CFS, plus two new related preprints (Lee 2026, Slaughter 2026) that do not remove the gap. Novelty therefore holds at 3, with 4 still conditional on repeating the search on 17 and 18 Oct. Not changed to 4 yet.
+
+## Update 2026-10-10 (repeat search done)
+The repeat prior-art search (docs/02, last section; 14 database queries plus abstracts read) found no ME/CFS study that calibrates cell-type signal against a panel of
+other traits, conditions on them, or pre-registers the analysis. The condition set for novelty 4 is therefore met as of today: **4 is supportable, kept as "conditional"**
+until the same queries are rerun on 17 and 18 Oct and checked by hand in PubMed, bioRxiv and medRxiv, because title/abstract search cannot see methods sections or supplements.
+The cell types themselves remain a replication. Wording to use: "to my knowledge not found in searches of PubMed and preprint servers on 10 Oct 2026".
