@@ -68,3 +68,22 @@ Deep novelty check of the whole claim: `docs/12_discovery_novelty_check.md`.
 - **Why this is a weak test:** the dataset has only 443 glutamatergic amygdala nuclei (Excit_C has 55, Excit_B 44 and is excluded), the labels are coarse, and the Siletti
   clusters that carried the signal (Amex_153/175) have no one-to-one match here. A null is uninformative about the Siletti result. Output: `results/x_ATLAS_tran.tsv`.
 - The direction of the MSN.D2 signal is consistent with earlier informal and Maccallini reports of medium spiny neurons, and is the only nominal pattern that also reaches p < 0.05 in gwas_2, but it is not corrected-significant.
+
+### Independent fatigue cohort (PREREG v1.11 R1, FinnGen R13 "malaise and fatigue", 31,709 cases), 2026-10-10: not supported
+Heritability gate passed (z = 9.93312861939012). On the 461-cluster Siletti profile the six specific clusters have mean z = 0.32 against a 95th-percentile of 0.44 for random sets of six
+(permutation p = 0.099), and only 3 of 6 are positive: DLIT_150 z = 1.76 (p = 0.039), DLIT_152 z = 1.23 (p = 0.11), ULIT_121 z = 0.04, Amex_153 z = -0.10, Amex_175 z = -0.17, Splat_402 z = -0.87.
+So the amygdala excitatory clusters do not carry over to this fatigue cohort, and only the deep-layer intratelencephalic clusters show a weak, uncorrected trend.
+Caveats fixed in advance: "malaise and fatigue" is a broad symptom code, not ME/CFS, so this is a support test and not a replication; a null does not refute the ME/CFS result.
+Outputs: `results/x_R1_finngen_fatigue_clusters.tsv`, `results/x_R1_finngen_fatigue_profile.tsv`. Data integrity: the first FinnGen download was corrupted by a downloader bug and was redone with
+verified ranges; the Tran atlas files were re-downloaded and are byte-identical to the originals.
+
+## Summary of the Mac extension so far (2026-10-10)
+| Layer | Pre-reg | Result |
+|---|---|---|
+| Gene families | v1.7 F1 | not supported (FDR 0.12) |
+| Conditioning on 5 PCs of 19 traits | v1.9 | no cluster FDR < 0.05 (best 0.073) |
+| GTEx independent bulk tissue | v1.10 | amygdala not special among brain regions; pituitary enriched but not specific; nerve null |
+| Independent snRNA atlas (Tran 2021) | v1.11 P1 | amygdala excitatory not supported (weak test); D2 medium spiny neurons nominal only |
+| Independent fatigue cohort (FinnGen) | v1.11 R1 | not supported (p = 0.099) |
+| Peripheral/fetal atlas (Cao 2020) | v1.12 (to write) | download pending |
+Overall: none of the independent checks strengthens the amygdala result; none overturns it either, because each has limited power or a different phenotype or tissue type.
