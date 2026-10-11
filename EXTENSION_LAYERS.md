@@ -112,3 +112,17 @@ Output: `results/x_M5_cross_atlas.tsv`.
 ### M3 Replicated-loci genes (PREREG v1.15), 2026-10-10: not supported
 CLYBL, BICD1, GRIN2A, CSMD1 and RORA (all 5 present). Mean specificity in Amex_153 is 0.67 and in Amex_175 is 0.54, against a 95th percentile of 1.08 and 1.06 for expression-matched random sets
 (p = 0.28 and 0.38; bar 0.025). Five genes is a very small set, so this is uninformative about the amygdala result. Output: `results/x_M3_replicated_loci_genes.tsv`.
+
+### M4 Related conditions (PREREG v1.15), 2026-10-10: the six-cluster pattern IS shared with pain
+Rule (fixed beforehand): mean z of the six specific clusters exceeds the 95th percentile of random six-cluster sets in the same profile; Bonferroni over 3 conditions (p < 0.0167). Heritability gate passed for both FinnGen conditions.
+| Condition | cases | h2 z | mean z of the six | random-set 95th pct | p | six > 0 | Supported? |
+|---|---:|---:|---:|---:|---:|---:|---|
+| FinnGen pain (limb, back, neck, head, abdomen) | 246,393 | 21.8 | **2.46** | 1.39 | **0.0001** | 6 of 6 | **yes** |
+| FinnGen fibromyalgia | 4,005 | 5.8 | 1.08 | 1.04 | 0.040 | 5 of 6 | no (above Bonferroni bar) |
+| IBS (EBI file) | n/a | n/a | 0.04 | 0.60 | 0.69 | 3 of 6 | no |
+Per cluster in pain: DLIT_152 z 3.40, Amex_175 2.71, DLIT_150 2.65, Amex_153 2.28, ULIT_121 1.92, Splat_402 1.79; in fibromyalgia: DLIT_152 1.96, Amex_175 1.83.
+**Reading (important for the report):** the cluster pattern the main pipeline calls "specific to ME/CFS" also appears, strongly and in the same direction, in a large pain phenotype. It is specific relative to the 19-trait
+panel, which contains no pain trait (pain and fibromyalgia files were excluded from the panel because no full-genome file existed), but it is not specific relative to pain. The honest wording is therefore:
+"a set of deep- and upper-layer cortical and amygdala excitatory clusters carries ME/CFS signal beyond the 19 panel traits, and the same clusters carry pain signal". This fits the DecodeME report of a chronic-pain gene
+and the amygdala's role in pain affect, and it is a hypothesis that ME/CFS and chronic pain share neuronal circuitry. Limits: FinnGen "pain" is a broad symptom code; sample overlap with ME/CFS is nil (FinnGen vs DecodeME/UK Biobank).
+Output: `results/x_M4_related_conditions.tsv`; scripts `x_related.py`.
