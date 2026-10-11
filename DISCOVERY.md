@@ -78,6 +78,20 @@ written in the report as "to my knowledge not previously reported (searched [dat
   above all four of those but **below the 90th percentile (70%)** of traits, so by the rule nothing "unusual" is claimed. Caveat: ME/CFS has few significant clusters, and
   a small count makes the share noisy and tends to favour the strongest tail. What it supports: the score separates traits whose signal is generic (neuronal brain traits)
   from traits with a distinct class (immune, connective tissue), and ME/CFS looks more like the second group than the first.
+- **Solidity checks W1 to W8 (PREREG v1.14, run 2026-10-10, `results/w_checks.txt`; W2, W9, W10 are still running).**
+  - W1 matched-power panel: all six keep s >= 2 when the panel is only the 13 low-power traits (Amex_153 s 4.01, Amex_175 2.59, DLIT_152 2.44, DLIT_150 2.32, ULIT_121 2.18,
+    Splat_402 2.12). Passes. (CRP has 34 significant clusters, so by the stated cutoff of 30 it counts as a strong trait.)
+  - W3 chromosome jackknife of s: the intervals are wide and **no cluster meets the "stable" rule (lower bound > 1.5)**: Amex_153 0.58 to 5.21, Amex_175 1.07 to 3.79, the others
+    0.4 to 4.1. The point values hold (every leave-one-chromosome-out s is at least 1.65, Amex_153 at least 2.51). Reading: the specificity score is imprecise at this sample size.
+  - W4 **where the cells come from: Amex_153 is 93% amygdala dissections, but Amex_175 is 91% cerebral cortex dissections (1% amygdala).** The "amygdala excitatory" name of Amex_175 is a
+    supercluster label; its cells are mostly cortical. **The clean amygdala claim therefore rests on Amex_153 alone.** Reword: "an excitatory cluster from amygdala dissections (Amex_153) and a
+    related cortical cluster".
+  - W5 subsets: all six clusters pass the Bonferroni threshold (p < 0.0021) in the infection-onset subset (e.g. Amex_153 p 6.8e-5); none do in non-infectious onset, female-only or male-only.
+    Descriptive (overlapping samples, and the subsets differ in size); it suggests the signal sits mainly in infection-triggered ME/CFS.
+  - W6 amygdala region score: rank 2 of 17 regions for ME/CFS (Paleocortex first) but the 79th percentile of the panel, **below the pre-set 90th, so the rule fails**.
+  - W7 power projection (an assumption, not a result): with the 21,620 recruited cases (z scaled by 1.18), model B would have 24 clusters at FDR < 0.05 and all six would pass (best FDR 0.009 to 0.021),
+    and model C 42. If the effect is real, the final DecodeME data should settle it.
+  - W8 other definitions: all six are definition-robust (rank among the panel at the top for all 19 traits, weighted s 2.17 to 3.57, and top 10% for ME/CFS but for at most 4 of 19 panel traits).
 - **Later checks that did not strengthen A (run by the second session, 2026-10-10; see `EXTENSION_LAYERS.md`, `docs/12_discovery_novelty_check.md`).**
   (1) R1' (PREREG v1.9): conditioning inside MAGMA on the first five principal components of the 19 other traits leaves **no cluster at
   FDR < 0.05** (best 0.073); Amex_153 still has the highest specificity score (3.69). (2) GTEx independent check (v1.10, bulk tissue,

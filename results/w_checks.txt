@@ -1,0 +1,52 @@
+## W1 matched-power panel
+weak traits (<= 30 sig clusters): 13 ['adhd', 'als', 'alzheimer', 'anxiety', 'autism', 'chronotype', 'depression_broad', 'epilepsy', 'ibd', 'ibs', 'migraine', 'parkinson', 'rheumatoid_arthritis']
+strong traits: 6 ['bmi', 'crp', 'education_years', 'height', 'neuroticism', 'schizophrenia']
+           full  weak_panel  strong_panel  power_robust(s>=2 weak)
+ULIT_121   2.35        2.18          2.84                     True
+DLIT_150   2.01        2.32          2.11                     True
+DLIT_152   2.03        2.44          1.46                     True
+Amex_153   2.98        4.01          2.47                     True
+Amex_175   2.50        2.59          2.12                     True
+Splat_402  2.41        2.12          3.18                     True
+
+## W3 chromosome jackknife of s
+           s_full  jack_mean  jack_se  lo95  hi95  min_loco  stable(lo>1.5)
+ULIT_121     2.35       2.28     0.93  0.45  4.11      2.03           False
+DLIT_150     2.01       1.94     1.01 -0.04  3.92      1.65           False
+DLIT_152     2.03       1.97     0.83  0.34  3.59      1.74           False
+Amex_153     2.98       2.89     1.18  0.58  5.21      2.51           False
+Amex_175     2.50       2.43     0.69  1.07  3.79      2.19           False
+Splat_402    2.41       2.33     0.82  0.72  3.95      2.01           False
+
+## W4 where the cells come from (share of cells by dissection region)
+Amex_153 {'Amygdala': 0.934, 'Hippocampus': 0.053, 'Cerebral cortex': 0.012, 'Paleocortex': 0.001, 'Basal nuclei': 0.0}
+Amex_175 {'Cerebral cortex': 0.909, 'Hippocampus': 0.073, 'Amygdala': 0.012, 'Paleocortex': 0.004, 'Hypothalamus': 0.002}
+
+## W5 subsets (model A p, Bonferroni 0.05/24 = 0.00208)
+          infectious_onset non_infectious_onset  female  male     main
+ULIT_121            0.0011                0.012    0.11  0.15  0.00042
+DLIT_150            0.0005               0.0081   0.033  0.27  0.00063
+DLIT_152           0.00022               0.0034  0.0086  0.45  0.00037
+Amex_153           6.8e-05                  0.1   0.043  0.39   0.0003
+Amex_175           0.00041                0.011   0.065  0.27  0.00078
+Splat_402          0.00039                 0.19   0.029  0.29   0.0012
+passing Bonferroni: {'infectious_onset': ['ULIT_121', 'DLIT_150', 'DLIT_152', 'Amex_153', 'Amex_175', 'Splat_402'], 'non_infectious_onset': [], 'female': [], 'male': []}
+
+## W6 amygdala region score vs panel
+ME/CFS amygdala score 1.570; rank 2 of 17 regions; percentile among panel 0.79
+rule (>90th percentile and top 3): False
+top regions ME/CFS: {'Paleocortex': 1.72, 'Amygdala': 1.57, 'Cerebral cortex': 1.53, 'Claustrum': 1.41, 'Extended amygdala': 1.1}
+
+## W7 power projection (z x sqrt(21620/15579))
+model A: clusters FDR<0.05 now 11, projected 55; six now/projected: [('ULIT_121', np.float64(0.033), np.float64(0.003)), ('DLIT_150', np.float64(0.036), np.float64(0.004)), ('DLIT_152', np.float64(0.033), np.float64(0.003)), ('Amex_153', np.float64(0.033), np.float64(0.003)), ('Amex_175', np.float64(0.04), np.float64(0.005)), ('Splat_402', np.float64(0.049), np.float64(0.007))]
+model B: clusters FDR<0.05 now 0, projected 24; six now/projected: [('ULIT_121', np.float64(0.067), np.float64(0.009)), ('DLIT_150', np.float64(0.081), np.float64(0.012)), ('DLIT_152', np.float64(0.067), np.float64(0.009)), ('Amex_153', np.float64(0.067), np.float64(0.009)), ('Amex_175', np.float64(0.087), np.float64(0.014)), ('Splat_402', np.float64(0.111), np.float64(0.021))]
+model C: clusters FDR<0.05 now 7, projected 42; six now/projected: [('ULIT_121', np.float64(0.05), np.float64(0.006)), ('DLIT_150', np.float64(0.05), np.float64(0.006)), ('DLIT_152', np.float64(0.05), np.float64(0.006)), ('Amex_153', np.float64(0.05), np.float64(0.006)), ('Amex_175', np.float64(0.068), np.float64(0.01)), ('Splat_402', np.float64(0.076), np.float64(0.014))]
+
+## W8 other specificity definitions
+           s_weighted  rank_pct_vs_panel  me_in_top10pct  panel_traits_top10pct  (a)rank>=.95  (b)s_w>=2  (c)top10 & <=4 of 19 panel  definition_robust
+ULIT_121         2.79                1.0            True                      2          True       True                        True               True
+DLIT_150         2.17                1.0            True                      2          True       True                        True               True
+DLIT_152         2.24                1.0            True                      4          True       True                        True               True
+Amex_153         3.57                1.0            True                      2          True       True                        True               True
+Amex_175         3.18                1.0            True                      2          True       True                        True               True
+Splat_402        2.44                1.0            True                      1          True       True                        True               True
