@@ -1,0 +1,21 @@
+atlas	siletti_cluster	rank	best_match	spearman	shared_genes
+tran	Amex_153	1	AmyG__Excit_A	0.669	12876
+tran	Amex_153	2	AmyG__Excit_C	0.664	12876
+tran	Amex_153	3	AmyG__Inhib_E	0.567	12876
+tran	Amex_153	4	AmyG__Inhib_A	0.555	12876
+tran	Amex_153	5	AmyG__Inhib_G	0.493	12876
+tran	Amex_175	1	AmyG__Excit_A	0.664	12876
+tran	Amex_175	2	AmyG__Excit_C	0.584	12876
+tran	Amex_175	3	NAc__MSN.D2_A	0.512	12876
+tran	Amex_175	4	NAc__MSN.D1_D	0.51	12876
+tran	Amex_175	5	NAc__MSN.D1_A	0.509	12876
+cao	Amex_153	1	Fetal__SKOR2_NPSR1 positive cells	0.456	12624
+cao	Amex_153	2	Fetal__Limbic system neurons	0.454	12624
+cao	Amex_153	3	Fetal__Inhibitory neurons	0.446	12624
+cao	Amex_153	4	Fetal__Purkinje neurons	0.445	12624
+cao	Amex_153	5	Fetal__Excitatory neurons	0.443	12624
+cao	Amex_175	1	Fetal__Excitatory neurons	0.442	12624
+cao	Amex_175	2	Fetal__Limbic system neurons	0.44	12624
+cao	Amex_175	3	Fetal__SKOR2_NPSR1 positive cells	0.437	12624
+cao	Amex_175	4	Fetal__Inhibitory neurons	0.436	12624
+cao	Amex_175	5	Fetal__Purkinje neurons	0.43	12624

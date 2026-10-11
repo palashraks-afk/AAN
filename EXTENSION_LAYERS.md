@@ -101,3 +101,14 @@ Overall: none of the independent checks strengthens the amygdala result; none ov
 | Layer | Pre-reg | Result |
 |---|---|---|
 | Peripheral/autonomic and fetal limbic (Cao 2020) | v1.13 | not supported (best peripheral p = 0.054; limbic s = 0.97) |
+
+### M5 Cross-atlas identity of the amygdala clusters (NEXT_20, descriptive), 2026-10-10
+Spearman correlation of gene specificity profiles between Siletti Amex_153 / Amex_175 and every group of the other two atlases (about 12,900 shared genes).
+Amex_153 matches Tran AmyG Excit_A (rho 0.67) and Excit_C (0.66) best; Amex_175 matches Excit_A (0.66) then Excit_C (0.58); then amygdala inhibitory and accumbens medium spiny groups (0.5 to 0.57).
+In the fetal atlas the best matches are generic fetal neuron groups (limbic system neurons, excitatory neurons, SKOR2/NPSR1 cells; rho 0.43 to 0.46). So the Siletti "amygdala excitatory"
+clusters do correspond to excitatory neurons of the amygdala in an independent dataset, which makes the Tran test (p = 0.12 and 0.15) the right counterpart, with the stated caveat of 344 and 55 nuclei.
+Output: `results/x_M5_cross_atlas.tsv`.
+
+### M3 Replicated-loci genes (PREREG v1.15), 2026-10-10: not supported
+CLYBL, BICD1, GRIN2A, CSMD1 and RORA (all 5 present). Mean specificity in Amex_153 is 0.67 and in Amex_175 is 0.54, against a 95th percentile of 1.08 and 1.06 for expression-matched random sets
+(p = 0.28 and 0.38; bar 0.025). Five genes is a very small set, so this is uninformative about the amygdala result. Output: `results/x_M3_replicated_loci_genes.tsv`.

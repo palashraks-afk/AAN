@@ -1,0 +1,3 @@
+cluster	mean_specificity_of_5_genes	null_95th_pct	p_one_sided	supported_p_lt_0.025
+Amex_153	0.673	1.081	0.2767	False
+Amex_175	0.537	1.064	0.3761	False
