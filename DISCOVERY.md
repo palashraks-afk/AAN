@@ -94,6 +94,10 @@ written in the report as "to my knowledge not previously reported (searched [dat
   - W8 other definitions: all six are definition-robust (rank among the panel at the top for all 19 traits, weighted s 2.17 to 3.57, and top 10% for ME/CFS but for at most 4 of 19 panel traits).
   - W9 drivers (`results/w9_drivers.tsv`): dropping the top 1, 5 and 20 contributing genes lowers z gradually (Amex_153 3.43, 3.40, 3.25, 2.81; Amex_175 3.16, 3.10, 2.91, 2.36) and both clusters stay
     nominally significant after dropping 20 genes (p 0.0025 and 0.0092). **Passes: the signal is spread over many genes, not a few.** Top contributors for Amex_153 include 57554 (LRRC7).
+  - **W10 analysis choices (fails):** with SNP-to-gene windows of 0/0 kb and 50/50 kb instead of the pre-registered 35/10 kb (MAGMA/FUMA standard), the six clusters' z falls to 66 to 82% (0/0) and 55 to 73% (50/50) of
+    its main value (Amex_153 3.43 to 2.36 and 2.50; Amex_175 3.16 to 2.36 and 2.13), and **no cluster is at FDR < 0.05 in either rerun**. Only Splat_402 stays within 25%. The pre-registered rule (within 25% in both) fails for five of six.
+    Reading: the FDR-significant result depends on the window choice. The same direction and ranking remain (all six z > 1.7), but the significance is fragile. Must be stated in the report. The 35/10 kb window was fixed before
+    any ME/CFS result was seen (PREREG_v1), so this is not a selected window, but it is one reasonable choice among several.
 - **Later checks that did not strengthen A (run by the second session, 2026-10-10; see `EXTENSION_LAYERS.md`, `docs/12_discovery_novelty_check.md`).**
   (1) R1' (PREREG v1.9): conditioning inside MAGMA on the first five principal components of the 19 other traits leaves **no cluster at
   FDR < 0.05** (best 0.073); Amex_153 still has the highest specificity score (3.69). (2) GTEx independent check (v1.10, bulk tissue,
