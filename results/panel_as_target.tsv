@@ -1,0 +1,20 @@
+trait	n_sig	n_specific	share_specific	expected_recovered	specific_superclusters
+adhd	0	0			
+als	0	0			
+alzheimer	11	2	0.182	True	Microglia
+anxiety	0	0			
+autism	0	0			
+bmi	163	5	0.031		CGE interneuron;Deep-layer intratelencephalic
+chronotype	0	0			
+crp	34	0	0.000		
+depression_broad	0	0			
+education_years	206	1	0.005		Hippocampal dentate gyrus
+epilepsy	0	0			
+height	95	57	0.600	True	Astrocyte;Bergmann glia;Choroid plexus;Committed oligodendrocyte precursor;Ependymal;Fibroblast;Oligodendrocyte;Oligoden
+ibd	25	17	0.680	True	Fibroblast;Microglia;Miscellaneous;Vascular
+ibs	0	0			
+migraine	0	0			
+neuroticism	310	4	0.013		Deep-layer intratelencephalic;Miscellaneous;Splatter
+parkinson	0	0			
+rheumatoid_arthritis	20	16	0.800	True	Microglia;Miscellaneous;Vascular
+schizophrenia	280	0	0.000	False	

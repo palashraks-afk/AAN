@@ -70,6 +70,14 @@ written in the report as "to my knowledge not previously reported (searched [dat
 - **R1 (v1.8) permutation null at the pre-registered 5,000 permutations (2026-10-10):** all 11 clusters keep empirical p <= 0.0012
   (nine at the minimum 0.0002, Splat_402 0.0012). The 1,000 run is kept as `results/permutation_decodeme_gwas_1_n1000.tsv`. This
   confirms the C2 check; it says nothing new about specificity.
+- **Method validation (PREREG v1.12, run 2026-10-10, `results/panel_as_target.tsv`).** Each panel trait was made the target with the other traits as its
+  panel. Rule fixed beforehand: the score recovers the expected class in at least 4 of 5 (Alzheimer's microglia, RA and IBD immune/vascular, schizophrenia
+  excitatory neurons, height non-neuronal). **Result: 4 of 5 recovered** (Alzheimer's, RA, IBD, height yes; schizophrenia no: its neuronal signal is shared with
+  other brain traits, so none of its 280 clusters is specific). Among traits with at least 3 significant clusters (9 traits), the median share of significant
+  clusters that are specific is 3%; the heavily neuronal traits are at 0% (schizophrenia), 0.5% (education), 1.3% (neuroticism) and 3% (BMI). ME/CFS is 6 of 11 (55%),
+  above all four of those but **below the 90th percentile (70%)** of traits, so by the rule nothing "unusual" is claimed. Caveat: ME/CFS has few significant clusters, and
+  a small count makes the share noisy and tends to favour the strongest tail. What it supports: the score separates traits whose signal is generic (neuronal brain traits)
+  from traits with a distinct class (immune, connective tissue), and ME/CFS looks more like the second group than the first.
 - **Later checks that did not strengthen A (run by the second session, 2026-10-10; see `EXTENSION_LAYERS.md`, `docs/12_discovery_novelty_check.md`).**
   (1) R1' (PREREG v1.9): conditioning inside MAGMA on the first five principal components of the 19 other traits leaves **no cluster at
   FDR < 0.05** (best 0.073); Amex_153 still has the highest specificity score (3.69). (2) GTEx independent check (v1.10, bulk tissue,
