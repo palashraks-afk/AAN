@@ -59,3 +59,12 @@ cannot resolve a small neuronal population, so this weakens but does not refute 
 Deep novelty check of the whole claim: `docs/12_discovery_novelty_check.md`.
 
 ### R2: not run (it depended on the OLS version of R1).
+
+### Independent single-nucleus atlas (PREREG v1.11 P1, Tran et al. 2021 amygdala + nucleus accumbens), 2026-10-10: amygdala excitatory neurons not replicated (weak test)
+35 cell-type groups (15 amygdala, 20 nucleus accumbens; 5 and 8 donors), MAGMA conditioned on mean expression, specificity against the 19-trait panel.
+- **H-A1 (pre-registered): not supported.** AmyG Excit_A p = 0.12 (gwas_2 p = 0.079, s = 0.90) and AmyG Excit_C p = 0.15 (gwas_2 p = 0.13, s = 1.48); the bar was p < 0.025 and s >= 2.
+- Nothing reaches FDR < 0.05 (best FDR 0.20). The nominal leaders are inhibitory amygdala groups (Inhib_H p = 0.006, gwas_2 p = 0.024; Inhib_A p = 0.017, s = 1.97) and
+  indirect-pathway medium spiny neurons of the nucleus accumbens (MSN.D2_B p = 0.013, gwas_2 p = 0.006; D2_D and D1_D/E at p of 0.04 to 0.08 in gwas_2). Exploratory, not supported.
+- **Why this is a weak test:** the dataset has only 443 glutamatergic amygdala nuclei (Excit_C has 55, Excit_B 44 and is excluded), the labels are coarse, and the Siletti
+  clusters that carried the signal (Amex_153/175) have no one-to-one match here. A null is uninformative about the Siletti result. Output: `results/x_ATLAS_tran.tsv`.
+- The direction of the MSN.D2 signal is consistent with earlier informal and Maccallini reports of medium spiny neurons, and is the only nominal pattern that also reaches p < 0.05 in gwas_2, but it is not corrected-significant.
