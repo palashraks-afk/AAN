@@ -143,3 +143,17 @@ GWAS compared with fibromyalgia and ME/CFS in a US biobank; not DecodeME, no cel
 (fibromyalgia GWAS with cell-type enrichment in dentate gyrus neurons; a different disease, cites DecodeME).
 Not done: page 2 and beyond of each query, "Cited by" lists of the DecodeME preprint and Maccallini, bioRxiv site search, the OSF DecodeME page.
 Result: specificity test still not found. Repeat on 17 Oct and finish the not-done items.
+
+## 10 Oct 2026, remaining searches finished
+- Google Scholar page 2 of both queries plus a third (`"myalgic encephalomyelitis" OR "chronic fatigue syndrome" "single-nucleus" OR "single-cell" GWAS MAGMA OR "S-LDSC"`): nothing new that tests cell-type specificity.
+  Seen and read as relevant only to context: Keele et al. 2026 (IJMS, DecodeME with tissue expression, mitochondrial focus), Zhang et al. 2025 (rare variants, single-cell expression, MAGMA on gene sets).
+- Citations of the DecodeME preprint (Semantic Scholar API, 17 citing papers, all titles read): DNA methylation review, EpiSwitch 3D genome biomarkers,
+  fibromyalgia Nature Medicine, mitochondrial studies, combinatorial genetic risk (J Transl Med), UKB metabolic GWAS (iScience), rare variants, several reviews and
+  clinical papers. None is a cell-type specificity analysis. Maccallini's preprint DOI is not in Semantic Scholar yet (not checked this way).
+- medRxiv and bioRxiv (via Europe PMC publisher filter, Aug 2025 to Dec 2026), queries "ME/CFS cell type enrichment", "DecodeME", "myalgic encephalomyelitis GWAS cell type": 5, 5 and 2 hits; only the
+  Lee et al. June 2026 paper does cell-type enrichment for ME/CFS (Descartes atlas, no panel calibration). New in the list: *Seven replicated genomic associations of ME/CFS: a biobank study*
+  (medRxiv, 9 Sep 2026; UK Biobank and All of Us GWAS, loci only, no cell types) and a DecodeME symptom cluster analysis (Jul 2026).
+- OSF DecodeME project (api.osf.io, node rgqs3): last modified 2026-01-20; folders for analysis plan, questionnaires, summary statistics, UK Biobank and a non-DecodeME fibromyalgia GWAS. No new follow-up
+  analysis files found.
+Conclusion on 10 Oct: across PubMed, Europe PMC (including medRxiv/bioRxiv/Research Square), Google Scholar (3 queries, 2 pages), citations of the DecodeME preprint and the OSF page, **no panel-calibrated specificity test for ME/CFS
+cell types was found**. Still to do on 17 Oct: repeat all of the above for anything posted since, check the citations of Maccallini and Lee, and ask the mentor.
