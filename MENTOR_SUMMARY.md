@@ -9,9 +9,8 @@ summary statistics for 19 comparison traits. All public. No human or animal subj
 and written down before the results (pre-registration, with every change logged). Three control traits (schizophrenia, Alzheimer's, height) had to
 reproduce known biology first, and they did.
 
-**Result.** 11 cell clusters are enriched; six are more ME/CFS-specific than the other traits. Two amygdala excitatory clusters stay specific however
-the comparison panel is changed. Several stricter checks weaken the result (no cluster passes when neuronal expression is also held constant), so it is
-a hypothesis, not a confirmed discovery.
+**Result.** 11 cell clusters are enriched; six are more ME/CFS-specific than the 19 other traits (mostly deep- and upper-layer cortical excitatory neurons, plus one cluster of cells from amygdala dissections). The evidence is modest, and several stricter or independent checks do not
+confirm it (a different brain atlas, bulk tissue, a fatigue cohort, conditioning on the other traits). The same clusters also carry signal in a large pain phenotype, although they stand out more in ME/CFS. It is a hypothesis, not a confirmed discovery.
 
 **What is not new.** Neurons, and some of these cell types, were reported informally before. The new part is the cross-trait specificity test.
 

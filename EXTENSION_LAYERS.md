@@ -157,3 +157,9 @@ Tran et al. 2021 with all five regions (amygdala, nucleus accumbens, DLPFC, subg
 | M8 reference check | yes | `docs/13_references_and_related_work.md` |
 | M9 judge Q&A pack | yes | `docs/14_judge_QA.md` |
 | M10 pre-registration timeline | yes | `figures/fig_prereg_timeline.png` |
+
+### v1.18 (2026-10-10): pain added to the comparison panel, and Mac/Windows concordance
+- **P1.** With FinnGen pain and fibromyalgia added to the panel (21 traits, both pass the heritability gate), **5 of 6 clusters stay specific (s >= 2)**: Amex_153 2.97, Splat_402 2.43, ULIT_121 2.38, Amex_175 2.13, DLIT_150 2.02; DLIT_152 falls to 1.81
+  (panel of 19: 3.10, 2.45, 2.39, 2.53, 2.07, 2.13). Within-trait robust z of the six clusters is higher in ME/CFS than in pain for every cluster (e.g. Amex_153 2.01 vs 1.19; DLIT_152 1.98 vs 1.94), although the two 461-cluster profiles correlate (Spearman 0.71; fibromyalgia 0.63).
+  So the earlier wording "shared with pain" needs one qualification: pain carries the same pattern but the six clusters stand out more in ME/CFS; only DLIT_152 is no longer specific. Outputs: `results/x_P1_*.tsv`.
+- **P2.** The Mac and Windows pipelines agree: Spearman 1.0000 for -log10 p of the 461 clusters (Pearson 1.0000), Spearman 0.9998 for the specificity score; the 11 FDR-significant clusters have the same maximum p (0.00117). This is evidence of computational reproducibility across operating systems and MAGMA builds. `results/x_P2_concordance.tsv`.
