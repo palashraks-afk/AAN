@@ -1,14 +1,14 @@
 # Scores
 
-Honest self-grades on the five criteria you set, as of 2026-10-09. They are not adjusted to meet a target. The detailed
+Honest self-grades on the five criteria you set, as of 2026-10-10 (evening). They are not adjusted to meet a target. The detailed
 reasoning is in `docs/04_honest_grades.md`. Re-grade after the results exist and after the 17 October prior-art search.
 
 | Criterion | Grade (1 to 5) | Why |
 |---|:-:|---|
 | Super advanced | **5** (design) | Specificity calibration against a 23-trait panel, conditioning, two enrichment methods, permutation null, locus drop, independent GWAS, benchmark, pre-registration. Real risk is execution time, not design. |
-| Groundbreaking / impact | **4** | Reach is a 5: over a million US patients, 9 in 10 undiagnosed, about 7% of the research funding its burden would predict. "Changes lives" is unproven: results can direct research, not treat. |
+| Groundbreaking / impact | **3 to 4** | Reach is a 5 (over a million US patients, 9 in 10 undiagnosed), but the result is a modest hypothesis: the amygdala signal passes its rule and panel-robustness, but not model B, not PC conditioning (best FDR 0.073), not bulk GTEx, not the Tran 2021 atlas (weak test), not the FinnGen fatigue cohort (p 0.099). Results can direct research, not treat. |
 | Strong foundation | **5** | Largest ME/CFS GWAS, peer-reviewed methods (MAGMA, LDSC, Human Brain Cell Atlas, Open Targets), unit tests, controls checked before the real result is read. |
-| New and novel | **3 now, 4 if the conditions hold** | Maccallini et al. 2026 (read in full) already reports cell-type enrichment for ME/CFS, a forward-selection test for independent signals and a brain-versus-peripheral tissue result, so those are replications. Not found anywhere: panel-calibrated specificity, conditioning on depression/BMI/insomnia, two-method confirmation, permutation null and locus drop, genetics-versus-imaging convergence, sex and infection contrasts, benchmark-validated ranking. It becomes 4 only if the gate passes, those layers give a clear result (an axis or a clear null) and the 17 Oct re-search finds nothing more. A 5 is not available. Evidence: `docs/11_novelty_evidence.md`. |
+| New and novel | **4 (provisional, set 2026-10-10)** | Conditions in `docs/11` section 5 are met as of today: the control gate passed, the calibrated layers ran and gave a clear (modest) result, and database searches on 10 Oct (PubMed, Europe PMC with medRxiv/bioRxiv/Research Square, Google Scholar, citations of the DecodeME preprint, OSF) found no panel-calibrated specificity test for ME/CFS cell types. What is new is the calibration, not the cell types (Maccallini 2026, forum analyses, Lee 2026 are prior work). Stays 4 only if the 17 Oct repeat search is clean; drops to 3 if a paper does this. A 5 is not available. |
 | Genuinely unique | **4 to 5** (provisional) | No calibrated, multi-method, pre-registered cell-type analysis of ME/CFS found in about 45 searches. Provisional until 17 Oct. |
 
 ## What would move a grade
