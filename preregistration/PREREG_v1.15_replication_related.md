@@ -1,6 +1,6 @@
-# Pre-registration v1.14: meta-analysis cluster profile, replicated-loci genes, and related conditions (tasks M1, M3, M4 of NEXT_20)
+# Pre-registration v1.15: meta-analysis cluster profile, replicated-loci genes, and related conditions (tasks M1, M3, M4 of NEXT_20)
 
-Written 2026-10-10 (Mac session), tag `prereg-v1.14`. Adds analyses only; no earlier rule changes. Nothing below has been computed on ME/CFS or on the related conditions.
+Written 2026-10-10 (Mac session), tag `prereg-v1.15`. Adds analyses only; no earlier rule changes. Nothing below has been computed on ME/CFS or on the related conditions.
 
 ## M1 DecodeME + MVP meta-analysis (descriptive, NOT independent)
 Source: Maccallini et al. 2026, Zenodo record 20204356 (CC-BY 4.0), `GWAS_METAL_DME_1_MVP_GRCh38.tsv.gz`: a meta-analysis that contains the DecodeME GWAS-1 cases, so it cannot test replication.
