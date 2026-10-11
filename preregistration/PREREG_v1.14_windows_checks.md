@@ -1,4 +1,4 @@
-# Pre-registration v1.13: ten solidity checks on the six specific clusters (written 2026-10-10, before running any of them)
+# Pre-registration v1.14: ten solidity checks on the six specific clusters (written 2026-10-10, before running any of them)
 
 Target and clusters as in DISCOVERY.md A: ME/CFS decodeme_gwas_1, six clusters Amex_153, Amex_175, DLIT_152, DLIT_150, ULIT_121, Splat_402 (the pair of amygdala
 clusters is the focus). Nothing here adds a cluster or changes a declared result. Each check is run once. Rules are stated now.
