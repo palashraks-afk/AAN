@@ -39,16 +39,22 @@ def aggregate(path, region, label_col):
     var = a.raw.var if a.raw is not None else a.var
     sym = var["feature_name"].astype(str).to_numpy() if "feature_name" in var.columns else var.index.astype(str).to_numpy()  # Ensembl ids if no names
     labels = a.obs[label_col].astype(str).to_numpy()
-    cats = sorted({l for l in labels if (labels == l).sum() >= MIN_CELLS and not l.startswith("drop")})  # drop.* = doublets / low-quality clusters
-    sums = {c: np.zeros(X.shape[1]) for c in cats}
-    idx = {c: np.flatnonzero(labels == c) for c in cats}
-    for c, ii in idx.items():
-        for s in range(0, len(ii), 5000):
-            blk = X[ii[s:s + 5000]]
-            blk = blk.toarray() if sp.issparse(blk) else np.asarray(blk)
-            sums[c] += blk.sum(0)
-    out = pd.DataFrame({f"{region}__{c}": sums[c] for c in cats}, index=sym)
-    return out.groupby(level=0).sum(), {c: len(idx[c]) for c in cats}
+    counts = pd.Series(labels).value_counts()
+    cats = sorted(c for c, n in counts.items() if n >= MIN_CELLS and not c.startswith("drop"))  # drop.* = doublets / low-quality clusters
+    col = {c: i for i, c in enumerate(cats)}
+    code = np.array([col.get(l, -1) for l in labels])
+    sums = np.zeros((len(cats), X.shape[1]))
+    step = 20000
+    for s0 in range(0, X.shape[0], step):
+        blk = X[s0:s0 + step]
+        blk = blk.tocsr() if sp.issparse(blk) else sp.csr_matrix(blk)
+        c = code[s0:s0 + step]
+        keep = c >= 0
+        if keep.any():
+            G = sp.csr_matrix((np.ones(keep.sum()), (c[keep], np.flatnonzero(keep))), shape=(len(cats), blk.shape[0]))
+            sums += (G @ blk).toarray()
+    out = pd.DataFrame({f"{region}__{c}": sums[col[c]] for c in cats}, index=sym)
+    return out.groupby(level=0).sum(), {c: int(counts[c]) for c in cats}
 
 
 def build(name, files, label_col):

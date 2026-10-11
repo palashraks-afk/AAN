@@ -87,3 +87,17 @@ verified ranges; the Tran atlas files were re-downloaded and are byte-identical 
 | Independent fatigue cohort (FinnGen) | v1.11 R1 | not supported (p = 0.099) |
 | Peripheral/fetal atlas (Cao 2020) | v1.12 (to write) | download pending |
 Overall: none of the independent checks strengthens the amygdala result; none overturns it either, because each has limited power or a different phenotype or tissue type.
+
+### Peripheral/autonomic and fetal limbic cell types (PREREG v1.13, Cao et al. 2020 fetal atlas, 70 groups), 2026-10-10: not supported
+- **H-P1 (six peripheral nervous system groups, bar p < 0.0083): not supported.** Sympathoblasts p = 0.054 (gwas_2 p = 0.041, s = 1.14), enteric neurons p = 0.083 (s = 0.59),
+  chromaffin cells p = 0.40, visceral neurons p = 0.47, enteric glia p = 0.72, Schwann cells p = 0.99.
+- **H-P2 (fetal limbic system neurons): not supported.** p = 0.0041 and gwas_2 p = 0.014, but specificity s = 0.97 (< 2): the group is enriched like other fetal neurons, not more than other traits.
+- Exploratory (BH over 70 groups): 4 fetal groups reach FDR < 0.05 (inhibitory neurons FDR 0.016, SKOR2/NPSR1 cells, Purkinje neurons, SLC24A4/PEX5L cells), all with s between 1.0 and 1.4, so shared with other traits.
+  Fetal neurons in general carry the ME/CFS signal, which agrees with the brain-wide enrichment; nothing is peripheral and nothing is specific.
+- Limits stated beforehand: 1-million-cell subsample, a few hundred nuclei per peripheral group, fetal cells (10 to 18 weeks). A null is weak evidence against a peripheral contribution.
+- Process note: the first run of this atlas accidentally put the FinnGen fatigue cohort into the null panel; this was caught before any result was read, the cohort was added to the exclusion list
+  (`x_specific_component.py`), and the run was repeated with the 19-trait panel. Output: `results/x_ATLAS_cao.tsv`.
+
+| Layer | Pre-reg | Result |
+|---|---|---|
+| Peripheral/autonomic and fetal limbic (Cao 2020) | v1.13 | not supported (best peripheral p = 0.054; limbic s = 0.97) |

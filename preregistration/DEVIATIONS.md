@@ -1,5 +1,10 @@
 # Deviations from PREREG_v1
 
+## 2026-10-10 - fatigue cohort kept out of the null panel (Mac extension, before any result on the affected run was read)
+- After the FinnGen "malaise and fatigue" cohort was added as an analysed trait, the automatic panel list picked it up as a panel trait for the first run of the Cao atlas test.
+  It was caught from the printed panel size (20 instead of 19) before any result was read. `x_specific_component.py` now excludes it (PREREG v1.6 and v1.11 keep related conditions out of the null panel).
+  Tran 2021, GTEx and the conditioning layer ran before the cohort existed and are unaffected.
+
 ## 2026-10-09 - p-value floor of 1e-300 for MAGMA input (Mac rerun, before any ME/CFS cell-type result was opened)
 - The analysis was rerun on a Mac. Its MAGMA build rejects p-values below about 2.2e-308 (denormal numbers) as "not a number";
   the Windows build accepted them. Height has SNPs down to 5e-324. `run_magma.py` now clips p at 1e-300 for every trait.

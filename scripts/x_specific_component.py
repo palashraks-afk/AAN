@@ -15,7 +15,7 @@ import calibrate
 
 DERIVED = Path("D:/AAN_data/derived")
 RESULTS = Path("D:/AAN/results")
-EXCLUDE = {"fibromyalgia", "chronic_pain", "type1_diabetes"}
+EXCLUDE = {"fibromyalgia", "chronic_pain", "type1_diabetes", "finngen_malaise_fatigue"}  # related conditions never sit in the null panel (PREREG v1.6, v1.11)
 SEED = 20261010
 
 
