@@ -126,3 +126,11 @@ panel, which contains no pain trait (pain and fibromyalgia files were excluded f
 "a set of deep- and upper-layer cortical and amygdala excitatory clusters carries ME/CFS signal beyond the 19 panel traits, and the same clusters carry pain signal". This fits the DecodeME report of a chronic-pain gene
 and the amygdala's role in pain affect, and it is a hypothesis that ME/CFS and chronic pain share neuronal circuitry. Limits: FinnGen "pain" is a broad symptom code; sample overlap with ME/CFS is nil (FinnGen vs DecodeME/UK Biobank).
 Output: `results/x_M4_related_conditions.tsv`; scripts `x_related.py`.
+
+### M1 MVP-only ME/CFS GWAS (independent) and the DecodeME + MVP meta-analysis (PREREG v1.15 M1 and v1.16), 2026-10-10
+- **MVP-only (GCST90479178; 3,891 cases, 439,202 controls; EHR PheCode 798.1; no overlap with DecodeME or UK Biobank):** LDSC heritability z = 2.88, **below the gate of 4**, so as pre-registered it is descriptive only and no
+  supported/not-supported call is made. Mean z of the six specific clusters = 0.28 (random-set 95th percentile 0.48, p = 0.14); 4 of 6 positive: ULIT_121 0.98, Amex_153 0.72, Splat_402 0.70, Amex_175 0.23, DLIT_150 -0.34, DLIT_152 -0.59.
+  Direction is mostly consistent for the amygdala and upper-layer clusters but the cohort is too small and its phenotype too broad to test anything; Maccallini's own Table 5 shows the same near-zero MVP tissue effects.
+- **DecodeME + MVP meta-analysis (contains all DecodeME cases; descriptive, never a replication):** heritability z = 14.1; mean z of the six = 3.40 (DecodeME alone about 3.2), all 6 positive. Adding the MVP cases leaves the six clusters
+  about as strong as in DecodeME alone (e.g. Amex_153 3.69 vs 3.43, DLIT_152 3.63 vs 3.37), so the extra cases neither dilute nor clearly add. Per-cluster values for the 11 main clusters in
+  `results/x_M1_cluster_z_by_cohort.tsv`; summary in `results/x_M1_mvp_meta.tsv`.
