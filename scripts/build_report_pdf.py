@@ -34,7 +34,7 @@ def convert(md):
             m = re.match(r"!\[(.*?)\]\((.*?)\)", ln)
             alt, src = m.group(1), m.group(2)
             out.append(f'<img src="{src}" alt="{html.escape(alt)}">')
-            if re.match(r"Figure \d+\.", alt):
+            if re.match(r"Figure \d+[a-z]?\.", alt):
                 out.append(f'<em class="cap">{inline(alt)}</em>')
         elif ln.startswith("|"):
             rows = []

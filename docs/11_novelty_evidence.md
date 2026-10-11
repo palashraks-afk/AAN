@@ -157,3 +157,17 @@ Result: specificity test still not found. Repeat on 17 Oct and finish the not-do
   analysis files found.
 Conclusion on 10 Oct: across PubMed, Europe PMC (including medRxiv/bioRxiv/Research Square), Google Scholar (3 queries, 2 pages), citations of the DecodeME preprint and the OSF page, **no panel-calibrated specificity test for ME/CFS
 cell types was found**. Still to do on 17 Oct: repeat all of the above for anything posted since, check the citations of Maccallini and Lee, and ask the mentor.
+
+## 11 Oct 2026, final deep search (PubMed, Europe PMC, web search; Chrome was not connected, so Google Scholar was reached only through the web search tool)
+ME/CFS side: Europe PMC (2025 to 2026) with combinations of ME/CFS / chronic fatigue / DecodeME, cell type / single-cell / MAGMA, specificity / other traits, amygdala. No paper found that tests ME/CFS cell types
+against a panel of other traits. Seen again: Maccallini 2026, Lee 2026, mitochondria/tissue paper (Keele 2026), rare-variant papers. ME Research UK summary of the 2026 International ME/CFS Conference:
+DecodeME signal focused on neurons rather than glia (no amygdala mention).
+Method side (new, relevant to how the claim is worded):
+- **Duncan et al. 2025, Nat Neurosci 28:248, "Mapping the cellular etiology of schizophrenia and complex brain phenotypes"**: same Siletti atlas, several brain phenotypes; cross-trait but descriptive; eccentric
+  medium spiny-like amygdala neurons recur across psychiatric traits. Not ME/CFS.
+- **ECLIPSER (Rouhana et al. 2021 bioRxiv)**: cell-type enrichment of GWAS-locus genes against a background of loci from unrelated traits, i.e. a cross-trait null. Not ME/CFS, different construction.
+- **seismic (Lai et al. 2025, Nat Commun 16:8744)**: a specificity score for genes across cell types and influential-gene analysis; abstract does not describe a cross-trait panel control (not read in full).
+- Benchmarking and other tools (scDRS, EPIC, CHEERS, CELLECT/sLDSC variants) score cell-type association per trait; none found that scores one trait's cell-type profile against a trait panel.
+Consequence: the **general idea of calibrating against other traits is not new**; what I could not find is a panel-calibrated cluster-level specificity analysis of ME/CFS. Novelty therefore sits in the ME/CFS application plus
+the validation of the score, not in the idea of cross-trait comparison. Grade: 3 to 4 (see SCORES.md). Wording for the report: "to my knowledge, a panel-calibrated specificity analysis of ME/CFS cell types was not found (searched 10 and 11 October 2026)".
+Still to do on 17 Oct: repeat; read seismic and ECLIPSER methods in full; Google Scholar and the Cited-by lists directly when Chrome is connected.
