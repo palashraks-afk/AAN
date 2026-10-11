@@ -98,6 +98,9 @@ written in the report as "to my knowledge not previously reported (searched [dat
     its main value (Amex_153 3.43 to 2.36 and 2.50; Amex_175 3.16 to 2.36 and 2.13), and **no cluster is at FDR < 0.05 in either rerun**. Only Splat_402 stays within 25%. The pre-registered rule (within 25% in both) fails for five of six.
     Reading: the FDR-significant result depends on the window choice. The same direction and ranking remain (all six z > 1.7), but the significance is fragile. Must be stated in the report. The 35/10 kb window was fixed before
     any ME/CFS result was seen (PREREG_v1), so this is not a selected window, but it is one reasonable choice among several.
+  - W2 false-positive rate of the T2 rule (`results/w2_null.tsv`, 200 null traits made by shuffling gene rows within size and expression bins): **0.5% of null traits have at least one cluster that passes FDR < 0.05 and s >= 2**
+    (rule: at most 5%; passes), and 1.0% have any cluster at FDR < 0.05. Under the null, 0.14 clusters per trait reach p < 0.001, of which 0.12 also have s >= 2. Reading: the rule rarely fires by chance.
+    Limit: this null shuffles genes and so tests the cell-type step, not every source of error (for example a trait with real but generic neuronal signal, which the panel is meant to catch).
 - **Later checks that did not strengthen A (run by the second session, 2026-10-10; see `EXTENSION_LAYERS.md`, `docs/12_discovery_novelty_check.md`).**
   (1) R1' (PREREG v1.9): conditioning inside MAGMA on the first five principal components of the 19 other traits leaves **no cluster at
   FDR < 0.05** (best 0.073); Amex_153 still has the highest specificity score (3.69). (2) GTEx independent check (v1.10, bulk tissue,
