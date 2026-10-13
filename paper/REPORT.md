@@ -1,11 +1,11 @@
-# Which brain cells carry the genetic risk for ME/CFS, and is the pattern specific to the disease?
+# Which brain cells carry the genetic risk for myalgic encephalomyelitis/chronic fatigue syndrome (ME/CFS), and is the pattern specific to the disease?
 
 Palash Rakshit, Redlands, California
 Entry for the AAN Neuroscience Research Prize 2027
 
 ## Abstract
 
-ME/CFS is a long-lasting illness that affects an estimated 0.8 to 3.3 million people in the United States, most of them women, and it receives a small share of research funding. A large 2025 genetic study, DecodeME (15,579 patients, 259,909 controls), tied the disease to brain tissue. But brain tissue holds hundreds of cell types, and almost every brain trait lights up neurons, so finding neurons says little on its own. I asked a narrower question: which brain cell types carry ME/CFS risk that other brain traits do not? I linked the genetic signal to genes and then to 461 cell clusters from the Human Brain Cell Atlas, and I built a specificity score that compares ME/CFS with 19 other traits. The plan was written and time-stamped before the results. Three control traits first had to reproduce known biology, and they did; the score also recovered the expected cell class in four of five tests. Eleven clusters, mostly excitatory neurons of the cortex and amygdala, were enriched in ME/CFS, and all eleven passed permutation, locus-drop and second-analysis checks. Six were more specific to ME/CFS than the comparison traits, and the strongest was an excitatory cluster from amygdala dissections, Amex_153, which stayed specific across every change I made to the comparison panel. The same clusters also carry signal in a large chronic-pain cohort, though less strongly than in ME/CFS, and the signal was clearest in patients whose illness began with an infection. Independent datasets did not confirm the amygdala label in particular, so I present the result as a hypothesis about excitatory neurons in cortical and limbic circuits that larger cohorts can test. The method offers a way to ask whether other disease cell-type findings are specific.
+Myalgic encephalomyelitis/chronic fatigue syndrome (ME/CFS) is a long-lasting illness that affects an estimated 0.8 to 3.3 million people in the United States, most of them women, and it receives a small share of research funding. A large 2025 genetic study, DecodeME (15,579 patients, 259,909 controls), tied the disease to brain tissue. But brain tissue holds hundreds of cell types, and almost every brain trait lights up neurons, so finding neurons says little on its own. I asked a narrower question: which brain cell types carry ME/CFS risk that other brain traits do not? I linked the genetic signal to genes and then to 461 cell clusters from the Human Brain Cell Atlas, and I built a specificity score that compares ME/CFS with 19 other traits. The plan was written and time-stamped before the results. Three control traits first had to reproduce known biology, and they did; the score also recovered the expected cell class in four of five tests. Eleven clusters, mostly excitatory neurons of the cortex and amygdala, were enriched in ME/CFS, and all eleven passed permutation, locus-drop and second-analysis checks. Six were more specific to ME/CFS than the comparison traits, and the strongest was an excitatory cluster from amygdala dissections, Amex_153, which stayed specific across every change I made to the comparison panel. The same clusters also carry signal in a large chronic-pain cohort, though less strongly than in ME/CFS, and the signal was clearest in patients whose illness began with an infection. Independent datasets did not confirm the amygdala label in particular, so I present the result as a hypothesis about excitatory neurons in cortical and limbic circuits that larger cohorts can test. The method offers a way to ask whether other disease cell-type findings are specific.
 
 ---
 
@@ -40,7 +40,7 @@ The DecodeME team, a preprint by Maccallini (2026) that combined DecodeME with U
 
 **Cell types.** The Human Brain Cell Atlas (Siletti et al., 2023) profiles about 3 million nuclei from more than 100 dissections of three adult donors. I used its 461 clusters, grouped into 31 broad cell classes.
 
-**Comparison panel.** I gathered summary statistics for 23 other traits from the GWAS Catalog and kept the 19 that completed the pipeline and had a SNP heritability z-score of at least 4. The panel covers brain traits, immune traits, a body-size trait and three controls (Table 1). Insomnia was dropped because its heritability was too low.
+**Comparison panel.** I gathered summary statistics for 23 other traits from the GWAS Catalog and kept the 19 that completed the pipeline and had a SNP heritability z-score of at least 4. The panel covers brain traits, immune traits, a body-size trait and three controls (Table 1).
 
 **Table 1. The 19 comparison traits.**
 
@@ -74,7 +74,7 @@ Before looking at any ME/CFS cell-type result, I wrote the full plan, thresholds
 ![Figure 2b. Pre-registrations (blue, each written and tagged before the analysis it describes) and logged deviations (orange), 7 to 10 October 2026.](../figures/fig_prereg_timeline.png)
 
 ### 2.3 Heritability check
-I estimated how much of each trait's variation is inherited with LD score regression (Bulik-Sullivan et al., 2015). The standard software would not install on my computer, so I rewrote the method in Python, tested it on simulated data, and checked it against a published figure: for ME/CFS, my estimate converts to a liability-scale heritability close to DecodeME's reported 0.095. A trait went on to later steps only if its heritability z-score was at least 4.
+I estimated how much of each trait's variation is inherited with LD score regression (Bulik-Sullivan et al., 2015). The standard software would not install on my computer, so I rewrote the method in Python, tested it on simulated data, and checked it against a published figure (DecodeME's liability-scale heritability of 0.095 for ME/CFS). A trait went on to later steps only if its heritability z-score was at least 4.
 
 ### 2.4 From SNPs to genes to cell types
 I mapped variants from genome build GRCh38 to standard identifiers (97.6% matched). I combined SNP p-values into one score per gene with MAGMA 1.10 (de Leeuw et al., 2015), assigning SNPs within 35 kb upstream and 10 kb downstream of each gene.
@@ -135,6 +135,8 @@ The code is written in Python, with MAGMA 1.10 (a separate program) for the gene
 ## 3. Results
 
 ### 3.1 The controls worked, and so did the specificity score
+First, the heritability step. My re-implementation of LD score regression gave a liability-scale heritability for ME/CFS close to DecodeME's reported 0.095, which supports it. Insomnia failed the heritability cut-off (z of 1.4) and was dropped from the panel, which is why the panel has 19 traits.
+
 The three control checks passed before I looked at ME/CFS. In schizophrenia, 280 of 461 clusters were enriched, mostly excitatory cortical neurons. Alzheimer's disease was enriched in microglia (FDR 3 x 10^-7). The three strongest height clusters were all fibroblasts (Figure 3).
 
 ![Figure 3. Strongest enrichment (z) for each broad cell class in the three controls and in ME/CFS. Schizophrenia lights up neurons, Alzheimer's disease microglia, height connective and vascular tissue. ME/CFS shows a weaker neuronal pattern.](../figures/fig2_controls.png)
@@ -304,7 +306,9 @@ The specificity score is general. It asks of any disease, once it has been teste
 ### 4.4 How this relates to earlier work
 Neuronal enrichment in ME/CFS has been reported by the DecodeME team, by Maccallini (2026), and by informal community analyses that also noted amygdala and cortical excitatory cell types. In this respect my result confirms them. What I did not find in PubMed, Europe PMC (which indexes medRxiv, bioRxiv and Research Square), Google Scholar, the citations of the DecodeME preprint, or the DecodeME project page was a test of whether ME/CFS cell types are specific compared with a panel of other traits, with robustness checks and a pre-registered plan. The closest paper, Lee (2026), found enrichment in inhibitory and enteric neurons with a different atlas and no cross-trait calibration. Cross-trait comparison itself is not new in general: Duncan et al. (2025) mapped schizophrenia and other brain phenotypes onto the same atlas and noted which cell types recur across traits, and ECLIPSER (Rouhana et al., 2021) tests cell-type enrichment against a background of loci from unrelated traits. Neither addresses ME/CFS, and neither scores the ME/CFS profile against a panel of traits cluster by cluster as I do here. General-purpose tools such as seismic (Lai et al., 2025) improve how a gene's specificity to a cell type is scored and how influential genes are found; from their descriptions they do not ask whether a disease's association with a cell type exceeds what a panel of other traits shows, which is what the score here does. My searches were last run on 10 October 2026 and are repeated before submission.
 
-### 4.5 Limitations
+### 4.5 Limitations of this study
+These are limits of my own analysis, not of earlier work.
+
 - **Statistical evidence is moderate.** The enriched clusters have z-scores around 3 to 3.6 and FDR of 0.03 to 0.05 in the planned analysis. Under the strictest conditioning (model B) none stays under FDR 0.05, and the uncertainty of the specificity score is wide (the jackknife interval for *s* of Amex_153 runs from about 0.6 to 5.2).
 - **Choices in the pipeline matter.** With a different SNP-to-gene window (0 kb or 50 kb instead of the standard 35/10 kb that I fixed beforehand), the same clusters keep their rank but fall under the FDR cutoff.
 - **Independent replication is open.** The second DecodeME analysis shares all cases, so it is a check on the controls and not a replication. The independent or related-data checks I could run (a second brain atlas, bulk GTEx tissue, a fatigue cohort, a veteran cohort below the heritability gate, five replicated-locus genes) fell short of their pre-registered bars; each was weak or indirect, for the reasons in Table 6, so none refutes the result and none supports it.
@@ -322,10 +326,13 @@ Neuronal enrichment in ME/CFS has been reported by the DecodeME team, by Maccall
 
 ---
 
-## 5. Data and code availability
+## 5. Conclusion
+I asked which brain cell types carry ME/CFS genetic risk beyond what other traits show. A small set of excitatory neurons, led by an amygdala cluster (Amex_153), stands out against 19 comparison traits, and the same clusters carry signal in chronic pain. This fills a gap: earlier work reported neurons in general, and this is a calibrated, pre-registered test of which cell types are specific, with a score that was validated on known biology and that others can reuse for other diseases. It gives researchers a more specific population of cells to test than "the brain", and the full DecodeME data and cell-level studies of patient tissue can now check it.
+
+## 6. Data and code availability
 All data used are public: DecodeME summary statistics (OSF rgqs3), the Human Brain Cell Atlas, the GWAS Catalog, and the 1000 Genomes reference. Code, dated pre-registrations (tags prereg-v1 to prereg-v1.18), every result table, figures, and a one-command runner are at https://github.com/palashraks-afk/AAN. No human or animal subjects were recruited for this work.
 
-## 6. Acknowledgements
+## 7. Acknowledgements
 I thank the DecodeME participants and team for releasing their data, the authors of the comparison studies, and the creators of the Human Brain Cell Atlas, MAGMA, and the AlphaFold database. [Mentor, teacher and any reviewers to be added.] [AI-use disclosure: to be written by the author.]
 
 ## References
