@@ -186,3 +186,11 @@ Close papers read (abstracts), with what they do and do not contain:
 - Convergence evidence: amygdala subfield MRI in ME/CFS (Front Neurol 2026, 10.3389/fneur.2026.1913553; 38 patients; nominal only, nothing survived correction) and HPA-axis meta-analysis (Mol Psychiatry 2026, 10.1038/s41380-026-03608-1; lower cortisol).
 Result: the gap is unchanged. In title/abstract searches of PubMed and the main preprint servers, no ME/CFS study combines a cell-type atlas with a panel of other traits, conditioning, or pre-registration.
 Limits: title/abstract only (methods text and supplements are not searched); Google Scholar, conference talks and unpublished work are not covered; forum and blog items are secondary. Repeat by hand on 17 and 18 Oct, and re-run the same 14 queries.
+
+## Repeat search on 17 Oct 2026 (the scheduled one; Europe PMC = PubMed + bioRxiv, medRxiv, Research Square and other preprint servers)
+Eleven title/abstract-restricted query groups (ME/CFS with: cell type or single-cell; MAGMA/LDSC/heritability; DecodeME; neuron/brain/amygdala; meta-analysis or replication; genetic correlation or MR;
+amygdala/limbic/striatum; brain or cell atlas, scDRS, CELLEX, specificity, calibration, "panel of"; pre-registration; fibromyalgia or chronic pain; plus long COVID with cell type and GWAS), 2022 to 2026.
+**Nothing new was posted since 9 Oct 2026 in any group** (0 items with a first-publication date on or after 9 Oct). The groups that matter for the novelty claim: GWAS plus cell type (Lee 2026, Maccallini 2026, a hypermobile EDS study, the 2022
+DecodeME recruitment paper): none tests specificity against other traits; atlas/specificity/calibration restricted to ME/CFS genetics: no relevant hit (two unrelated blood-biomarker and virus-sequence papers);
+pre-registered genetics: 0 hits. Small increases in raw hit counts versus 10 Oct come from widening the start year to 2022, not from new papers.
+Result: the gap is unchanged. Not covered by this automated search (still to do by hand): Google Scholar, "cited by" lists of Maccallini and Lee, a bioRxiv/medRxiv site search, conference abstracts. Repeat once more on 18 Oct before submitting.

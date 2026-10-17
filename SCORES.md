@@ -31,3 +31,6 @@ The repeat prior-art search (docs/02, last section; 14 database queries plus abs
 other traits, conditions on them, or pre-registers the analysis. The condition set for novelty 4 is therefore met as of today: **4 is supportable, kept as "conditional"**
 until the same queries are rerun on 17 and 18 Oct and checked by hand in PubMed, bioRxiv and medRxiv, because title/abstract search cannot see methods sections or supplements.
 The cell types themselves remain a replication. Wording to use: "to my knowledge not found in searches of PubMed and preprint servers on 10 Oct 2026".
+
+## Note 2026-10-17
+The scheduled repeat prior-art search was run (docs/02, last section): no new ME/CFS paper in PubMed or the preprint servers since 9 Oct, and nothing that tests cell-type specificity against a panel of other traits. Novelty stays "3 to 4 (provisional)"; repeat on 18 Oct and check Google Scholar and the cited-by lists by hand.
