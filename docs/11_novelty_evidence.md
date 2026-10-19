@@ -171,3 +171,14 @@ Method side (new, relevant to how the claim is worded):
 Consequence: the **general idea of calibrating against other traits is not new**; what I could not find is a panel-calibrated cluster-level specificity analysis of ME/CFS. Novelty therefore sits in the ME/CFS application plus
 the validation of the score, not in the idea of cross-trait comparison. Grade: 3 to 4 (see SCORES.md). Wording for the report: "to my knowledge, a panel-calibrated specificity analysis of ME/CFS cell types was not found (searched 10 and 11 October 2026)".
 Still to do on 17 Oct: repeat; read seismic and ECLIPSER methods in full; Google Scholar and the Cited-by lists directly when Chrome is connected.
+
+## 18 Oct 2026, re-search (the planned 17 Oct repeat)
+Run: Europe PMC (articles and preprints, 1 to 18 Oct 2026) with four query sets (ME/CFS + GWAS/genetic/MAGMA/LDSC; ME/CFS + cell type/single-cell/amygdala; DecodeME; cell-type enrichment + calibration/other traits),
+PubMed (same period), and an extended web search. Chrome was not connected, so Google Scholar and Cited-by lists were not reached directly; the Semantic Scholar route for Maccallini and Lee is still not available
+(neither preprint is indexed there).
+Result: **nothing new.** No ME/CFS paper from 1 to 18 Oct tests cell-type enrichment, specificity or calibration against other traits. The few hits are unrelated reviews (CBT, lactate signalling, muscle satellite cells).
+"DecodeME" returns 0 new items. A general-method hit, "Convex approaches to isolate the shared and distinct genetic components of complex traits" (Bioinformatics, 1 Oct 2026), is about shared versus distinct genetic
+components of traits at the variant level; not read in full, not about cell types or ME/CFS.
+Items already known and unchanged: Maccallini 2026, Lee 2026, the Sept 2026 UK Biobank/All of Us loci preprint, the DecodeME symptom-cluster preprint, Duncan 2025, ECLIPSER, seismic.
+Conclusion on 18 Oct: the finding stands as "a panel-calibrated specificity analysis of ME/CFS cell types was not found in searches of 10, 11 and 18 October 2026". Novelty stays at 3 to 4 (SCORES.md).
+Not done: Google Scholar and Cited-by (needs Chrome); full read of seismic, ECLIPSER and the new Bioinformatics paper; asking the mentor or teacher.
