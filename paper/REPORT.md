@@ -335,7 +335,7 @@ All data used are public: DecodeME summary statistics (OSF rgqs3), the Human Bra
 ## 7. Acknowledgements
 I thank the DecodeME participants and team for releasing their data, the authors of the comparison studies, and the creators of the Human Brain Cell Atlas, MAGMA, and the AlphaFold database. I thank Ms. Heather Wingo, my AP Biology teacher at Redlands High School, for supporting my application.
 
-**Use of AI.** I used an AI assistant (Claude, from Anthropic) to help with the literature search, to write and run the analysis code, and to help draft and edit this report and the abstract. I chose the question, made the design decisions, reviewed the results and checked the claims, and I take responsibility for the content.
+**Use of AI.** I wrote an initial rough draft of parts of the writing myself. I then used AI assistants (Claude, and another AI tool earlier in the project) to help with the literature search, to write and run the analysis code, and to draft and edit sections of this report and the abstract. I chose the research question, made the design decisions, reviewed the results and checked the claims, and I take responsibility for the content.
 
 ## References
 1. 1000 Genomes Project Consortium. A global reference for human genetic variation. Nature 526, 68-74 (2015). doi:10.1038/nature15393
