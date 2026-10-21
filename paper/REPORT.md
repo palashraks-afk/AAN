@@ -11,7 +11,7 @@ Entry for the AAN Neuroscience Research Prize 2027
 
 **Results.** Eleven cell clusters, primarily excitatory neurons in the cortex and amygdala, were significantly enriched for ME/CFS genetic risk. Six of these clusters were more specific to ME/CFS than to comparison traits. The strongest specific signal mapped to an excitatory cluster from amygdala dissections, designated Amex_153, which remained specific across every change made to the comparison panel. The same clusters also carried signal in a large chronic-pain cohort. Within ME/CFS, the signal was clearest in patients whose illness began with an infection.
 
-**Conclusions.** These results point to excitatory neurons in cortical and limbic circuits as cell populations where ME/CFS genetic risk is concentrated. Because independent datasets did not confirm the specific amygdala anatomical label, these findings offer a hypothesis regarding cortical and limbic excitatory neurons for future cohorts to test. To our knowledge, no prior study has tested whether ME/CFS cell-type enrichment is specific against a panel of other traits, making this a possible discovery.
+**Conclusions.** These results point to excitatory neurons in cortical and limbic circuits as cell populations where ME/CFS genetic risk is concentrated. Because independent datasets did not confirm the specific amygdala anatomical label, these findings offer a hypothesis regarding cortical and limbic excitatory neurons for future cohorts to test. To our knowledge, no prior study has tested whether ME/CFS cell-type enrichment is specific against a panel of other traits.
 
 ---
 
