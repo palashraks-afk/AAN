@@ -13,7 +13,7 @@ h1{font-size:20pt;line-height:1.2;margin-bottom:4px} h2{font-size:15pt;margin-to
 h3{font-size:12.5pt;margin-top:18px} p{margin:8px 0;text-align:left}
 img{max-width:100%;display:block;margin:10px auto 2px} em.cap{display:block;font-size:9.5pt;color:#444;margin:2px 0 14px}
 table{border-collapse:collapse;font-size:8.5pt;margin:8px 0 14px;width:100%} th,td{border:1px solid #bbb;padding:3px 5px;text-align:left} th{background:#eef2f5}
-ul,ol{margin:6px 0 6px 20px} li{margin:3px 0} hr{border:0;border-top:1px solid #ddd;margin:20px 0}
+a{color:#1a5276;word-break:break-all} ul,ol{margin:6px 0 6px 20px} li{margin:3px 0} hr{border:0;border-top:1px solid #ddd;margin:20px 0}
 @page{size:Letter;margin:0.7in}
 """
 
@@ -23,6 +23,7 @@ def inline(s):
     s = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", s)
     s = re.sub(r"(?<!\*)\*(?!\s)(.+?)(?<!\s)\*(?!\*)", r"<em>\1</em>", s)
     s = re.sub(r"\^(-?\d+)", r"<sup>\1</sup>", s)
+    s = re.sub(r"\[([^\]]+)\]\((https?://[^)\s]+)\)", r'<a href="\2">\1</a>', s)
     return s
 
 
