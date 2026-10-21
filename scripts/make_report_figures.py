@@ -23,17 +23,17 @@ plt.rcParams.update({"font.size": 11, "axes.spines.top": False, "axes.spines.rig
 def pipeline():
     fig, ax = plt.subplots(figsize=(11, 3.6))
     ax.axis("off")
-    boxes = [("DecodeME GWAS\n15,579 cases\n259,909 controls", 0.0), ("SNP p-values\nto gene scores\n(MAGMA)", 0.2),
-             ("Cell-type test\n461 brain clusters\n(Siletti atlas)", 0.4), ("Compare with\n19 other traits\n(specificity score s)", 0.6),
-             ("Checks: permutation,\nlocus drop, 2nd GWAS,\nconditioning, windows", 0.8)]
+    boxes = [("DecodeME GWAS\n15,579 cases\n259,909 controls", 0.02), ("SNP p-values\nto gene scores\n(MAGMA)", 0.22),
+             ("Cell-type test\n461 brain clusters\n(Siletti atlas)", 0.42), ("Compare with\n19 other traits\n(specificity score s)", 0.62),
+             ("Checks: permutation,\nlocus drop, second\nGWAS, other settings", 0.82)]
     for text, x in boxes:
-        ax.add_patch(FancyBboxPatch((x, 0.4), 0.17, 0.4, boxstyle="round,pad=0.01", fc="#eaf2f8", ec=BLUE, lw=1.5, transform=ax.transAxes))
-        ax.text(x + 0.085, 0.6, text, ha="center", va="center", fontsize=10, color=INK, transform=ax.transAxes)
+        ax.add_patch(FancyBboxPatch((x, 0.4), 0.15, 0.4, boxstyle="round,pad=0.008", fc="#eaf2f8", ec=BLUE, lw=1.5, transform=ax.transAxes))
+        ax.text(x + 0.075, 0.6, text, ha="center", va="center", fontsize=8.5, color=INK, transform=ax.transAxes)
     for x in (0.18, 0.38, 0.58, 0.78):
-        ax.annotate("", xy=(x + 0.02, 0.6), xytext=(x, 0.6), xycoords="axes fraction",
+        ax.annotate("", xy=(x + 0.03, 0.6), xytext=(x, 0.6), xycoords="axes fraction",
                     arrowprops=dict(arrowstyle="->", color=INK, lw=1.5))
-    ax.add_patch(FancyBboxPatch((0.02, 0.02), 0.93, 0.22, boxstyle="round,pad=0.01", fc="#fdf2e9", ec=ACC2, lw=1.5, transform=ax.transAxes))
-    ax.text(0.485, 0.13, "Before any ME/CFS cell-type result was read, control traits had to reproduce known biology\n"
+    ax.add_patch(FancyBboxPatch((0.02, 0.02), 0.96, 0.22, boxstyle="round,pad=0.01", fc="#fdf2e9", ec=ACC2, lw=1.5, transform=ax.transAxes))
+    ax.text(0.5, 0.13, "Before any ME/CFS cell-type result was read, control traits had to reproduce known biology\n"
             "(schizophrenia: neurons, Alzheimer's: microglia, height: connective tissue). The plan was written and tagged in advance.",
             ha="center", va="center", fontsize=9, color=INK, transform=ax.transAxes)
     fig.savefig(FIG / "fig0_pipeline.png", dpi=250, bbox_inches="tight")

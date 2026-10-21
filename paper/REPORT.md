@@ -258,11 +258,8 @@ In patients whose illness began with an infection, all six clusters passed a str
 | SORCS3 | 3.81 | 7.1e-05 | 0.999 |
 | ARFGEF2 | 5.82 | 3.0e-09 | 0.999 |
 
-![Figure 13a. AlphaFold-predicted structure of CACNA1E](../figures/structures/CACNA1E.png)
-![Figure 13b. ISL1](../figures/structures/ISL1.png)
-![Figure 13c. LRRC7](../figures/structures/LRRC7.png)
+![Figure 13. AlphaFold-predicted structures of three top-ranked genes: CACNA1E, ISL1 and LRRC7 (left to right), drawn as backbone traces coloured by the model's own confidence (pLDDT). They show protein shape and say nothing about disease. Interactive versions are in figures/structures.](../figures/fig13_structures.png)
 
-*Figure 13. AlphaFold-predicted structures of three top-ranked genes (CACNA1E, ISL1, LRRC7), drawn as backbone traces coloured by the model's own confidence. They show protein shape and say nothing about disease. Interactive versions are in figures/structures.*
 
 ### 3.9 Independent and related-data checks
 A second computer ran a set of independent and related-data checks (Table 6). None met its pre-registered bar for confirming the amygdala result, and none contradicted it; each had limited power or measured a different phenotype or tissue. Two points matter most. First, in an independent single-nucleus atlas, the ME/CFS signal in excitatory neurons pointed to cortical groups (subgenual anterior cingulate, p about 0.006) more than amygdala ones (p 0.12 to 0.18), although that atlas has only 344 and 55 amygdala excitatory nuclei and its labels do not map one-to-one onto the main atlas. The amygdala clusters do match amygdala excitatory neurons in it (rank correlation of about 0.66), so the comparison is fair, just underpowered. Second, the six clusters also carry strong signal in a large chronic-pain cohort (mean z 2.46 against 1.39 for random sets of six clusters, p = 0.0001, all six positive). This does not undo the specificity result, because pain was not in the 19-trait panel; with pain added, five of six clusters stay specific and every cluster is stronger in ME/CFS than in pain. It does mean these clusters are better described as carrying signal for ME/CFS and chronic pain together, which fits a shared-circuit hypothesis.

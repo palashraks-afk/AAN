@@ -14,6 +14,7 @@ h3{font-size:12.5pt;margin-top:18px} p{margin:8px 0;text-align:left}
 img{max-width:100%;display:block;margin:10px auto 2px} em.cap{display:block;font-size:9.5pt;color:#444;margin:2px 0 14px}
 table{border-collapse:collapse;font-size:8.5pt;margin:8px 0 14px;width:100%} th,td{border:1px solid #bbb;padding:3px 5px;text-align:left} th{background:#eef2f5}
 a{color:#1a5276;word-break:break-all} ul,ol{margin:6px 0 6px 20px} li{margin:3px 0} hr{border:0;border-top:1px solid #ddd;margin:20px 0}
+h1,h2,h3{break-after:avoid;page-break-after:avoid} img,tr,em.cap{break-inside:avoid;page-break-inside:avoid} p{orphans:3;widows:3}
 @page{size:Letter;margin:0.7in}
 """
 
